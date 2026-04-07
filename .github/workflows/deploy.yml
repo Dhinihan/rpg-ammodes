@@ -24,7 +24,16 @@ jobs:
           pip install mkdocs-material \
                       mkdocs-publish-filter \
                       mkdocs-ezlinks-plugin \
-                      mkdocs-callouts
+                      mkdocs-callouts \
+                      beautifulsoup4
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Build Check
+        run: mkdocs build
 
       - name: Deploy
         run: mkdocs gh-deploy --force
