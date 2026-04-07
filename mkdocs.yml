@@ -22,11 +22,12 @@ plugins:
       only_doc_pages: true
       include_tag:
         - published
-  - roamlinks:
-      link_relative: true
-  - callouts
+  - obsidian-bridge
 
 markdown_extensions:
+  - obsidian_media_mkdocs
+  - obsidian_callouts
+  - attr_list
   - admonition
   - pymdownx.details
   - pymdownx.superfences

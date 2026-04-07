@@ -23,8 +23,8 @@ jobs:
         run: |
           pip install mkdocs-material \
                       mkdocs-file-filter-plugin \
-                      mkdocs-roamlinks-plugin \
-                      mkdocs-callouts \
+                      mkdocs-obsidian-bridge \
+                      obsidian-media \
                       pyyaml
 
       - name: Copy public notes to docs/
