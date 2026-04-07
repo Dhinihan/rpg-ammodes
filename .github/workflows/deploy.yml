@@ -22,23 +22,22 @@ jobs:
       - name: Install dependencies
         run: |
           pip install mkdocs-material \
-                      mkdocs-ezlinks-plugin \
+                      mkdocs-roamlinks-plugin \
                       mkdocs-callouts \
-                      beautifulsoup4 \
                       pyyaml
 
-      - name: Filter public notes
+      - name: Filter public notes to docs/
         run: |
           python3 << 'EOF'
           import os
           import shutil
           import yaml
           
-          temp_dir = "_temp_private"
-          os.makedirs(temp_dir, exist_ok=True)
+          docs_dir = "docs"
+          os.makedirs(docs_dir, exist_ok=True)
           
           for root, dirs, files in os.walk('.'):
-            if any(x in root for x in ['.obsidian', 'templates', '.git', '.github', temp_dir]):
+            if any(x in root for x in ['.obsidian', 'templates', '.git', '.github', docs_dir]):
               continue
             
             for file in files:
@@ -46,17 +45,35 @@ jobs:
                 filepath = os.path.join(root, file)
                 with open(filepath, 'r', encoding='utf-8') as f:
                   content = f.read()
+                  is_public = False
                   if content.startswith('---'):
                     parts = content.split('---', 2)
                     if len(parts) >= 2:
                       try:
                         frontmatter = yaml.safe_load(parts[1])
-                        if not (frontmatter and frontmatter.get('publico') == True):
-                          shutil.move(filepath, os.path.join(temp_dir, os.path.basename(filepath)))
+                        if frontmatter and frontmatter.get('publico') == True:
+                          is_public = True
                       except:
                         pass
+                  
+                  if is_public:
+                    # Copy to docs keeping folder structure
+                    rel_path = os.path.relpath(filepath)
+                    dest_path = os.path.join(docs_dir, rel_path)
+                    os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+                    shutil.copy2(filepath, dest_path)
+                    
+                    # Also copy linked images
+                    file_dir = os.path.dirname(filepath)
+                    base_name = os.path.splitext(file)[0]
+                    for ext in ['.png', '.jpg', '.jpeg', '.gif', '.svg']:
+                      img_path = os.path.join(file_dir, base_name + ext)
+                      if os.path.exists(img_path):
+                        img_dest_dir = os.path.dirname(dest_path)
+                        os.makedirs(img_dest_dir, exist_ok=True)
+                        shutil.copy2(img_path, os.path.join(img_dest_dir, os.path.basename(img_path)))
           
-          print("Private notes moved to temp folder")
+          print("Public notes copied to docs/")
           EOF
 
       - name: Configure Git
@@ -64,20 +81,8 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Build Check
-        run: mkdocs build
-
-      - name: Restore private notes
-        run: |
-          python3 << 'EOF'
-          import os
-          import shutil
-          temp_dir = "_temp_private"
-          for file in os.listdir(temp_dir):
-            shutil.move(os.path.join(temp_dir, file), ".")
-          os.rmdir(temp_dir)
-          print("Private notes restored")
-          EOF
+      - name: Build
+        run: mkdocs build -d site
 
       - name: Deploy
         run: mkdocs gh-deploy --force

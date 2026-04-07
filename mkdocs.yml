@@ -14,13 +14,10 @@ theme:
     - search.suggest
     - search.highlight
 
-docs_dir: .
-
 plugins:
   - search
-  - ezlinks:
-      obsidian_syntax: true
-      base_dir: .
+  - roamlinks:
+      link_relative: true
   - callouts
 
 markdown_extensions:
@@ -29,11 +26,3 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
-
-exclude_docs: |
-  mkdocs.yml
-  LICENSE
-  .github/**/*
-  .obsidian/**/*
-  templates/**/*
-  _temp_private/**/*
