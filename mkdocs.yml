@@ -14,8 +14,14 @@ theme:
     - search.suggest
     - search.highlight
 
+docs_dir: docs
+
 plugins:
   - search
+  - file-filter:
+      only_doc_pages: true
+      include_tag:
+        - published
   - roamlinks:
       link_relative: true
   - callouts
@@ -26,3 +32,10 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tasklist:
       custom_checkbox: true
+
+exclude_docs: |
+  mkdocs.yml
+  LICENSE
+  .github/**/*
+  .obsidian/**/*
+  templates/**/*

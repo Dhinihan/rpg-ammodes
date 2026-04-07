@@ -1,5 +1,6 @@
 ---
-publico: true
+tags:
+  - published
 ---
 # NPCs de Ammódes
 

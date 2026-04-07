@@ -22,11 +22,12 @@ jobs:
       - name: Install dependencies
         run: |
           pip install mkdocs-material \
+                      mkdocs-file-filter-plugin \
                       mkdocs-roamlinks-plugin \
                       mkdocs-callouts \
                       pyyaml
 
-      - name: Filter public notes to docs/
+      - name: Copy public notes to docs/
         run: |
           python3 << 'EOF'
           import os
@@ -51,19 +52,18 @@ jobs:
                     if len(parts) >= 2:
                       try:
                         frontmatter = yaml.safe_load(parts[1])
-                        if frontmatter and frontmatter.get('publico') == True:
+                        if frontmatter and 'published' in frontmatter.get('tags', []):
                           is_public = True
                       except:
                         pass
                   
                   if is_public:
-                    # Copy to docs keeping folder structure
                     rel_path = os.path.relpath(filepath)
                     dest_path = os.path.join(docs_dir, rel_path)
                     os.makedirs(os.path.dirname(dest_path), exist_ok=True)
                     shutil.copy2(filepath, dest_path)
                     
-                    # Also copy linked images
+                    # Copy linked images
                     file_dir = os.path.dirname(filepath)
                     base_name = os.path.splitext(file)[0]
                     for ext in ['.png', '.jpg', '.jpeg', '.gif', '.svg']:
@@ -81,8 +81,5 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Build
-        run: mkdocs build -d site
-
-      - name: Deploy
+      - name: Build and Deploy
         run: mkdocs gh-deploy --force

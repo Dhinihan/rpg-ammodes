@@ -1,5 +1,6 @@
 ---
-publico: true
+tags:
+  - published
 ---
 # Bem-vindo a Ammódes
 
@@ -10,11 +11,12 @@ Basta adicionar isso ao topo de qualquer nota (frontmatter):
 
 ```yaml
 ---
-publico: true
+tags:
+  - published
 ---
 ```
 
-O sistema irá ignorar automaticamente qualquer arquivo que não tenha essa marcação.
+O sistema irá ignorar automaticamente qualquer arquivo que não tenha essa tag.
 
-## Notas Recentes
-- [[NPCs]] (Exemplo)
+## Notas
+- [[NPCs]]
