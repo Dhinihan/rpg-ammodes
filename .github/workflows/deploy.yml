@@ -22,10 +22,42 @@ jobs:
       - name: Install dependencies
         run: |
           pip install mkdocs-material \
-                      mkdocs-publish-filter \
                       mkdocs-ezlinks-plugin \
                       mkdocs-callouts \
-                      beautifulsoup4
+                      beautifulsoup4 \
+                      pyyaml
+
+      - name: Filter public notes
+        run: |
+          python3 << 'EOF'
+          import os
+          import shutil
+          import yaml
+          
+          temp_dir = "_temp_private"
+          os.makedirs(temp_dir, exist_ok=True)
+          
+          for root, dirs, files in os.walk('.'):
+            if any(x in root for x in ['.obsidian', 'templates', '.git', '.github', temp_dir]):
+              continue
+            
+            for file in files:
+              if file.endswith('.md'):
+                filepath = os.path.join(root, file)
+                with open(filepath, 'r', encoding='utf-8') as f:
+                  content = f.read()
+                  if content.startswith('---'):
+                    parts = content.split('---', 2)
+                    if len(parts) >= 2:
+                      try:
+                        frontmatter = yaml.safe_load(parts[1])
+                        if not (frontmatter and frontmatter.get('publico') == True):
+                          shutil.move(filepath, os.path.join(temp_dir, os.path.basename(filepath)))
+                      except:
+                        pass
+          
+          print("Private notes moved to temp folder")
+          EOF
 
       - name: Configure Git
         run: |
@@ -34,6 +66,18 @@ jobs:
 
       - name: Build Check
         run: mkdocs build
+
+      - name: Restore private notes
+        run: |
+          python3 << 'EOF'
+          import os
+          import shutil
+          temp_dir = "_temp_private"
+          for file in os.listdir(temp_dir):
+            shutil.move(os.path.join(temp_dir, file), ".")
+          os.rmdir(temp_dir)
+          print("Private notes restored")
+          EOF
 
       - name: Deploy
         run: mkdocs gh-deploy --force

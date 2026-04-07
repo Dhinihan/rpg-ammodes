@@ -18,8 +18,6 @@ docs_dir: .
 
 plugins:
   - search
-  - publish-filter:
-      pub_meta_key: publico
   - ezlinks:
       obsidian_syntax: true
       base_dir: .
@@ -38,3 +36,4 @@ exclude_docs: |
   .github/**/*
   .obsidian/**/*
   templates/**/*
+  _temp_private/**/*
