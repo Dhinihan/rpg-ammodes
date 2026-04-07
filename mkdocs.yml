@@ -1,0 +1,40 @@
+site_name: Ammódes Wiki
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: slate
+      primary: teal
+      accent: cyan
+    - scheme: default
+      primary: teal
+      accent: cyan
+  features:
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+
+docs_dir: .
+
+plugins:
+  - search
+  - publish-filter:
+      pub_meta_key: publico
+  - ezlinks:
+      obsidian_syntax: true
+      base_dir: .
+  - callouts
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+exclude_docs: |
+  mkdocs.yml
+  LICENSE
+  .github/**/*
+  .obsidian/**/*
+  templates/**/*
