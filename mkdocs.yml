@@ -36,6 +36,9 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
 
+extra_css:
+  - stylesheets/extra.css
+
 exclude_docs: |
   mkdocs.yml
   LICENSE
