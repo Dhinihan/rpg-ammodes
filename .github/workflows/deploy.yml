@@ -58,28 +58,26 @@ jobs:
                       except:
                         pass
                   
-                   if is_public:
-                     rel_path = os.path.relpath(filepath)
-                     dest_path = os.path.join(docs_dir, rel_path)
-                     os.makedirs(os.path.dirname(dest_path), exist_ok=True)
-                     shutil.copy2(filepath, dest_path)
-                     
-                     # Copy linked images
-                     file_dir = os.path.dirname(filepath)
-                     base_name = os.path.splitext(file)[0]
-                     for ext in ['.png', '.jpg', '.jpeg', '.gif', '.svg']:
-                       img_path = os.path.join(file_dir, base_name + ext)
-                       if os.path.exists(img_path):
-                         img_dest_dir = os.path.dirname(dest_path)
-                         os.makedirs(img_dest_dir, exist_ok=True)
-                         shutil.copy2(img_path, os.path.join(img_dest_dir, os.path.basename(img_path)))
-           
-           # Copy all images to docs/ root (for ![[image.png]] syntax)
-           for ext in ['.png', '.jpg', '.jpeg', '.gif', '.svg']:
-             for img_file in glob.glob(f'*{ext}'):
-               dest_img = os.path.join(docs_dir, img_file)
-               if not os.path.exists(dest_img):
-                 shutil.copy2(img_file, dest_img)
+                  if is_public:
+                    rel_path = os.path.relpath(filepath)
+                    dest_path = os.path.join(docs_dir, rel_path)
+                    os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+                    shutil.copy2(filepath, dest_path)
+                    
+                    file_dir = os.path.dirname(filepath)
+                    base_name = os.path.splitext(file)[0]
+                    for ext in ['.png', '.jpg', '.jpeg', '.gif', '.svg']:
+                      img_path = os.path.join(file_dir, base_name + ext)
+                      if os.path.exists(img_path):
+                        img_dest_dir = os.path.dirname(dest_path)
+                        os.makedirs(img_dest_dir, exist_ok=True)
+                        shutil.copy2(img_path, os.path.join(img_dest_dir, os.path.basename(img_path)))
+          
+          for ext in ['.png', '.jpg', '.jpeg', '.gif', '.svg']:
+            for img_file in glob.glob(f'*{ext}'):
+              dest_img = os.path.join(docs_dir, img_file)
+              if not os.path.exists(dest_img):
+                shutil.copy2(img_file, dest_img)
           
           print("Public notes copied to docs/")
           EOF
