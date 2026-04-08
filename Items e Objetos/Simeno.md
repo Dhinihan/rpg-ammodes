@@ -2,18 +2,13 @@
 tags:
   - published
 preço (gp): "1"
-quantidade: 1g
+quantidade: 1g refinada
 ---
 # Simeno
 
-## O Poder que Brota do Chão
+O [[Simeno]] (ou na grafia original *Simaíno*) é um pó verde água que se mistura na areia do deserto de [[Ammódes]]. Quanto mais fundo na areia, maior é a concentração. Também é encontrado raramente em forma de minério. O pó bruto não tem muito valor, mas após um processo de purificação e ativação arcana, vale mais do que ouro.
 
-O que move as engrenagens de Ammódes é o **[[Simeno]]**, é a partir dele que a humanidade finalmente pode declarar independência dos deuses e demônios e controlar o seu próprio destino. Ou pelo menos é isso que o membros de [[Athroniaeth]] querem acreditar.
-
-Dizem que o [[Simeno]] são os restos de uma divindade esquecida ou a própria alma do mundo fragmentada em poeira. Misturada à areia comum, essa substância permite que o impossível aconteça. Em [[Ammódes]], a magia e o poder pertencem a quem tem a audácia de se aventurar no deserto.
-
-Com o [[Simeno]], ferreiros moldam o aço com o pensamento e tecelões trançam proteção em mantos comuns. É a fonte de toda a riqueza, de todas as guerras e o único motivo para alguém se atrever a viver sob o sol impiedoso deste lugar.
+O principal uso do [[Simeno]] é como o reagente da tinta que é usada para escrever grimórios mágicos. No ano de 6915 DG, o primeiro Arquimago [[Owain]] desenvolveu a técnica de descrever alterações no tecido da realidade através da ressonância física entre os símbolos e a estrutura pentagrâmica do [[Simeno]]. Assim ele fundou a escola de magia [[Athroniaeth]], a instituição mais poderosa de [[Ammódes]] e do mundo conhecido. Alguns anos depois, os arquimagos de [[Athroniaeth]] desenvolveram formas de imbuir artefatos com magia usando o [[Simeno]]
 
 
-
-
+![[Simeno.png]]
