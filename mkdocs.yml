@@ -22,7 +22,9 @@ plugins:
       only_doc_pages: true
       include_tag:
         - published
-  - obsidian-bridge
+  - obsidian-bridge:
+      invalid_link_attributes:
+        - '.invalid'
 
 markdown_extensions:
   - obsidian_media_mkdocs
