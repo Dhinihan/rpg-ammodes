@@ -17,4 +17,4 @@ Acompanhe os anúncios, atualizações e comunicados oficiais da campanha de Amm
 
 ---
 
-*Notícias são postadas conforme a campanha evolui. Fique atento para novas comunicações.
+*Notícias são postadas conforme a campanha evolui. Fique atento para novas comunicações.*
