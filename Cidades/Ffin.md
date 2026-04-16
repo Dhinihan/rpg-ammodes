@@ -24,7 +24,7 @@ Parte do sucesso em domar a fúria dos ventos e da areia deve-se à posição ge
 
 ## Locais de Interesse
 
-- **[[Estalagem da Pedra Dura]]:** A principal estalagem do assentamento; reza a lenda que o nome surgiu de uma piada sobre a dureza do pão que o dono nunca chegou a entender.
+- **[[Estalagem da Pedra Dura]]:** A principal estalagem do assentamento; reza a lenda que o nome surgiu de uma piada sobre a dureza do pão que a dona nunca chegou a entender.
 - **[[Oficina d'Água]]:** Centro de refinamento de [[Simeno]] e principal provedora de água potável e serviços arcanos da cidade.
 - **[[Templo de Planetar]]:** Um templo antigo construído em tempos imemoriais. Acredita-se que foi erguido para venerar uma antiga divindade celestial conhecida como [[Planetar]]. 
 ![[Planetar.png]]
