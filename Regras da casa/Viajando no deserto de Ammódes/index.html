@@ -824,6 +824,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ordem-de-resolucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordem de resolução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#teste-de-animal-handling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -848,6 +859,17 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#falhas-graves-e-mitigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Falhas graves e mitigação
+      
+    </span>
+  </a>
   
 </li>
         
@@ -983,6 +1005,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ordem-de-resolucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ordem de resolução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#teste-de-animal-handling" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1007,6 +1040,17 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#falhas-graves-e-mitigacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Falhas graves e mitigação
+      
+    </span>
+  </a>
   
 </li>
         
@@ -1037,9 +1081,10 @@
 <p><img alt="Viajando no Deserto.png" src="../Viajando%20no%20Deserto.png" /></p>
 <h2 id="capacidade-de-carga">Capacidade de carga</h2>
 <p>Um personagem que carregue mais do que <strong>5 vezes seu valor de Constituição em libras</strong> sofre <strong>1 nível de exaustão por dia</strong> de viagem. Essa penalidade é cumulativa com qualquer outra fonte de exaustão.</p>
+<p>É <strong>impossível</strong> carregar mais do que <strong>10 vezes seu valor de Constituição em libras</strong> — esse é o limite absoluto, independente de qualquer fator.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemplo de capacidade de carga</p>
-<p>Um personagem com CON 14 pode carregar até 70 lb sem penalidade. Com CON 18, o limite sobe para 90 lb.</p>
+<p>Um personagem com CON 14 pode carregar até 70 lb sem penalidade. Acima de 70 lb, sofre 1 nível de exaustão por dia. Acima de 140 lb, simplesmente não consegue se mover.</p>
 </div>
 <h2 id="suprimentos">Suprimentos</h2>
 <h3 id="agua">Água</h3>
@@ -1128,14 +1173,27 @@
 </tr>
 </tbody>
 </table>
+<h3 id="ordem-de-resolucao">Ordem de resolução</h3>
+<p>Ao planejar uma viagem com lagartos gigantes, siga esta ordem:</p>
+<ol>
+<li><strong>Decida os suprimentos:</strong> Determine quanta água e comida o grupo levará, considerando a viagem de ida e volta e uma margem de segurança.</li>
+<li><strong>Faça o teste de Animal Handling:</strong> Um único teste determina a duração real da viagem (veja abaixo).</li>
+<li><strong>Calcule a duração real:</strong> Se o teste falhar, a viagem dura mais do que o planejado.</li>
+<li><strong>Resolva a exaustão:</strong> Compare os suprimentos levados com os necessários para a duração real. Se faltarem suprimentos, aplique exaustão conforme a tabela de racionamento.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Dica</p>
+<p>Levar suprimentos extras é sempre recomendável. Se o teste de Animal Handling for ruim e a viagem se prolongar, o grupo pode se ver sem água ou comida no meio do deserto.</p>
+</div>
 <h3 id="teste-de-animal-handling">Teste de Animal Handling</h3>
-<p>Sempre que um grupo viajar usando lagartos gigantes, faça <strong>um único teste de Animal Handling</strong> para a viagem inteira.</p>
-<p><strong>DC = 11 + número de dias da viagem</strong></p>
+<p>Sempre que um grupo viajar usando lagartos gigantes, faça <strong>um único teste de Animal Handling</strong> para a viagem inteira. O teste é feito <strong>independentemente da carga</strong> — mesmo que os lagartos estejam dentro da capacidade ideal.</p>
+<p><strong>DC = 11 + número de dias planejados da viagem</strong></p>
 <p>Em caso de falha, cada ponto de diferença abaixo da DC aumenta o tempo de viagem em 10%. O consumo de água e comida aumenta proporcionalmente.</p>
 <h4 id="modificadores">Modificadores</h4>
 <ul>
-<li>Se pelo menos dois membros do grupo forem proficientes em Animal Handling, o personagem com o maior bônus pode realizar o teste com <strong>vantagem</strong>.</li>
-<li>Se a quantidade de lagartos for maior que o número de personagens proficientes em Animal Handling, o teste é feito com <strong>desvantagem</strong>. Essa desvantagem se sobrepõe a qualquer vantagem.</li>
+<li><strong>Normal:</strong> Se houver exatamente 1 personagem proficiente em Animal Handling e exatamente 1 lagarto, o teste é feito normalmente.</li>
+<li><strong>Vantagem:</strong> Se pelo menos dois membros do grupo forem proficientes em Animal Handling, o personagem com o maior bônus realiza o teste com <strong>vantagem</strong>.</li>
+<li><strong>Desvantagem:</strong> Se a quantidade de lagartos for maior que o número de personagens proficientes em Animal Handling, o teste é feito com <strong>desvantagem</strong>. Essa desvantagem se sobrepõe a qualquer vantagem.</li>
 </ul>
 <div class="admonition example">
 <p class="admonition-title">Exemplo 1 — Falha parcial</p>
@@ -1156,6 +1214,20 @@
 - Como lagartos (3) &gt; proficientes (1), o teste é feito com <strong>desvantagem</strong>, mesmo que houvesse vantagem por outra razão.
 Se houvesse 2+ proficientes, o teste seria com vantagem — mas a desvantagem dos lagartos se sobrepõe.</p>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Exemplo 4 — Teste normal</p>
+<p>Um grupo de 2 pessoas usa 1 lagarto. Apenas 1 pessoa é proficiente em Animal Handling.
+- Como há exatamente 1 proficiente e 1 lagarto, o teste é feito <strong>normalmente</strong>, sem vantagem ou desvantagem.</p>
+</div>
+<h3 id="falhas-graves-e-mitigacao">Falhas graves e mitigação</h3>
+<p>Se o teste de Animal Handling for muito ruim e a viagem se prolongar significativamente, o grupo pode precisar tomar decisões difíceis para sobreviver. Dependendo da situação, o mestre pode narrar consequências como:</p>
+<ul>
+<li>Abandonar parte da carga ou um lagarto no meio do caminho</li>
+<li>Voltar para o ponto de partida e recomeçar a viagem</li>
+<li>Gastar recursos adicionais (magias, habilidades, itens) para mitigar a falta de suprimentos</li>
+<li>Realizar testes adicionais de sobrevivência ao longo da viagem</li>
+</ul>
+<p>Essas situações são resolvidas caso a caso, de acordo com o contexto da aventura.</p>
 
 
 
