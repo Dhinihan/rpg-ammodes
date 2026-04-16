@@ -30,6 +30,7 @@ Esta wiki serve como o registro público da nossa campanha de RPG. Use os links 
 * O Segredo do [[Simeno]]: Entenda como a poeira mágica dita as leis da física, da economia e da criação de itens.
 * [[Registros de Aventura]]: Acompanhe a trajetória dos jogadores por esse mundo inóspito
 * [[Notícias]]: Acompanhe os anúncios e atualizações da campanha
+* [[Regras da casa]]: Regras opcionais e complementares para a campanha
 
 ---
 
