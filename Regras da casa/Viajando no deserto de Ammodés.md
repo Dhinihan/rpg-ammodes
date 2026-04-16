@@ -2,9 +2,9 @@
 tags:
   - published
 ---
-# Viajando no deserto de Ammodés
+# Viajando no deserto de Ammódes
 
-O deserto de Ammodés é implacável. As regras a seguir substituem ou complementam as regras de viagem do _Guia do Mestre_ para aventuras nesse terreno.
+O deserto de Ammódes é implacável. As regras a seguir substituem ou complementam as regras de viagem do _Guia do Mestre_ para aventuras nesse terreno.
 
 ![[Viajando no Deserto.png]]
 ## Capacidade de carga
@@ -45,7 +45,7 @@ Cada personagem precisa de **1 ração de comida por dia**.
 
 ## Montarias: lagarto gigante
 
-Em [[Ffin]] é possível alugar lagartos gigantes como animal de carga.
+Em [[Ffin]] é possível alugar lagartos gigantes como animais de carga.
 
 ### Consumo
 
@@ -87,6 +87,6 @@ Em caso de falha, cada ponto de diferença abaixo da DC aumenta o tempo de viage
 > - Sem aumento de tempo: a viagem dura **3 dias** conforme o planejado.
 
 > [!example] Exemplo 3 — Vantagem e desvantagem
-> Um grupo de 4 pessoas usa 3 lagartos. Apenas 1 pessoa é proficient em Animal Handling.
+> Um grupo de 4 pessoas usa 3 lagartos. Apenas 1 pessoa é proficiente em Animal Handling.
 > - Como lagartos (3) > proficientes (1), o teste é feito com **desvantagem**, mesmo que houvesse vantagem por outra razão.
 > Se houvesse 2+ proficientes, o teste seria com vantagem — mas a desvantagem dos lagartos se sobrepõe.
