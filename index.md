@@ -28,6 +28,8 @@ Esta wiki serve como o registro público da nossa campanha de RPG. Use os links 
 
 * As [[Cidades]]: Descubra os domos que abrigam as pobres almas que vivem no deserto
 * O Segredo do [[Simeno]]: Entenda como a poeira mágica dita as leis da física, da economia e da criação de itens.
+* As [[Facções]]: Conheça as organizações e povos que disputam poder e sobrevivência em Ammódes
+* Os [[NPCs]]: Personagens que habitam o deserto e podem cruzar o caminho dos aventureiros
 * [[Registros de Aventura]]: Acompanhe a trajetória dos jogadores por esse mundo inóspito
 * [[Notícias]]: Acompanhe os anúncios e atualizações da campanha
 * [[Regras da casa]]: Regras opcionais e complementares para a campanha
