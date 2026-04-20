@@ -10,7 +10,7 @@ status: ativa
 
 # Athroniaeth
 
-![[Caminho_Para_Imagem|250]]
+![[Athroniaeth.png]]
 
 ---
 

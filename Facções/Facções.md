@@ -16,7 +16,7 @@ Organizações, povos e grupos de poder que moldam o mundo de Ammódes.
 
 A instituição mais poderosa de Ammódes, fundada por [[Owain]] em 6915 DG. Controla o monopólio do conhecimento arcano e a exploração de [[Simeno]], estendendo sua influência como academia, governo, corporação e força militar. Sua sede original fica em [[Blodeuyn]], mas um movimento crescente de magos estabelece presença em [[Ffin]], atraídos pela fronteira da engenharia arcana no deserto.
 
-## Doreán
+## [[Doreán]]
 
 **Tipo:** Comunidades deslocadas
 
