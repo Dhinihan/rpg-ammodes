@@ -24,17 +24,17 @@ tags:
 
 > [!TIP] O objetivo aqui é apresentar os personagens, o tom da campanha e a motivação principal sem perder muito tempo em tavernas.
 
-### Cena 1: Esse mapa vale a pena?
+### [[Cena 1]]: Esse mapa vale a pena?
 > Os jogadores finalmente encontram o corpo do viajante desaparecido segurando um um pequeno cilindro trancado contendo um mapa para a [[Tumba Brilhante]], quando os jogadores finalmente conseguem pegar o cilindro, vários [[Stirges]] atacam os jogadores
 - [x] Situação de perigo definida
 - [x] Conexão com o MacGuffin estabelecida
 
-### Cena 2: Um trabalho mal pago
+### [[Cena 2]]: Um trabalho mal pago
 > Após a voltar para [[Ffin]] os jogadores descobrem que o aristocrata que pediu ajuda para eles foi embora da cidade. Descobrem na [[Estalagem da Pedra Dura]] que [[Atilla]] foi embora da cidade sem deixar explicação, fazendo os jogadores eventualmente assumirem que o cilindro é deles para abrir. Nele os jogadores aprendem que este é o mapa para a [[Tumba Brilhante]] onde se acredita que foi enterrado o primeiro sacerdote de [[Planetar]] e que ele possuía o amuleto da vida eterna e que o enterrou junto com ele para voltar no [[dia do juízo final]]
 - [x] Revelação do gancho principal
 - [x] Conexão com o patrono ou fonte da missão
 
-### Cena 3: A Preparação e a Promessa
+### [[Cena 3]]: A Preparação e a Promessa
 > Os jogadores precisam interagir com os membros de [[Ffin]] para entender melhor onde o mapa aponta e como eles vão chegar lá. Os principais NPCs são [[Maion]] a dona da [[Estalagem da Pedra Dura]], [[Rhiannon]] a Chanceler de [[Ffin]] e [[Ludger]] o interino de [[Atilla]] no [[Templo de Planetar]]. 
 >
 >Os jogadores só poderão carregar 5x a constituição deles em lb. Caso ultrapassem, recebem 1 ponto de exaustão por dia de viagem. É não é possível viajar com mais de 10x a constituição.
@@ -49,17 +49,17 @@ tags:
 
 > [!WARNING] Aqui o mundo começa a se mostrar. O grupo viaja em direção a primeira masmorra ou local de escavação, enfrentando a oposição inicial.
 
-### Cena 4: O Perigo Ambiental
+### [[Cena 4]]: O Perigo Ambiental
 > skill challenge para viajar no deserto, a viagem pareceu normal no começo, mas os jogadores precisam sair da trilha do mapa por causa de uma tempestade de areia, podem tomar exaustão e podem também se perderem
 - [x] Desafio ambiental definido
 - [x] Consequências do ambiente no grupo
 
-### Cena 5: O Portão e o Enigma
+### [[Cena 5]]: O Portão e o Enigma
 > A porta do tumulo brilhante deve estar em completa escuridão para revelar o mecanismo de entrada através de um leve brilho
 - [x] Enigma ou armadilha definida
 - [x] Solução exige habilidades não combate
 
-### Cena 6: O Primeiro Contato com os Rivais
+### [[Cena 6]]: O Primeiro Contato com os Rivais
 > Um grupo de magos filiados a uma vertente radical de [[Athroniaeth]] estão explorando a tumba com [[Atilla]] como refém. Eles estão procurando pelo amuleto da vida eterna (mas estão céticos)
 - [x] Rival ou facção adversaria introduzida
 - [x] Motivação dos rivais definida
@@ -75,12 +75,12 @@ tags:
 - [x] Inimigo ou desafio principal definido
 - [x] Elemento ambiental dinâmico no combate
 
-### Cena 8: A Reviravolta
+### [[Cena 8]]: Balde de areia fria
 > O artefato não é um amuleto da vida eterna, mas algo muito mais perigoso, é parte de um conjunto de itens mágicos que se caírem nas mãos dos magos radicais de [[Athroniaeth]] pode significar a conquista total do deserto
 - [x] Reviravolta definida
 - [x] Conexão com próximo arco estabelecida
 
-### Cena 9: A Fuga Eletrizante (Cliffhanger)
+### Cena 9: Encontro inesperado na saída
 > Ao sair da caverna, os jogadores são surpreendidos por um grande grupo de nativos da região e são "convidados" a acompanhá-los
 - [x] Mecanica de fuga preparada
 - [x] Gancho para próxima sessão plantado

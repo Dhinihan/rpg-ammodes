@@ -1,0 +1,3 @@
+![[Mage.png]]
+
+![[Wizard.png]]
