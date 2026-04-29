@@ -1,4 +1,13 @@
 site_name: Ammódes Wiki
+nav:
+  - Início: index.md
+  - Cidades: Cidades/Cidades.md
+  - Facções: Facções/Facções.md
+  - NPCs: NPCs/NPCs.md
+  - Items e Objetos: Items e Objetos/Items e Objetos.md
+  - Notícias: Notícias/Notícias.md
+  - Regras da casa: Regras da casa/Regras da casa.md
+
 theme:
   name: material
   language: pt-BR
