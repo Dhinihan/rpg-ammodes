@@ -27,6 +27,7 @@ Com o [[Simeno]], ferreiros moldam o aço com o pensamento e tecelões trançam 
 Esta wiki serve como o registro público da nossa campanha de RPG. Use os links abaixo para navegar pelos pilares desta campanha:
 
 * As [[Cidades]]: Descubra os domos que abrigam as pobres almas que vivem no deserto
+* Os [[Locais]]: Lugares notáveis e pontos de interesse espalhados pelo deserto
 * O Segredo do [[Simeno]]: Entenda como a poeira mágica dita as leis da física, da economia e da criação de itens.
 * As [[Facções]]: Conheça as organizações e povos que disputam poder e sobrevivência em Ammódes
 * Os [[NPCs]]: Personagens que habitam o deserto e podem cruzar o caminho dos aventureiros

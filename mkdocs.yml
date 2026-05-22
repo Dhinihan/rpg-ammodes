@@ -2,6 +2,7 @@ site_name: Ammódes Wiki
 nav:
   - Início: index.md
   - Cidades: Cidades/Cidades.md
+  - Locais: Locais/Locais.md
   - Facções: Facções/Facções.md
   - NPCs: NPCs/NPCs.md
   - Items e Objetos: Items e Objetos/Items e Objetos.md
