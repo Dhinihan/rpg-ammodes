@@ -32,6 +32,8 @@ spotlight: "[[Yawar]] (Chan)"
 - O lendário "**amuleto da vida eterna**" é, na verdade, uma das peças: o [[Periapt of Health]]. *(Eco direto da [[Cena 2 - Interrogatório e Reveal]]: era isto que a Mão de Athroniaeth veio buscar.)*
 - **Duas formas de "pertencer" ao deserto:** vestir o traje **ou** ser filho genuíno do deserto — os [[Doreán]], que ainda hoje sobrevivem no coração dele. *(Esta é a chave da cena e da [[Cena 4 - Câmara Secreta]]: o [[Yawar]] é a chave viva.)*
 
+![[Mural.png]]
+
 ---
 
 ## O Que Acontece (Desenvolvimento)
