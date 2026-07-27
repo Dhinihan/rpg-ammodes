@@ -1,2 +1,4 @@
 .obsidian/
+.pi/
+Sessões/**/*.html
 *.lock
