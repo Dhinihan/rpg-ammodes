@@ -12,6 +12,7 @@ A trajetória dos jogadores pelo deserto de [[Ammódes]], sessão a sessão. Cad
 ## Sessões
 
 - **[[Sessão 1 - No Olho da Tempestade]]** — O grupo recupera um cilindro lacrado de um mensageiro morto, descobre o mapa para a [[Tumba Brilhante]] e corre contra magos de [[Athroniaeth]] pelo deserto até abrir a tumba do Primeiro Sacerdote.
+- **[[Sessão 1.5 - O Traje do Deserto]]** — Um flashback revela como [[Yawar]] foi acusado de traição em [[Ffin]] e convencido por [[Ava]] a se entregar; no presente, o grupo perde os magos para um teleporte, decifra o mito do traje do deserto, atravessa a prova dos cinco sacerdotes e arranca o [[Periapt of Health]] do sarcófago — para encontrar os [[Doreán]] esperando na saída.
 
 ---
 
