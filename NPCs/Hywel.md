@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Hywel
 
+![[Hywel.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** Institucional e professoral.
 > **Personalidade:** Moderado, paternalista e condescendente; acredita na superioridade dos magos, mas também em conhecimento livre e colaboração externa.
