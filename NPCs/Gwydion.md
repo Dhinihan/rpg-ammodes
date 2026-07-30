@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Gwydion
 
+![[Gwydion.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** Carismático, excêntrico e confortável ao defender propostas antes impensáveis.
 > **Personalidade:** Ambicioso; aproveita o crescimento do radicalismo sem controlar todas as suas células.
