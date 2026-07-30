@@ -8,6 +8,8 @@ estado: Ativa
 
 # Pegadas do Gigante
 
+![[Pegadas do Gigante.png]]
+
 > [!info] Resumo Rápido
 > **O que é:** :: Uma trilha de caravana em deserto aberto marcada por rochas vulcânicas massivas.
 > **Onde fica:** :: Na rota de carregamentos de Simeno para [[Ffin]].
