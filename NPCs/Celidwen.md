@@ -14,6 +14,8 @@ intimidacao: 0
 
 # Celidwen
 
+![[Celidwen.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** Não registrado.
 > **Personalidade:** Antropóloga estudiosa do povo aasimar antigo. [[Atilla]] a chama de Kelly.
