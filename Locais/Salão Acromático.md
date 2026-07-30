@@ -8,6 +8,8 @@ estado: Preservado e parcialmente esvaziado
 
 # Salão Acromático
 
+![[Salão Acromático.png]]
+
 > [!info] Resumo Rápido
 > **O que é:** :: Um salão impossível de mármore branco e granito preto.
 > **Onde fica:** :: No primeiro nível subterrâneo do [[Templo de Planetar]].
