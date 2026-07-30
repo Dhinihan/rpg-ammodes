@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Vialis
 
+![[Vialis.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** Distraído e irritadiço.
 > **Personalidade:** Antissocial; prefere artefatos a pessoas. [[Atilla]] sofreu para conquistar sua confiança.
