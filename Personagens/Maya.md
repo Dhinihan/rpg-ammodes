@@ -31,6 +31,10 @@ Está viva, com o grupo do lado de fora da [[Tumba Brilhante]], sob cerco de [[D
 
 - Investigar a morte do pai e a versão de [[Athroniaeth]] sobre ela.
 
+## Possibilidades atuais
+
+- O reitor [[Hywel]] investiga a morte do pai de Maya como um dos assassinatos ou acidentes convenientes ligados à radicalização dentro de Athroniaeth. Essa ligação ainda não foi revelada em mesa.
+
 ## Preferências do jogador
 
 Não registrado.

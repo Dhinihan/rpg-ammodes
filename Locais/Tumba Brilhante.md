@@ -27,3 +27,18 @@ localização: "[[Deserto de Ammódes]]"
 ## 🔍 Detalhes de Investigação (Percepção / Investigação)
 
 - **A Porta Camuflada:** Se os jogadores examinarem de perto (CD 14), percebem finas e quase invisíveis fissuras retangulares
+
+---
+
+## Fatos observados em mesa
+
+- A porta exterior se abre quando permanece em escuridão e suas ranhuras brilhantes são percorridas com as mãos. ([[Sessão 1 - No Olho da Tempestade]])
+- A tumba contém um mural sobre a transformação de Ammódes, a prova dos cinco sacerdotes e uma forja guardada por dois Azer. ([[Sessão 1.5 - O Traje do Deserto]])
+- Uma oferta ritual de água corporal feita por [[Yawar]] abriu a passagem para a prova dos sacerdotes. ([[Sessão 1.5 - O Traje do Deserto]])
+- A prova associa bota, manto, anel, amuleto e diadema a perigos do deserto; as peças de bronze nas estátuas eram marcadores, não relíquias. ([[Sessão 1.5 - O Traje do Deserto]])
+- Na forja, o cascalho branco do teto oxida temporariamente os Azer, e seus martelos invertem a luz da placa atingida e das placas ortogonalmente adjacentes. ([[Sessão 1.5 - O Traje do Deserto]])
+- O sarcófago do Primeiro Sacerdote continha o [[Periapt of Health]], retirado pelo grupo. Os Azer ficaram travados em bronze, não destruídos. ([[Sessão 1.5 - O Traje do Deserto]])
+
+## Estado atual
+
+O grupo e [[Atilla]] saíram da tumba. Uma multidão de [[Doreán]] armados os espera do lado de fora.

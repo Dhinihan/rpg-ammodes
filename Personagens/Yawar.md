@@ -26,11 +26,11 @@ Não registrado.
 
 ## Estado atual
 
-Está vivo, do lado de fora da [[Tumba Brilhante]], cercado com o grupo por [[Doreán]] armados. A acusação contra ele continua de pé em [[Ffin]].
+Está vivo, do lado de fora da [[Tumba Brilhante]], cercado com o grupo por [[Doreán]] armados. A acusação contra ele em [[Ffin]] já foi resolvida, embora ainda não tenha sido mostrado em mesa como isso aconteceu.
 
 ## Pendências
 
-- Descobrir quem realmente tentou desligar a proteção alcalina de [[Ffin]].
+- Revelar em um flashback futuro como a acusação foi resolvida e quem realmente tentou desligar a proteção alcalina de [[Ffin]].
 - Descobrir quem são os outros que têm os mesmos sonhos.
 - Saber se [[Ava]] cumpriu a promessa de tirá-lo da cela, ou se ele saiu de outro modo.
 - A multidão de [[Doreán]] armados ainda não declarou o que quer do grupo.
