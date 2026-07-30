@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Theron
 
+![[Theron.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** Autoconfiante e direto.
 > **Personalidade:** Leal, avesso a regras sem valor e muito respeitado pelos Colorados. Referência: Kara “Starbuck” Thrace.
