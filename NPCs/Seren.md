@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Seren
 
+![[Seren.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** Sempre atarefada, apressada e pronta para apresentar a informação necessária.
 > **Personalidade:** Prestativa, competente e extremamente bem informada; sustenta um jogo duplo delicado.
