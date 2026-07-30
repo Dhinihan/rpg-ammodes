@@ -1,6 +1,6 @@
 ---
 name: gerador-prompt-imagem
-description: Interrogatório criativo para gerar prompts de imagem para a wiki Ammódes. Você aponta uma nota do vault (NPC, Local, Item, Facção) e o agente faz perguntas até montar um prompt otimizado para geração de imagem por IA, mantendo a direção de arte do mundo.
+description: Interrogatório criativo para gerar prompts e, com autorização, imagens para a wiki Ammódes. Você aponta uma nota do vault (NPC, Local, Item, Facção) e o agente faz perguntas, monta o prompt, pode gerar a imagem com o Codex e adicioná-la à nota.
 metadata:
   audience: dm
   workflow: image-generation
@@ -16,6 +16,7 @@ Eu gero prompts de imagem para ilustrar a wiki de RPG Ammódes. Você me diz qua
 4. Verifico se já existem traços fixos da entidade para manter consistência
 5. Quando tiver informação suficiente, exibo o prompt gerado para confirmação
 6. Se você aprovar, entrego o prompt final em português, pronto para copiar e usar
+7. Com sua autorização explícita, gero a imagem com o Codex e adiciono o embed à nota alvo
 
 ## Quando me usar
 
@@ -136,19 +137,72 @@ O prompt deve ser:
 
 ### Passo 7: Revisão e entrega
 
-Exiba o prompt gerado e pergunte:
+Exiba o prompt gerado e pergunte, usando o toolcall `question`:
 
 **"O prompt ficou bom assim, ou quer ajustar algo?"**
 
-- Se aprovar: entregue o prompt final como texto puro
+- Se aprovar: considere esse texto como o prompt final e vá para o Passo 8
 - Se quiser ajustar: faça as modificações e exiba novamente
 
-A entrega final deve ser **apenas o texto do prompt**, sem comentários adicionais, sem explicações, sem código.
+### Passo 8: Geração opcional e inclusão na nota
+
+Após a aprovação do prompt, defina o caminho proposto para a imagem:
+
+- Salve a imagem no mesmo diretório da nota alvo
+- Por padrão, use o nome-base da nota com extensão `.png` (ex: `NPCs/Atilla.md` gera `NPCs/Atilla.png`)
+- Se a pesquisa encontrou uma imagem já associada à nota, preserve o caminho existente
+- Nunca sobrescreva uma imagem sem mencionar explicitamente a substituição na pergunta de autorização
+
+Mostre o caminho proposto e pergunte, usando o toolcall `question`:
+
+**"Quer que eu use o Codex para gerar a imagem agora e adicioná-la à nota? Isso consumirá os limites de geração de imagens da sua conta."**
+
+Ofereça estas escolhas:
+
+- **Gerar e adicionar à nota**
+- **Somente entregar o prompt**
+- **Voltar e ajustar o prompt**
+
+Quando o arquivo de destino já existir, substitua a primeira escolha por **"Gerar, substituir a imagem existente e atualizar a nota"**. A pergunta deve informar os caminhos exatos da imagem e da nota.
+
+Se o usuário escolher somente o prompt, entregue o prompt final como texto puro. Se escolher ajustar, retorne ao Passo 7.
+
+Se o usuário autorizar a geração:
+
+1. Verifique se `codex` está disponível e autenticado com `codex login status`.
+2. Execute o Codex em modo headless a partir da raiz do vault, com `--ephemeral` e `--sandbox workspace-write`.
+3. Invoque `$imagegen` com o prompt final aprovado, a orientação adequada à categoria e o caminho exato de saída. Instrua o Codex a gerar somente a imagem e a não alterar arquivos Markdown.
+4. Aguarde a conclusão e verifique que o arquivo esperado existe, não está vazio e é uma imagem válida.
+5. Somente após essa verificação, adicione à nota o embed do Obsidian `![[Nome da imagem.png]]`, logo após o primeiro título de nível 1. Preserve o conteúdo e a formatação existentes.
+6. Se a nota já contiver exatamente esse embed, não o duplique. Se contiver outro embed associado que será substituído, atualize apenas esse embed.
+7. Informe os caminhos da imagem criada e da nota atualizada.
+
+Ao montar o comando headless, grave a instrução em um arquivo temporário dentro do vault usando `apply_patch`, envie esse arquivo por `stdin` e remova-o após a execução. Esse fluxo funciona também quando o shell padrão é Fish, que não aceita heredoc, e preserva literalmente `$imagegen` e todo o conteúdo do prompt.
+
+O arquivo temporário deve conter exatamente:
+
+```text
+$imagegen
+PROMPT_FINAL
+Salve exatamente em CAMINHO_DA_IMAGEM. Gere somente a imagem e não altere arquivos Markdown.
+```
+
+Execute-o com redirecionamento de entrada, compatível com Fish:
+
+```fish
+codex exec --ephemeral --sandbox workspace-write --cd CAMINHO_DO_VAULT - < CAMINHO_DO_ARQUIVO_TEMPORARIO
+```
+
+Remova o arquivo temporário mesmo se o Codex falhar. Nunca inclua o prompt diretamente no comando nem use `echo`, pois aspas, cifrões e outros caracteres do conteúdo podem ser interpretados pelo shell.
+
+Se o Codex não estiver instalado, não estiver autenticado ou falhar na geração, não modifique a nota. Informe o erro de forma concisa e entregue o prompt final para que o usuário não perca o trabalho.
 
 ## Notas importantes
 
 - A língua do vault é português do Brasil — todas as interações e o prompt final devem estar em português brasileiro com acentos corretos
 - Não use ícones/emojis em nenhum momento (regra do AGENTS.md)
-- A skill não cria, edita nem salva arquivos de imagem — ela apenas gera o texto do prompt
+- A geração de imagem é sempre opcional e depende de autorização explícita após a aprovação do prompt
+- Nunca edite a nota antes de confirmar que a imagem foi gerada corretamente
+- Nunca sobrescreva uma imagem existente sem autorização explícita
 - Mantenha a consistência visual quando o usuário solicitar, mas nunca force reutilização de traços sem permissão
 - Se a nota alvo não existir, informe o usuário e peça que verifique o caminho

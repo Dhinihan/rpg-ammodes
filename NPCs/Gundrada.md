@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Gundrada
 
+![[Gundrada.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** Intensa, austera e sempre pronta para confrontar sinais de deslealdade.
 > **Personalidade:** Fanática e xenofóbica; referência: Brida, de *The Last Kingdom*.
