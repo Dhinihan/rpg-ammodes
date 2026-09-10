@@ -1,30 +1,28 @@
 ---
 tags:
-  - npc
+  - npc/wiki
+  - published
 aliases: []
-localizacao: "[[Ffin]]"
-faccao: "[[Athroniaeth]]"
-percepcao_passiva: 10
-intuicao_passiva: 10
-persuasao: 0
-enganacao: 0
-intimidacao: 0
+localizacao: Ffin
+faccao: Athroniaeth
 ---
 
 # Hywel
 
 ![[Hywel.png]]
 
-> [!abstract] Resumo de Interpretação
-> **Voz e Trejeitos:** Institucional e professoral.
-> **Personalidade:** Moderado, paternalista e condescendente; acredita na superioridade dos magos, mas também em conhecimento livre e colaboração externa.
-
 ---
 
-## Notas de Sessão e Preparação
+## Histórico
 
-- Atual reitor da escola local de [[Athroniaeth]] e rival eleitoral de [[Gwydion]].
-- Considera os magos pioneiros do progresso gerado pelo Simeno, mas acredita que novas tecnologias exigem colaboração com outros setores e nações.
-- Suspeita que Gwydion esteja por trás de acidentes e assassinatos de moderados, incluindo o pai de [[Maya]].
-- Quer provar que existe uma conspiração, mas ainda desconhece a Mão e está longe de encontrá-la.
-- Sua assistente [[Seren]] pertence à Mão e manipula a investigação.
+Hywel é o reitor da escola de [[Athroniaeth]] em [[Ffin]], no cargo há doze anos. Tem um jeito professoral e defende publicamente a academia como um polo de conhecimento aberto, cujos avanços devem beneficiar toda a população.
+
+Sua atuação e sua campanha valorizam a colaboração com outros setores e nações. Segundo [[Dylan]], essa orientação é a razão de Ffin permanecer aberta a mercadores, clérigos e [[Doreán]], em vez de servir exclusivamente aos magos.
+
+Na eleição atual, enfrenta [[Gwydion]], cuja candidatura ganhou força após a tempestade. [[Dylan]] considera que, pela primeira vez em doze anos, Hywel tem um oponente à altura. A disputa contrapõe a continuidade de uma escola aberta à proposta de concentrar o governo da cidade e sua força militar nas mãos dos magos.
+
+## Relacionamentos
+
+- **[[Athroniaeth]]:** Reitor da escola de Ffin. Defende o conhecimento aberto e a colaboração externa como parte do desenvolvimento da academia.
+- **[[Gwydion]]:** Rival na eleição para reitor. Divergem sobre quem deve se beneficiar dos avanços da escola e sobre o papel dos magos no governo de Ffin.
+- **[[Ava]]:** Acredita que Hywel vencerá novamente a eleição e não considera Gwydion uma ameaça relevante.

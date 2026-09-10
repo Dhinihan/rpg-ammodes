@@ -1,8 +1,15 @@
+---
+tags:
+  - item
+  - published
+aliases: []
+---
+
 # Periapt of Health
 
 ![[Periapt of Health.png]]
 
-
+---
 
 ## Efeito
 
@@ -11,10 +18,19 @@ Enquanto estiver usando este amuleto, você pode usar uma ação de [Magia](http
 Além disso, você tem [Vantagem](https://www.dndbeyond.com/sources/dnd/free-rules/rules-glossary#Advantage) em testes de resistência para evitar ou encerrar a condição de [Envenenado](https://www.dndbeyond.com/sources/dnd/free-rules/rules-glossary#PoisonedCondition) enquanto usar este amuleto.
 
 Afeta as regras [[Viajando no deserto de Ammódes]]: Usando esse amuleto, o jogador pode ignorar o primeiro nível de exaustão que ganhar cada dia.
+
+O amuleto só desperta seu poder quando exposto à luz do sol. Uma vez ativado e com [sintonia](https://www.dndbeyond.com/sources/dnd/br-2024/rules-glossary#Attunement), não depende mais da exposição solar para funcionar.
+
 ## Papel na História
 
-O Periapt of Health é um artefato único, concedido diretamente por [[Planetar]] ao seu primeiro sacerdote. Não existe outro igual em todo o deserto. Quando o sacerdote morreu, o amuleto foi enterrado com ele na [[Tumba Brilhante]], onde permaneceu selado por eras, até agora.
+O grupo encontrou o amuleto na [[Tumba Brilhante]] durante a [[Sessão 1.5 - O Traje do Deserto]].
 
-[[Atilla]] sabe da existência do artefato e está na caçada por ele e pelos demais itens do sacerdote antes que caiam nas mãos dos magos de [[Athroniaeth]]. Sua motivação é clara: impedir que a facção utilize esses artefatos para terminar a conquista do [[Deserto de Ammódes]]. Mas há um risco que poucos conhecem. Se os magos de Athroniaeth obtiverem o Periapt e os demais artefatos, poderão completar seu domínio sobre o deserto e, ao fazê-lo, correm o perigo de inadvertidamente acordar Planetar e despertar sua fúria.
+Segundo [[Atilla]], o Periapt é uma das cinco peças do traje do deserto, o conjunto que [[Planetar]] teria deixado para seus sacerdotes. Ele afirma não saber onde estão as outras quatro, e considera que duas ou três peças bastariam para atravessar o [[Deserto de Ammódes]] com facilidade.
 
-O amuleto só desperta seu poder quando exposto à luz do sol, uma ligação direta com a natureza celestial de Planetar. Uma vez ativado e com sintonia ([Attuned](https://www.dndbeyond.com/sources/dnd/br-2024/rules-glossary#Attunement)), não depende mais da exposição solar para funcionar.
+Na [[Sessão 2 - A Guerra do Simeno]], o amuleto fechou a luta contra os mephits na casa alugada em [[Ffin]]: [[Kadur]] terminou o combate com 8 pontos de vida e curou exatamente 8.
+
+## Conexões
+
+- [[Tumba Brilhante]]
+- [[Planetar]]
+- [[Atilla]]

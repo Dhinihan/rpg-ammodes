@@ -139,11 +139,11 @@ Ignis invocou uma **coruja** familiar por 10 po. Kadur pagou um artesão para pa
 
 Depois do descanso, o grupo se dividiu. Kadur e Ignis foram atrás de um professor de confiança. Golimar, Maya e Yawar foram à estalagem.
 
-### Dylan e a eleição
+### [[Dylan]] e a eleição
 
-O professor é **Dylan**, elfo velho, amigo de Ignis dos tempos de aula e transferido para Ffin. Abriu a porta de madrugada sem reclamar e pôs um chá.
+O professor é **[[Dylan]]**, elfo velho, amigo de Ignis dos tempos de aula e transferido para Ffin. Abriu a porta de madrugada sem reclamar e pôs um chá.
 
-Ignis contou o ataque no deserto e mostrou o símbolo em forma de mão. Dylan nunca o tinha visto servindo de marca de pertencimento a coisa alguma. Mas reconheceu o nome do professor que Ignis identificou entre os agressores: **[[Llosg]]**. Ninguém o vê há uns quinze dias.
+Ignis contou o ataque no deserto e mostrou o símbolo em forma de mão. [[Dylan]] nunca o tinha visto servindo de marca de pertencimento a coisa alguma. Mas reconheceu o nome do professor que Ignis identificou entre os agressores: **[[Llosg]]**. Ninguém o vê há uns quinze dias.
 
 O resto da conversa foi política interna da academia, que mudou muito desde que Ignis saiu:
 
@@ -151,9 +151,9 @@ O resto da conversa foi política interna da academia, que mudou muito desde que
 - O oponente é **[[Gwydion]]**, que ganhou força nas últimas semanas, depois da tempestade. Propõe unir a prefeitura à reitoria, montar um exército de magos, tornar Ffin prioritariamente uma cidade de magos e expandir a escola sobre o terreno do Templo de Planetar, derrubando o templo se preciso. O discurso é de nós contra eles: quem controla o Simeno deveria controlar a cidade.
 - Hywel trata a escola como polo de conhecimento aberto e defende que os avanços beneficiem todo mundo. É a razão de Ffin ser uma cidade aberta a mercadores, clérigos e Doreán.
 - As academias são autônomas. Existe um conselho de reitores que funda novas escolas e aloca recursos, mas não há cargo acima de reitor. Se os magos de Athroniaeth se unirem, nenhuma força interna de Ffin resiste.
-- **Llosg** lidera a investigação sobre a sabotagem da proteção durante a tempestade. O primeiro acusado foi Atilla, inocentado. Antes Llosg não ligava para política nem para exército, e hoje é só nisso que gasta o tempo.
+- **Gwydion** lidera a investigação sobre a sabotagem da proteção durante a tempestade. O primeiro acusado foi Atilla, inocentado. Antes Llosg não ligava para política nem para exército, e hoje é só nisso que gasta o tempo.
 
-Sobre o teleporte, Dylan foi claro: pelo que Ignis descreveu, olhos brilhando e corpo levado sem conjuração aparente, é ritual e item mágico caro, algo implantado. Exige dinheiro e capacidade arcana de quem está quase no lugar de reitor. Ele nunca viu pesquisa assim, e vai perguntar com cuidado, porque não quer virar alvo.
+Sobre o teleporte, [[Dylan]] foi claro: pelo que Ignis descreveu, olhos brilhando e corpo levado sem conjuração aparente, é ritual e item mágico caro, algo implantado. Exige dinheiro e capacidade arcana de quem está quase no lugar de reitor. Ele nunca viu pesquisa assim, e vai perguntar com cuidado, porque não quer virar alvo.
 
 ### Ava e a profecia do dilúvio
 
@@ -206,7 +206,7 @@ Madrugada em [[Ffin]], numa casa alugada cheia de areia e sete mephits mortos no
 > [!question] Pontas soltas
 > - Quem mandou os mephits, e como eles entraram numa cidade fechada? Foram invocados ou trazidos do plano elemental?
 > - [[Llosg]] sobreviveu ao teleporte da tumba? Onde ele está?
-> - O broche em forma de mão é emblema da própria [[Athroniaeth]] ou marca de um grupo dentro dela? Nem Dylan nem [[Ava]] o reconheceram como marca de pertencimento.
+> - O broche em forma de mão é emblema da própria [[Athroniaeth]] ou marca de um grupo dentro dela? Nem [[Dylan]] nem [[Ava]] o reconheceram como marca de pertencimento.
 > - [[Gwydion]] comanda a célula ou só se aproveita da onda que ela cria?
 > - O que [[Vialis]] escreveu a [[Atilla]], e onde está a próxima peça do traje do deserto?
 > - O que aconteceu na mina atacada por [[Gundrada]], e o que será dos mineradores feitos reféns?

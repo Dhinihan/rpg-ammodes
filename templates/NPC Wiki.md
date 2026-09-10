@@ -11,7 +11,7 @@ faccao:
 
 # {{title}}
 
-![[Caminho_Para_Imagem\|250]]
+![[Caminho_Para_Imagem]]
 
 ---
 

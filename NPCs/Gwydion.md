@@ -1,30 +1,30 @@
 ---
 tags:
-  - npc
+  - npc/wiki
+  - published
 aliases: []
-localizacao: "[[Ffin]]"
-faccao: "[[Athroniaeth]]"
-percepcao_passiva: 10
-intuicao_passiva: 10
-persuasao: 0
-enganacao: 0
-intimidacao: 0
+localizacao: Ffin
+faccao: Athroniaeth
 ---
 
 # Gwydion
 
 ![[Gwydion.png]]
 
-> [!abstract] Resumo de Interpretação
-> **Voz e Trejeitos:** Carismático, excêntrico e confortável ao defender propostas antes impensáveis.
-> **Personalidade:** Ambicioso; aproveita o crescimento do radicalismo sem controlar todas as suas células.
-
 ---
 
-## Notas de Sessão e Preparação
+## Histórico
 
-- Elfo candidato a reitor da escola local de Athroniaeth e rival de [[Hywel]].
-- Defende fundir prefeitura e reitoria, formar um exército de magos para proteger o Simeno e restringir o acesso às cidades do deserto a magos de Athroniaeth.
-- Está associado à Mão de Athroniaeth, que funciona de maneira descentralizada.
-- Não soube da expedição contra [[Atilla]], mas a aprovaria.
-- Lidera uma investigação interna sobre a sabotagem da proteção alkálica e procura um bode expiatório ainda indefinido para sustentar a narrativa de que os magos estão sob ameaça.
+Gwydion é um elfo carismático e excêntrico, candidato à reitoria de [[Athroniaeth]] em [[Ffin]]. Sua candidatura ganhou força nas semanas seguintes à tempestade. Segundo [[Dylan]], é a primeira vez em doze anos de mandato que [[Hywel]] enfrenta um oponente à altura.
+
+Sua plataforma propõe unir a prefeitura à reitoria, formar um exército de magos e tornar Ffin prioritariamente uma cidade de magos. Defende também a expansão da escola sobre o terreno do [[Templo de Planetar]], mesmo que isso exija derrubá-lo. Seu discurso sustenta que quem controla o [[Simeno]] deveria controlar a cidade.
+
+Gwydion lidera a investigação interna sobre a sabotagem da proteção de Ffin durante a tempestade. Conforme o relato de [[Dylan]] na [[Sessão 2 - A Guerra do Simeno]], [[Atilla]] foi o primeiro acusado e acabou inocentado.
+
+## Relacionamentos
+
+- **[[Athroniaeth]]:** Candidato à reitoria da escola de Ffin. Defende ampliar o poder político e militar dos magos sobre a cidade.
+- **[[Hywel]]:** Adversário na eleição. Enquanto Gwydion propõe concentrar o controle da cidade nos magos, Hywel defende a escola como um polo de conhecimento aberto, cujos avanços beneficiem a todos.
+- **[[Templo de Planetar]]:** Seu projeto de expansão da escola ameaça o terreno e a própria existência do templo.
+- **[[Atilla]]:** Foi acusado e depois inocentado na investigação da sabotagem liderada por Gwydion.
+- **[[Ava]]:** Acredita que Hywel vencerá novamente a eleição e não considera Gwydion um problema.

@@ -50,6 +50,8 @@ A origem do templo se perde em tempos imemoriais. [[Planetar]] não é um deus n
 
 Não se sabe quem construiu o templo. Não se sabe em que condições [[Planetar]] abandonou o local -- ou se foi o templo que abandonou a entidade.
 
+Antes de [[Ffin]] existir, os nativos consideravam o lugar amaldiçoado. Não o destruíram nem o saquearam. Apenas o abandonaram. É [[Atilla]] quem conta essa parte da história.
+
 O evento que abriu a brecha no domo permanece sem explicação. Nenhum registro sobreviveu para contá-lo. [[Atilla]] estuda os arquivos remanescentes do templo há anos em busca de respostas, mas até agora encontrou mais perguntas do que conclusões.
 
 ---

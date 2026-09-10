@@ -12,6 +12,20 @@ Para quem olha de fora, as cidades parecem bolhas de esperança flutuando em um 
 
 ---
 
+## Atualizações da wiki
+
+Organizei as informações da [[Sessão 2 - A Guerra do Simeno]] nas páginas abaixo, para facilitar a consulta entre as sessões.
+
+- O relato da [[Sessão 2 - A Guerra do Simeno]] já está disponível, com os acontecimentos da sessão e as pontas que ficaram em aberto.
+- [[Aella]] e [[Colorados]] agora têm páginas com suas lideranças, a formação da coalizão e a participação na guerra contra Ffin.
+- Também entraram as páginas de [[Dylan]], [[Hywel]], [[Gwydion]], [[Llosg]], [[Gundrada]] e [[Theron]]. As de [[Atilla]] e [[Ava]] foram atualizadas com o que aconteceu na sessão.
+- [[Pegadas do Gigante]] e [[Salão Acromático]] ganharam páginas próprias com as descrições dos lugares e o que sabemos sobre eles.
+- Os efeitos e as informações sobre o [[Periapt of Health]], a [[Armadura Animada]] e a [[Espada Animada]] estão reunidos nas páginas de cada item.
+- A página de [[Aella]] tem uma imagem do estandarte, e a dos [[Colorados]] tem uma vista da vila principal da tribo.
+- Os índices de [[Facções]], [[NPCs]], [[Locais]] e [[Items e Objetos]] também foram atualizados com os links dessas páginas.
+
+---
+
 ## O Poder que Brota do Chão
 
 O que move as engrenagens de Ammódes é o **[[Simeno]]**, é a partir dele que a humanidade finalmente pode declarar independência dos deuses e demônios e controlar o seu próprio destino. Ou pelo menos é isso que o membros de [[Athroniaeth]] querem acreditar.
@@ -30,6 +44,7 @@ Esta wiki serve como o registro público da nossa campanha de RPG. Use os links 
 * Os [[Locais]]: Lugares notáveis e pontos de interesse espalhados pelo deserto
 * O Segredo do [[Simeno]]: Entenda como a poeira mágica dita as leis da física, da economia e da criação de itens.
 * As [[Facções]]: Conheça as organizações e povos que disputam poder e sobrevivência em Ammódes
+* Os [[Items e Objetos]]: Artefatos, recursos e equipamentos relevantes para a campanha
 * Os [[NPCs]]: Personagens que habitam o deserto e podem cruzar o caminho dos aventureiros
 * [[Registros de Aventura]]: Acompanhe a trajetória dos jogadores por esse mundo inóspito
 * [[Notícias]]: Acompanhe os anúncios e atualizações da campanha
