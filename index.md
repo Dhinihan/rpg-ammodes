@@ -14,15 +14,13 @@ Para quem olha de fora, as cidades parecem bolhas de esperança flutuando em um 
 
 ## Atualizações da wiki
 
-Organizei as informações da [[Sessão 2 - A Guerra do Simeno]] nas páginas abaixo, para facilitar a consulta entre as sessões.
+O que entrou nas últimas 24 horas.
 
-- O relato da [[Sessão 2 - A Guerra do Simeno]] já está disponível, com os acontecimentos da sessão e as pontas que ficaram em aberto.
-- [[Aella]] e [[Colorados]] agora têm páginas com suas lideranças, a formação da coalizão e a participação na guerra contra Ffin.
-- Também entraram as páginas de [[Dylan]], [[Hywel]], [[Gwydion]], [[Llosg]], [[Gundrada]] e [[Theron]]. As de [[Atilla]] e [[Ava]] foram atualizadas com o que aconteceu na sessão.
-- [[Pegadas do Gigante]] e [[Salão Acromático]] ganharam páginas próprias com as descrições dos lugares e o que sabemos sobre eles.
-- Os efeitos e as informações sobre o [[Periapt of Health]], a [[Armadura Animada]] e a [[Espada Animada]] estão reunidos nas páginas de cada item.
-- A página de [[Aella]] tem uma imagem do estandarte, e a dos [[Colorados]] tem uma vista da vila principal da tribo.
-- Os índices de [[Facções]], [[NPCs]], [[Locais]] e [[Items e Objetos]] também foram atualizados com os links dessas páginas.
+- [[Dylan]] ganhou retrato.
+- A página de [[Athroniaeth]] agora tem o estandarte da coruja, além da ilustração que a página já tinha.
+- [[Ffin]] ganhou o estandarte da cidade: montanhas cinzas sobre fundo azul, com uma lua no centro.
+
+O histórico de anúncios da campanha está em [[Notícias]].
 
 ---
 
