@@ -16,10 +16,20 @@ estado:
 - Os detidos foram colocados em celas temporárias na prefeitura; Ffin normalmente exila em vez de prender. ([[Sessão 1.5 - O Traje do Deserto]])
 - Existe uma saída secreta construída nas fundações pelos Doreán que ergueram a cidade. Ela ainda é usada para entrar e sair sem os olhos dos magos. ([[Sessão 1.5 - O Traje do Deserto]])
 
+## Fatos observados na Sessão 2
+
+- O grupo voltou ao meio-dia, dois dias depois da emboscada e um dia após o previsto. ([[Sessão 2 - A Guerra do Simeno]])
+- Um mercador levou à cidade a notícia do ataque [[Doreán]] a um carregamento de [[Simeno]]; um grupo de magos saiu à procura dos responsáveis. ([[Sessão 2 - A Guerra do Simeno]])
+- Na cidade, tudo de ruim passou a ser culpa dos [[Doreán]]. ([[Sessão 2 - A Guerra do Simeno]])
+- [[Ava]] estava hospedada na [[Estalagem da Pedra Dura]] e procurou o grupo. ([[Sessão 2 - A Guerra do Simeno]])
+- A perda do carregamento atacado por [[Theron]] não seca a cidade, mas deve provocar racionamento de água. ([[Sessão 2 - A Guerra do Simeno]])
+- Na madrugada seguinte, levantou vento, que em [[Ffin]] não existe por causa do [[Isolamento Arkalico]]; a janela sem trinco da casa alugada do grupo abriu e entrou areia demais para a corrente. Da areia vieram sete mephits. O grupo sobreviveu e os corpos ficaram no chão. ([[Sessão 2 - A Guerra do Simeno]])
+
 ## Estado atual e pendências
 
 - A acusação contra [[Yawar]] já foi resolvida, mas ainda não foi mostrado em mesa como isso aconteceu.
 - Não foi estabelecido quem realmente tentou desligar a proteção nem como obteve o conhecimento necessário.
+- A cidade deve acordar racionando água e com o clima hostil aos [[Doreán]].
 
 ## Preparação da Sessão 2
 

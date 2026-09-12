@@ -50,6 +50,13 @@ intimidacao: 0
 - A carta de [[Vialis]] ainda não chegou às mãos de Atilla. Vialis está sob custódia de [[Gundrada]] desde o ataque à mina.
 - Sua assistente [[Celidwen]] deveria retornar ao [[Templo de Planetar]] com a carta.
 
+### Preparação da Sessão 3
+
+- Foi atacado por mephits na mesma noite do ataque ao grupo; sobreviveu graças a [[Ludger]], que tenta curá-lo sem muito sucesso.
+- Mantém uma sending stone compartilhada com [[Vialis]] e sabe que ele foi capturado por [[Gundrada]].
+- [[Atilla]] não morre de qualquer forma. Se o grupo não encontrar [[Celidwen]], [[Ludger]] alega que ele morreu e o trata em segredo no [[Salão Acromático]]; [[Celidwen]] sabe da verdade.
+- Se o grupo o socorre, a decisão de como protegê-lo é conjunta com ele, [[Celidwen]] e [[Ludger]].
+
 ### O que ele esconde
 
 - Atilla esconde a importância real do [[Salão Acromático]] e minimiza seus fenômenos mágicos e temporais. O que está fora da nota pública do local está em [[Salão Acromático - Notas privadas]].

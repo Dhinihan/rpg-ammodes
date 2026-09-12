@@ -4,6 +4,8 @@ tags:
 ---
 # Ffin
 
+![[Estandarte de Ffin.png]]
+
 ---
 
 ## Visão Geral
@@ -17,6 +19,8 @@ tags:
 [[Ffin]] é um assentamento finalizado recentemente sob encomenda para [[Athroniaeth]]. A cidade destaca-se como o primeiro posto avançado em uma zona de tempestade de areia constante, um feito da engenharia arcana possibilitado pelo uso do [[Simeno]]. Embora outras cidades também utilizem o [[Isolamento Arkalico]], a proteção de [[Ffin]] é o ápice de 20 anos de desenvolvimento arcano. Se esta nova barreira puder ser replicada, o avanço da exploração pelo [[Grande Deserto de Ammódes]] poderá finalmente ser retomado.
 
 Parte do sucesso em domar a fúria dos ventos e da areia deve-se à posição geológica da cidade: as cordilheiras ao redor quebram as correntes mais fortes, permitindo que, em certas horas do dia, o ritual de proteção da área seja renovado. Alguns críticos, contudo, afirmam que é a bênção do antigo [[Templo de Planetar]] (preservado no coração da cidade) que realmente protege a região.
+
+O estandarte da cidade traz montanhas cinzas sobre fundo azul, com uma lua no centro.
 
 ![[Ffin.png]]
 

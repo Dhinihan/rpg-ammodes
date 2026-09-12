@@ -22,6 +22,12 @@ faccao: "[[Athroniaeth]]"
 - Alega estar doente; usa a licença para recuperar-se dos ferimentos e continuar conspirando com a Mão.
 - O relato de Atilla sobre sua participação deverá causar estranheza em [[Rhiannon]].
 
+### Preparação da Sessão 3
+
+- [[Llosg]] está morto, junto com os outros magos da expedição da [[Tumba Brilhante]]; para a academia, eles foram mortos enquanto dormiam.
+- A Mão tentou apagar os rastros e simulou a cena de crime, mas o trabalho tem falhas.
+- O escritório dele guarda um diário secreto sem nomes: a doutrina da Mão, assassinatos dos quais ela participou e pistas do envolvimento na sabotagem. Arcana CD 15 ou Investigação CD 20 para encontrar; Investigação ou Percepção 15 para ler com cuidado, buscando segredos.
+
 ## Limites da nota pública
 
 - A aparência e o cargo de magíster de evocação são informações públicas.

@@ -32,3 +32,7 @@ intimidacao: 0
 - O jeito professoral é conhecido. O paternalismo e a condescendência ficam como orientação privada de interpretação.
 - A defesa do conhecimento aberto e da colaboração com outros setores é uma posição pública de sua atuação e campanha.
 - Não foi estabelecida uma relação pessoal com [[Ignis Fênix]] além do vínculo com a mesma academia.
+
+### Preparação da Sessão 3
+
+- Enfrenta o protesto liderado por [[Gwydion]] na reitoria, que cobra sua saída pela falta de segurança após os assassinatos noturnos.

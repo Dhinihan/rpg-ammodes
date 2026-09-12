@@ -27,3 +27,12 @@ intimidacao: 0
 - Relatou que a versão oficial o acusava de liderar uma tentativa de desligar a proteção da cidade. ([[Sessão 1.5 - O Traje do Deserto]])
 - Considerou a acusação estranha, pois desativar a barreira exigiria conhecimento profundo dos encantamentos de [[Athroniaeth]]. ([[Sessão 1.5 - O Traje do Deserto]])
 - Aconselhou Yawar a se entregar diretamente a [[Rhiannon]], mas também indicou a saída de ventilação da cozinha quando guardas estavam na porta. ([[Sessão 1.5 - O Traje do Deserto]])
+
+### Fatos observados em mesa
+
+- Informou que um mercador chegou à cidade dizendo que Doreán atacaram um carregamento de [[Simeno]], e que um grupo de magos saiu à procura dos responsáveis. ([[Sessão 2 - A Guerra do Simeno]])
+- Notou que, em [[Ffin]], tudo de ruim passou a ser culpa dos [[Doreán]]. ([[Sessão 2 - A Guerra do Simeno]])
+
+### Preparação da Sessão 3
+
+- Possibilidade: o grupo pode procurá-la para ver se está bem ou se também foi atacada pela relação com os jogadores.

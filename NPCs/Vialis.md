@@ -23,7 +23,9 @@ intimidacao: 0
 
 ## Notas de Sessão e Preparação
 
-- Arqueólogo humano e amigo de Atilla.
+- Arqueólogo humano e amigo de [[Atilla]].
 - Encontrou outro templo antigo e conhece sua localização; o templo está associado à bota do traje do deserto.
-- Estava alojado junto a mineradores de Simeno.
-- É capturado por [[Gundrada]] durante o ataque à mina porque carrega mapas do coração do deserto.
+- Estava alojado junto a mineradores de [[Simeno]].
+- Foi capturado por [[Gundrada]] durante o ataque à mina porque carregava mapas do coração do deserto. ([[Sessão 2 - A Guerra do Simeno]])
+- [[Atilla]] sabe do cativeiro por uma sending stone que mantém com ele.
+- Pode ter sido levado para [[Kariate Aljusur]]; a vila seria parada antes do próximo templo que ele conhece.

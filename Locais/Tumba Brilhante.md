@@ -38,7 +38,8 @@ localização: "[[Deserto de Ammódes]]"
 - A prova associa bota, manto, anel, amuleto e diadema a perigos do deserto; as peças de bronze nas estátuas eram marcadores, não relíquias. ([[Sessão 1.5 - O Traje do Deserto]])
 - Na forja, o cascalho branco do teto oxida temporariamente os Azer, e seus martelos invertem a luz da placa atingida e das placas ortogonalmente adjacentes. ([[Sessão 1.5 - O Traje do Deserto]])
 - O sarcófago do Primeiro Sacerdote continha o [[Periapt of Health]], retirado pelo grupo. Os Azer ficaram travados em bronze, não destruídos. ([[Sessão 1.5 - O Traje do Deserto]])
+- Durante a espera, um destacamento [[Doreán]] ocupou a tumba; [[Atilla]] sentou-se na frente da passagem secreta para ninguém descer. ([[Sessão 2 - A Guerra do Simeno]])
 
 ## Estado atual
 
-O grupo e [[Atilla]] saíram da tumba. Uma multidão de [[Doreán]] armados os espera do lado de fora.
+A tumba permanece como o grupo a deixou: o sarcófago do Primeiro Sacerdote aberto, os Azer travados em bronze e a passagem secreta sob vigilância de [[Atilla]]. O grupo seguiu para as [[Pegadas do Gigante]] e voltou a [[Ffin]].

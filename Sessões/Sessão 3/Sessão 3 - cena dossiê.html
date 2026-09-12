@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sessão 3 — Trilha de mesa (modo duplo)</title>
+<style>
+:root{
+  --serif:Georgia,"Iowan Old Style","Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+  --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+  --coral:#c04743;
+  --coral-claro:#ff8a86;
+  --agua:#1c7a63;
+  --ambar:#a34d00;
+}
+*{box-sizing:border-box}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ambar);outline-offset:2px;border-radius:4px}
+body[data-mode="preparo"] :focus-visible{outline-color:#7fd6bd}
+.pular{position:absolute;left:-9999px;top:0;background:#111;color:#fff;padding:.6rem 1rem;z-index:200;font-weight:bold}
+.pular:focus{left:.5rem;top:.5rem}
+
+/* ============ Casca dos modos ============ */
+body[data-mode="mesa"]{
+  margin:0;height:100vh;height:100dvh;overflow:hidden;
+  display:flex;flex-direction:column;
+  background:#f4ead8;color:#241d12;
+  font-family:var(--sans);line-height:1.42;
+  font-size:clamp(13px,2.05vh,16px);
+}
+body[data-mode="preparo"]{
+  margin:0;background:#0f1418;color:#e7ebee;
+  font-family:var(--sans);line-height:1.6;font-size:16px;
+}
+body[data-mode="mesa"] #app-preparo{display:none}
+body[data-mode="preparo"] #app-mesa{display:none}
+
+/* ============ Topo compartilhado ============ */
+.topo{display:flex;flex-wrap:wrap;align-items:center;gap:.45rem 1rem;padding:.5rem .8rem}
+body[data-mode="mesa"] .topo{background:#2a2119;color:#f4ead8;border-bottom:4px solid var(--coral)}
+body[data-mode="preparo"] .topo{background:#0a0e11;border-bottom:4px solid #3d5f78}
+.topo .marca h1{font-family:var(--serif);margin:0;font-size:clamp(1rem,2.7vh,1.35rem);letter-spacing:.02em}
+.topo .marca .sub{margin:.1rem 0 0;font-family:var(--mono);font-size:.68rem;opacity:.82}
+.topo .modo-linha{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem .9rem;margin-left:auto}
+.topo fieldset{border:1px solid rgba(150,150,150,.55);border-radius:8px;margin:0;padding:.15rem .55rem .3rem}
+.topo legend{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;padding:0 .3rem}
+.topo label{display:inline-flex;gap:.35rem;align-items:center;margin-right:.7rem;cursor:pointer;font-weight:bold;font-size:.82rem}
+.topo input[type=radio]{width:1.05rem;height:1.05rem;accent-color:var(--coral);cursor:pointer}
+body[data-mode="preparo"] .topo input[type=radio]{accent-color:#7fd6bd}
+.progresso{font-family:var(--mono);font-size:.7rem;opacity:.9}
+.chips{display:flex;flex-wrap:wrap;gap:.35rem;width:100%}
+body[data-mode="mesa"] .chips{display:none}
+.chip{font-family:var(--mono);font-size:.68rem;border:1px solid currentColor;border-radius:999px;padding:.1rem .55rem;opacity:.85}
+
+/* ============ MESA: trilha ============ */
+#app-mesa{flex:1;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto}
+.trilha{display:flex;flex-wrap:wrap;align-items:center;gap:.3rem .45rem;padding:.35rem .7rem;background:#3a2c1f;color:#f4ead8;border-bottom:1px solid rgba(0,0,0,.25)}
+.trilha .dica{font-family:var(--mono);font-size:.64rem;opacity:.78;margin-left:auto}
+.trilha [role=tab]{
+  cursor:pointer;border:1px solid rgba(244,234,216,.45);border-radius:999px;
+  background:transparent;color:inherit;font-family:var(--mono);font-size:.74rem;
+  padding:.18rem .65rem;display:inline-flex;gap:.35rem;align-items:center;
+}
+.trilha [role=tab] .n{font-weight:bold;opacity:.8}
+.trilha [role=tab]:hover{background:rgba(244,234,216,.16)}
+.trilha [role=tab][aria-selected="true"]{background:var(--coral);border-color:var(--coral);color:#fff;font-weight:bold}
+.trilha [role=tab][aria-selected="true"] .n{opacity:1}
+
+/* palco */
+#palco{display:grid;grid-template-columns:minmax(0,1fr) clamp(215px,23vw,320px);gap:.55rem;padding:.55rem .7rem;min-height:0;overflow:hidden}
+#momens{position:relative;min-height:0;overflow:hidden}
+.momento{
+  height:100%;min-height:0;display:grid;grid-template-rows:auto auto minmax(0,1fr);gap:.4rem;
+}
+.momento[hidden]{display:none}
+.mom-cabeca{display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;border-bottom:2px solid rgba(36,29,18,.18);padding-bottom:.2rem}
+.mom-cabeca .bloco{min-width:0}
+.mom-num{font-family:var(--mono);font-size:.66rem;text-transform:uppercase;letter-spacing:.12em;color:var(--coral);font-weight:bold}
+.mom-cabeca h2{font-family:var(--serif);font-size:clamp(1.05rem,3vh,1.5rem);margin:.05rem 0 0;color:#7a2a1e;line-height:1.15}
+.mom-tempo{font-family:var(--mono);font-size:.68rem;color:#5a4a36}
+.mom-decisao{margin:0;font-size:.94em;background:rgba(192,71,67,.11);border-left:4px solid var(--coral);padding:.28rem .5rem;border-radius:0 5px 5px 0}
+.mom-decisao strong{color:#7a2a1e}
+.mom-corpo{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) clamp(140px,17vw,225px);gap:.5rem;min-height:0}
+
+/* gatilhos */
+.gatilhos{display:flex;flex-direction:column;gap:.4rem;min-height:0}
+.gatilho{flex:1;display:flex;gap:.5rem;align-items:flex-start;min-height:0;border:1px solid #d9c8a6;border-radius:8px;background:#fffdf6;padding:.4rem .5rem}
+.gatilho input[type=checkbox]{flex:0 0 auto;width:1.15rem;height:1.15rem;margin:.15rem 0 0;accent-color:var(--coral);cursor:pointer}
+.gatilho .texto{min-width:0}
+.gatilho strong{display:block;font-family:var(--serif);font-size:1rem;line-height:1.2}
+.gatilho .linha{display:block;font-size:.86em;color:#4b3d2a;margin-top:.1rem}
+.gatilho.feito .texto{opacity:.5;text-decoration:line-through}
+
+/* marcações */
+.marcas{display:flex;flex-direction:column;min-height:0;overflow:hidden;border:1px solid #e0d1b4;border-radius:8px;background:#fbf5e9;padding:.35rem .45rem}
+.marcas h3{font-family:var(--mono);font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;color:#7a6a52;margin:.22rem 0 .08rem}
+.marcas h3:first-child{margin-top:0}
+.chips-m{display:flex;flex-wrap:wrap;gap:.18rem}
+.chip-m{display:inline-flex;align-items:center;gap:.25rem;border:1px solid #cbb892;border-radius:999px;padding:.02rem .42rem;font-size:.76em;background:#fff8ea;cursor:pointer;line-height:1.35}
+.chip-m input{width:.85rem;height:.85rem;accent-color:var(--agua);cursor:pointer}
+.chip-m:hover{background:#f4e7cd}
+.chip-m.feito{opacity:.5;text-decoration:line-through}
+
+/* figura */
+.mom-figura{margin:0;min-height:0;display:flex;flex-direction:column;gap:.22rem}
+.mom-figura .moldura{flex:1;min-height:0;border-radius:8px;overflow:hidden;border:1px solid #d9c8a6;background:#e9dcc4}
+.mom-figura img{width:100%;height:100%;object-fit:cover;display:block}
+.mom-figura.retrato img{object-position:center 18%}
+.mom-figura figcaption{font-family:var(--mono);font-size:.58rem;color:#6a5a44;line-height:1.25}
+
+/* lateral: notas */
+.lateral{display:flex;flex-direction:column;gap:.35rem;min-height:0;border:1px solid #d9c8a6;border-radius:10px;background:#fffdf6;padding:.45rem .55rem}
+.lateral h3{font-family:var(--mono);font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;margin:0;color:#7a2a1e}
+.lateral .rotulo-notas{font-size:.72em;color:#6a5a44}
+#notas-mesa{flex:1;min-height:2.5rem;max-height:100%;resize:vertical;width:100%;border:1px solid #d9c8a6;border-radius:7px;padding:.4rem .45rem;font-family:var(--sans);font-size:.9em;line-height:1.4;background:#fffef9;color:inherit}
+.estado{font-family:var(--mono);font-size:.62rem;color:#6a5a44}
+
+/* rodapé mesa */
+.rodape-mesa{display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.25rem .7rem;background:#2a2119;color:#f4ead8;font-family:var(--mono);font-size:.64rem}
+.rodape-mesa .aviso{opacity:.85}
+button.limpar{cursor:pointer;border-radius:7px;padding:.25rem .6rem;font-family:var(--mono);font-size:.66rem;border:1px solid currentColor;background:transparent;color:inherit}
+button.limpar:hover{background:rgba(192,71,67,.25)}
+body[data-mode="mesa"] button.limpar{border-color:var(--coral-claro);color:#ffd9c9}
+
+/* ============ Trilha A — ficha de cena (variação A) ============ */
+body[data-mode="mesa"]{font-size:clamp(12px,1.95vh,15px)}
+body[data-mode="mesa"] .topo{flex-wrap:nowrap;gap:.4rem .7rem;padding:.28rem .7rem}
+.topo .marca{min-width:0}
+.topo .marca h1{font-size:1rem;white-space:nowrap}
+.topo .marca .sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topo .modo-linha{flex-wrap:nowrap;gap:.4rem .6rem}
+.topo fieldset{padding:.08rem .45rem .2rem;white-space:nowrap}
+.topo legend{font-size:.58rem}
+.topo label{font-size:.72rem;margin-right:.45rem}
+.topo input[type=radio]{width:.9rem;height:.9rem}
+.topo .progresso{font-size:.68rem;white-space:nowrap}
+body[data-mode="mesa"] .trilha{flex-wrap:nowrap;overflow:hidden;padding:.25rem .6rem;gap:.25rem .35rem}
+.trilha [role=tab]{font-size:.7rem;padding:.14rem .55rem;white-space:nowrap}
+.trilha .dica{font-size:.6rem;white-space:nowrap}
+body[data-mode="mesa"] #palco{display:block;padding:.4rem .6rem}
+#momens{height:100%;min-height:0}
+.momento{gap:.32rem}
+.mom-cabeca{padding-bottom:.15rem}
+.mom-cabeca h2{font-size:clamp(.95rem,2.6vh,1.2rem)}
+.mom-decisao{font-size:.88em;padding:.22rem .5rem}
+.ver-preparo{font-family:var(--mono);font-size:.66rem;white-space:nowrap}
+.ficha{height:100%;min-height:0;display:grid;grid-template-columns:minmax(0,1.38fr) minmax(0,.92fr) minmax(0,1.18fr) clamp(104px,12.5vw,172px);gap:.45rem;overflow:hidden}
+.col{min-height:0;min-width:0;overflow:hidden;display:flex;flex-direction:column;gap:.26rem}
+.col>h3{font-family:var(--mono);font-size:.6rem;text-transform:uppercase;letter-spacing:.09em;color:#7a2a1e;margin:0;border-bottom:1px solid rgba(36,29,18,.28);padding-bottom:.12rem}
+.col.puxa{justify-content:stretch}
+.col.puxa .gatilho{flex:0 0 auto;display:flex;flex-direction:column;justify-content:center}
+.gatilho{position:relative;display:block;border:1px solid #d9c8a6;border-radius:7px;background:#fffdf6;padding:.3rem .45rem;cursor:pointer;line-height:1.3}
+.ficha .gatilho input[type=checkbox]{position:absolute;top:.32rem;left:.32rem;width:1rem;height:1rem;margin:0;opacity:0;cursor:pointer}
+.gatilho .texto{display:block}
+.gatilho strong{display:block;font-family:var(--serif);font-size:.94rem;line-height:1.2}
+.gatilho .linha{display:block;font-size:.8em;color:#4b3d2a;margin-top:.06rem}
+.gatilho .refs{display:block;margin-top:.1rem}
+.gatilho.feito{background:#ece1c9}
+.gatilho.feito .texto{opacity:.5;text-decoration:line-through}
+.gatilho:focus-within,.quem-linha:focus-within,.mini:focus-within{outline:3px solid var(--ambar);outline-offset:1px;border-radius:4px}
+.quem-linha{position:relative;display:block;border-bottom:1px dotted #c4ae86;padding:.16rem .1rem;cursor:pointer;font-size:.8em;line-height:1.3}
+.ficha .quem-linha input[type=checkbox]{position:absolute;top:.2rem;left:0;width:.9rem;height:.9rem;margin:0;opacity:0;cursor:pointer}
+.quem-linha .nome{font-weight:bold}
+.quem-linha.feito{opacity:.5;text-decoration:line-through}
+.grupo h4{font-family:var(--mono);font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:#7a6a52;margin:.1rem 0 .12rem}
+.improviso{margin-top:auto;border-top:1px dashed #c4ae86;padding-top:.3rem}
+.improviso ul{margin:.1rem 0 0;padding-left:.95rem}
+.improviso li{margin:.14rem 0;font-size:.82em;line-height:1.3;color:#4b3d2a}
+.grupo:first-of-type h4{margin-top:0}
+.mini{position:relative;display:inline-block;border:1px solid #cbb892;border-radius:999px;padding:.04rem .42rem;font-size:.74em;background:#fff8ea;cursor:pointer;line-height:1.4;margin:0 .14rem .16rem 0}
+.ficha .mini input[type=checkbox]{position:absolute;top:.15rem;left:.3rem;width:.8rem;height:.8rem;margin:0;opacity:0;cursor:pointer}
+.mini.feito{opacity:.5;text-decoration:line-through}
+.mini:hover{background:#f4e7cd}
+.refs{font-size:.7em;font-family:var(--mono)}
+.refs a{color:#0f5b4a}
+.gatilho .refs a[data-alvo],.grupo .refs a[data-alvo]{color:#7a2a1e}
+a.wiki{color:#0f5b4a;border-bottom:1px dotted currentColor;text-decoration:none}
+a.wiki:hover{background:rgba(28,122,99,.14)}
+.solta{margin:.1rem 0 0;font-size:.78em;color:#4b3d2a;border-left:3px solid #cbb892;padding-left:.4rem;line-height:1.32}
+.bestas{border:1px solid var(--coral);background:#fff6ef;border-radius:7px;padding:.28rem .42rem;font-size:.78em;line-height:1.32}
+.bestas .t{color:#7a2a1e}
+.bestas .itens{margin-top:.14rem}
+.midia{margin:0;min-height:0;min-width:0;display:flex;flex-direction:column;gap:.2rem}
+.midia .moldura{flex:1;min-height:0;border-radius:7px;overflow:hidden;border:1px solid #d9c8a6;background:#e9dcc4}
+.midia img{width:100%;height:100%;object-fit:cover;display:block}
+.midia.retrato img{object-position:center 18%}
+.midia figcaption{font-family:var(--mono);font-size:.56rem;color:#6a5a44;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rodape-mesa{gap:.6rem}
+.gaveta{position:relative}
+.gaveta>summary{cursor:pointer;list-style:none;border:1px solid var(--coral-claro);border-radius:7px;padding:.22rem .6rem;color:#ffd9c9}
+.gaveta>summary::-webkit-details-marker{display:none}
+.gaveta>summary:hover{background:rgba(192,71,67,.25)}
+.gaveta[open] .gaveta-corpo{position:fixed;right:.7rem;bottom:2.1rem;width:min(540px,92vw);background:#fffdf6;color:#241d12;border:1px solid #d9c8a6;border-radius:10px;padding:.5rem .6rem;z-index:120;box-shadow:0 8px 30px rgba(0,0,0,.35)}
+.gaveta-corpo p.dica{margin:0 0 .3rem;font-size:.72em;color:#6a5a44;font-family:var(--sans)}
+.gaveta-corpo textarea{width:100%;min-height:5rem;max-height:32vh;resize:vertical;border:1px solid #d9c8a6;border-radius:7px;padding:.4rem .45rem;font-family:var(--sans);font-size:.85rem;line-height:1.4;background:#fffef9;color:inherit;overflow:auto}
+.gaveta-corpo .estado{font-family:var(--mono);font-size:.62rem;color:#6a5a44;margin:.25rem 0 0}
+@media (max-width:800px){
+  body[data-mode="mesa"]{overflow:auto;height:auto;min-height:100vh;min-height:100dvh}
+  body[data-mode="mesa"] .topo{flex-wrap:wrap}
+  .topo .marca{flex:1 1 220px}
+  body[data-mode="mesa"] .trilha{flex-wrap:wrap;overflow:visible}
+  .trilha .dica{white-space:normal;flex:1 1 100%}
+  .mom-cabeca{flex-wrap:wrap}
+  #app-mesa{grid-template-rows:auto auto auto}
+  body[data-mode="mesa"] #palco{overflow:visible}
+  #momens{height:auto}
+  .momento{height:auto}
+  .ficha{height:auto;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:visible}
+  .col{overflow:visible}
+  .midia{min-height:190px;min-width:0}
+  .rodape-mesa{flex-wrap:wrap}
+}
+@media (max-width:520px){.ficha{grid-template-columns:minmax(0,1fr)}}
+
+/* ============ DOSSIÊ DA MADRUGADA (cena-dossie, sobrepõe Trilha A) ============ */
+body[data-mode="mesa"]{background:#221a12;font-family:var(--serif);font-size:clamp(11.5px,2.02vh,16px)}
+body[data-mode="mesa"] .topo{background:#191008;border-bottom:3px solid #b3402f}
+body[data-mode="mesa"] .topo .marca h1{font-family:var(--mono);letter-spacing:.06em}
+body[data-mode="mesa"] .trilha{background:transparent;border-bottom:none;padding:.42rem .8rem 0;gap:.32rem;position:relative;z-index:5}
+body[data-mode="mesa"] .trilha [role=tab]{background:#cdbd97;color:#4b3d2a;border:1px solid #a8936b;border-bottom:none;border-radius:9px 11px 0 0;padding:.24rem .6rem .2rem;box-shadow:inset 0 -3px 5px rgba(36,29,18,.18)}
+body[data-mode="mesa"] .trilha [role=tab]:hover{background:#dccda9}
+body[data-mode="mesa"] .trilha [role=tab][aria-selected="true"]{background:#efe4cd;color:#241d12;border-color:#efe4cd;padding-top:.44rem;transform:translateY(1px);box-shadow:0 -4px 10px rgba(0,0,0,.45);font-weight:bold}
+body[data-mode="mesa"] .trilha .dica{color:#b7a684}
+body[data-mode="mesa"] #palco{position:relative;overflow:hidden;background:
+  radial-gradient(1100px 480px at 18% -10%, rgba(255,240,210,.07), transparent 60%),
+  radial-gradient(900px 620px at 92% 112%, rgba(0,0,0,.4), transparent 60%),
+  repeating-linear-gradient(33deg, rgba(255,255,255,.014) 0 3px, transparent 3px 7px),
+  #221a12}
+body[data-mode="mesa"] #momens{padding:.55rem 0 .3rem}
+body[data-mode="mesa"] .momento{position:relative;width:92%;height:100%;margin:0 auto;background:
+  repeating-linear-gradient(transparent 0 25px, rgba(36,29,18,.055) 25px 26px),
+  linear-gradient(rgba(120,90,40,.06), rgba(120,90,40,.02)),
+  #efe4cd;transform:rotate(-0.4deg);border-radius:2px;
+  box-shadow:0 16px 36px rgba(0,0,0,.55), 0 2px 6px rgba(0,0,0,.5);
+  padding:.95rem .62rem .38rem;overflow:hidden;gap:.3rem}
+.momento::before,.momento::after{content:"";position:absolute;top:-7px;width:88px;height:22px;background:rgba(224,210,180,.88);border-left:1px dashed rgba(120,100,70,.4);border-right:1px dashed rgba(120,100,70,.4);box-shadow:0 1px 3px rgba(0,0,0,.3);z-index:6;pointer-events:none}
+.momento::before{left:5%;transform:rotate(-4deg)}
+.momento::after{right:5%;transform:rotate(3.5deg)}
+body[data-mode="mesa"] .mom-cabeca{align-items:center;border-bottom:2px solid rgba(36,29,18,.4);padding-bottom:.2rem}
+body[data-mode="mesa"] .mom-cabeca h2{font-family:var(--mono);font-weight:bold;color:#241d12;letter-spacing:.01em}
+body[data-mode="mesa"] .mom-num{color:#5a4a36}
+body[data-mode="mesa"] .mom-tempo{color:#5a4a36}
+.carimbo{display:inline-block;font-family:var(--mono);font-weight:bold;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:#b3402f;border:3px double #b3402f;border-radius:4px;padding:.14rem .5rem;transform:rotate(2deg);opacity:.93;white-space:nowrap;background:rgba(179,64,47,.05)}
+body[data-mode="mesa"] .ver-preparo{font-family:var(--mono);font-size:.64rem;color:#1c7a63}
+body[data-mode="mesa"] .mom-decisao{background:rgba(255,232,138,.62);border-left:4px solid #b3402f;transform:rotate(-.4deg);box-shadow:1px 2px 0 rgba(36,29,18,.2);margin-left:.2rem;margin-right:.5rem}
+body[data-mode="mesa"] .mom-decisao strong{color:#7a2a1e}
+body[data-mode="mesa"] .ficha{grid-template-columns:minmax(0,1.16fr) minmax(0,1fr) minmax(0,1.04fr) clamp(104px,13vw,172px);gap:.5rem}
+body[data-mode="mesa"] .momento[data-momento="2"] .ficha{grid-template-columns:minmax(0,1.02fr) minmax(0,1.12fr) minmax(0,.94fr) clamp(104px,13vw,172px)}
+body[data-mode="mesa"] .momento[data-momento="3"] .ficha{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr) minmax(0,1.2fr) clamp(100px,12vw,160px)}
+body[data-mode="mesa"] .momento[data-momento="4"] .ficha{grid-template-columns:minmax(0,1.2fr) minmax(0,.96fr) minmax(0,1fr) clamp(104px,13vw,172px)}
+body[data-mode="mesa"] .momento[data-momento="5"] .ficha{grid-template-columns:minmax(0,1.05fr) minmax(0,1.08fr) minmax(0,1fr) clamp(104px,13vw,172px)}
+body[data-mode="mesa"] .momento[data-momento="6"] .ficha{grid-template-columns:minmax(0,1.22fr) minmax(0,.9fr) minmax(0,1.08fr) clamp(100px,12vw,160px)}
+body[data-mode="mesa"] .col>h3{font-family:var(--mono);color:#241d12;border-bottom:2px solid #241d12;letter-spacing:.1em}
+body[data-mode="mesa"] .col.puxa{counter-reset:fio}
+body[data-mode="mesa"] .col.puxa .gatilho{counter-increment:fio;background:transparent;border:none;border-bottom:1px solid rgba(36,29,18,.4);border-radius:0;padding:.26rem .2rem .26rem 2rem;flex:1 1 auto}
+body[data-mode="mesa"] .col.quem{gap:.28rem}
+body[data-mode="mesa"] .improviso{background:rgba(28,122,99,.08);border:1px dashed #1c7a63;border-radius:3px;padding:.22rem .4rem;transform:rotate(-.4deg);margin-left:.1rem;margin-right:.4rem}
+body[data-mode="mesa"] .col.puxa .gatilho::before{content:counter(fio);position:absolute;left:.15rem;top:50%;transform:translateY(-50%);width:1.25rem;height:1.25rem;border:2px solid #1c7a63;border-radius:50% 46% 52% 48%;color:#1c7a63;font-family:var(--mono);font-size:.68rem;font-weight:bold;display:flex;align-items:center;justify-content:center}
+body[data-mode="mesa"] .col.puxa .gatilho:nth-of-type(2){transform:rotate(-.5deg) translateX(.15rem)}
+body[data-mode="mesa"] .col.puxa .gatilho:nth-of-type(3){transform:rotate(.45deg)}
+body[data-mode="mesa"] .col.puxa .gatilho:nth-of-type(4){transform:rotate(-.35deg) translateX(.1rem)}
+body[data-mode="mesa"] .col.puxa .gatilho strong{font-size:.9rem}
+body[data-mode="mesa"] .quem-linha{background:#fbf3df;border:1px solid #c4ae86;border-radius:3px;box-shadow:1px 2px 0 rgba(36,29,18,.25);padding:.2rem .35rem;margin:0 .15rem .24rem 0}
+body[data-mode="mesa"] label.quem-linha:nth-of-type(1){transform:rotate(-1deg)}
+body[data-mode="mesa"] label.quem-linha:nth-of-type(2){transform:rotate(.7deg) translateX(.12rem)}
+body[data-mode="mesa"] label.quem-linha:nth-of-type(3){transform:rotate(-.5deg)}
+body[data-mode="mesa"] label.quem-linha:nth-of-type(4){transform:rotate(.9deg)}
+body[data-mode="mesa"] label.quem-linha:nth-of-type(5){transform:rotate(-.8deg) translateX(.1rem)}
+body[data-mode="mesa"] .grupo h4{color:#1c7a63}
+body[data-mode="mesa"] .col.sai .mini{background:transparent;border:1.6px solid #1c7a63;border-radius:48% 52% 55% 45%/58% 48% 52% 44%;color:#241d12}
+body[data-mode="mesa"] .col.sai .mini:nth-of-type(2n){border-radius:54% 46% 44% 56%/44% 56% 46% 54%}
+body[data-mode="mesa"] .col.sai .mini:hover{background:rgba(28,122,99,.12)}
+body[data-mode="mesa"] .solta{border-left:3px solid #1c7a63;font-style:italic}
+body[data-mode="mesa"] .bestas{position:relative;background:#f6ecd4;border:2px dashed #8a7a5c;border-radius:4px;transform:rotate(.5deg);box-shadow:2px 3px 0 rgba(36,29,18,.18);margin-top:.55rem;font-size:.76em}
+body[data-mode="mesa"] .bestas::before{content:"";position:absolute;top:-12px;left:50%;width:32px;height:15px;margin-left:-16px;border:3px solid #9aa1a8;border-top:none;border-radius:0 0 16px 16px;background:linear-gradient(#ccd2d8,#a8b0b8);box-shadow:0 1px 2px rgba(0,0,0,.3)}
+body[data-mode="mesa"] .bestas .mini{color:#b3402f;border-color:#b3402f;font-family:var(--mono)}
+body[data-mode="mesa"] .improviso li{font-size:.78em}
+body[data-mode="mesa"] .midia{background:#fdfbf4;padding:5px 5px 3px;border:1px solid #cfc0a0;box-shadow:3px 4px 10px rgba(0,0,0,.35);transform:rotate(1.5deg);margin:.35rem -.3rem 0 .1rem;position:relative}
+body[data-mode="mesa"] .momento[data-momento="2"] .midia,body[data-mode="mesa"] .momento[data-momento="4"] .midia{transform:rotate(-1.6deg)}
+body[data-mode="mesa"] .momento[data-momento="5"] .midia{transform:rotate(1.1deg)}
+body[data-mode="mesa"] .midia::before{content:"";position:absolute;top:-10px;left:50%;margin-left:-30px;width:60px;height:17px;background:rgba(224,210,180,.92);border-left:1px dashed rgba(120,100,70,.4);border-right:1px dashed rgba(120,100,70,.4);transform:rotate(-3deg);box-shadow:0 1px 2px rgba(0,0,0,.25);z-index:2;pointer-events:none}
+body[data-mode="mesa"] .midia .moldura{border:none;border-radius:0}
+body[data-mode="mesa"] .midia figcaption{font-family:var(--serif);font-style:italic;text-align:center;white-space:normal;overflow:hidden}
+/* Dossiê: densidade — preenche a folha em 900px sem estourar em 648px */
+body[data-mode="mesa"] .momento{padding:1rem .7rem .45rem;gap:.45rem}
+body[data-mode="mesa"] .ficha{gap:.6rem;align-content:stretch;grid-template-columns:minmax(0,1.14fr) minmax(0,.96fr) minmax(0,.96fr) clamp(150px,19vw,268px)}
+body[data-mode="mesa"] .momento[data-momento="2"] .ficha{grid-template-columns:minmax(0,1fr) minmax(0,1.02fr) minmax(0,.9fr) clamp(150px,19vw,268px)}
+body[data-mode="mesa"] .momento[data-momento="3"] .ficha{grid-template-columns:minmax(0,1.12fr) minmax(0,.95fr) minmax(0,1.22fr) clamp(100px,12vw,160px)}
+body[data-mode="mesa"] .momento[data-momento="4"] .ficha{grid-template-columns:minmax(0,1.22fr) minmax(0,.96fr) minmax(0,1fr) clamp(100px,12vw,160px)}
+body[data-mode="mesa"] .momento[data-momento="5"] .ficha{grid-template-columns:minmax(0,1.02fr) minmax(0,1fr) minmax(0,.94fr) clamp(150px,19vw,268px)}
+body[data-mode="mesa"] .momento[data-momento="6"] .ficha{grid-template-columns:minmax(0,1.24fr) minmax(0,.9fr) minmax(0,1.1fr) clamp(100px,12vw,160px)}
+body[data-mode="mesa"] .mom-decisao{font-size:.95em;padding:.45vh .5rem}
+body[data-mode="mesa"] .col{gap:.4vh;justify-content:space-between}
+body[data-mode="mesa"] .col.puxa .gatilho{flex:1 1 0;display:flex;flex-direction:column;justify-content:center;padding:.6vh .2rem .6vh 2rem}
+body[data-mode="mesa"] .col.puxa .gatilho strong{font-size:clamp(.92rem,2.35vh,1.12rem)}
+body[data-mode="mesa"] .col.puxa .gatilho .linha{font-size:.84em}
+body[data-mode="mesa"] .col.quem{justify-content:flex-start;gap:.5vh}
+body[data-mode="mesa"] .col.quem .quem-linha{margin-bottom:auto}
+body[data-mode="mesa"] .col.quem .improviso{margin-top:auto}
+body[data-mode="mesa"] .quem-linha{padding:.45vh .35rem;font-size:clamp(.78rem,1.95vh,.98rem)}
+body[data-mode="mesa"] .momento[data-momento="1"] .ficha{grid-template-columns:minmax(0,2fr) minmax(0,1fr) clamp(150px,19vw,268px);gap:.7rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa{gap:.7rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa>h3{font-size:.82rem;padding-bottom:.2rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho{padding:1.25rem .45rem 1.25rem 3.7rem;border-bottom:3px solid rgba(36,29,18,.72)}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho::before{width:2.45rem;height:2.45rem;font-size:1.2rem;border-width:3.5px;left:.06rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho strong{font-size:clamp(1.55rem,4.6vh,2.15rem);line-height:1.1}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho .linha{font-size:clamp(1.02rem,2.6vh,1.28rem);margin-top:.32rem;color:#241d12;line-height:1.28}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho .refs{font-size:.95em;margin-top:.28rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.quem{justify-content:flex-start;gap:.15rem;min-height:0;padding-left:.1rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.quem>h3{font-size:.78rem;font-weight:bold;padding-bottom:.2rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .elenco{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;flex:1 1 auto;min-height:0}
+body[data-mode="mesa"] .momento[data-momento="1"] .pessoa{padding:.6rem .15rem .65rem;border-bottom:1px solid rgba(36,29,18,.4)}
+body[data-mode="mesa"] .momento[data-momento="1"] .pessoa:last-child{border-bottom:none}
+body[data-mode="mesa"] .momento[data-momento="1"] .elenco .quem-linha,
+body[data-mode="mesa"] .momento[data-momento="1"] .elenco label.quem-linha:nth-of-type(n){
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .5rem;
+  margin:0;padding:0;width:100%;
+  background:transparent;border:none;border-radius:0;box-shadow:none;transform:none;
+  font-size:inherit;line-height:1.15
+}
+body[data-mode="mesa"] .momento[data-momento="1"] .elenco .nome{font-family:var(--serif);font-size:1.28rem;font-weight:bold;color:#241d12;line-height:1.15}
+body[data-mode="mesa"] .momento[data-momento="1"] .elenco .papel{font-family:var(--sans);font-size:.95rem;font-weight:normal;color:#5a4a36;line-height:1.35}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado{margin:.32rem 0 0;display:grid;grid-template-columns:5.6rem minmax(0,1fr);column-gap:.4rem;align-items:baseline}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado .rotulo{font-family:var(--mono);font-size:.72rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;line-height:1.3;color:#7a6a52;padding-top:.1rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado .texto{font-family:var(--serif);font-size:1.08rem;line-height:1.35;color:#241d12;text-wrap:balance}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado.pista .rotulo,
+body[data-mode="mesa"] .momento[data-momento="1"] .achado.solta .rotulo{color:var(--agua)}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado.solta{border:none;padding:0;margin:.32rem 0 0;font-size:inherit;font-style:normal;color:inherit}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado.solta .texto{font-style:italic}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado.pista .mini{
+  display:inline-block;justify-self:start;max-width:13.8rem;margin:0 0 0 -.45rem;
+  background:transparent;border:1.6px solid var(--agua);
+  border-radius:48% 52% 55% 45%/58% 48% 52% 44%;
+  padding:.12rem .65rem .16rem;font-size:1.08rem;line-height:1.35;color:#241d12
+}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado.pista .refs{grid-column:2;margin:0}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado.dial .texto,
+body[data-mode="mesa"] .momento[data-momento="1"] .achado.travar .texto{color:#3a2e20}
+body[data-mode="mesa"] .momento.folha-elenco .ficha{grid-template-columns:minmax(0,2fr) minmax(0,1fr) clamp(150px,19vw,268px);gap:.7rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa{gap:.7rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa>h3{font-size:.82rem;padding-bottom:.2rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho{padding:1.25rem .45rem 1.25rem 3.7rem;border-bottom:3px solid rgba(36,29,18,.72)}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho::before{width:2.45rem;height:2.45rem;font-size:1.2rem;border-width:3.5px;left:.06rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho strong{font-size:clamp(1.55rem,4.6vh,2.15rem);line-height:1.1}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho .linha{font-size:clamp(1.02rem,2.6vh,1.28rem);margin-top:.32rem;color:#241d12;line-height:1.28}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho .refs{font-size:.95em;margin-top:.28rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.quem{justify-content:flex-start;gap:.15rem;min-height:0;padding-left:.1rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.quem>h3{font-size:.78rem;font-weight:bold;padding-bottom:.2rem}
+body[data-mode="mesa"] .momento.folha-elenco .elenco{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;flex:1 1 auto;min-height:0}
+body[data-mode="mesa"] .momento.folha-elenco .pessoa{padding:.6rem .15rem .65rem;border-bottom:1px solid rgba(36,29,18,.4)}
+body[data-mode="mesa"] .momento.folha-elenco .pessoa:last-child{border-bottom:none}
+body[data-mode="mesa"] .momento.folha-elenco .elenco .quem-linha,
+body[data-mode="mesa"] .momento.folha-elenco .elenco label.quem-linha:nth-of-type(n){
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .5rem;
+  margin:0;padding:0;width:100%;
+  background:transparent;border:none;border-radius:0;box-shadow:none;transform:none;
+  font-size:inherit;line-height:1.15
+}
+body[data-mode="mesa"] .momento.folha-elenco .elenco .nome{font-family:var(--serif);font-size:1.28rem;font-weight:bold;color:#241d12;line-height:1.15}
+body[data-mode="mesa"] .momento.folha-elenco .elenco .papel{font-family:var(--sans);font-size:.95rem;font-weight:normal;color:#5a4a36;line-height:1.35}
+body[data-mode="mesa"] .momento.folha-elenco .achado{margin:.32rem 0 0;display:grid;grid-template-columns:5.6rem minmax(0,1fr);column-gap:.4rem;align-items:baseline}
+body[data-mode="mesa"] .momento.folha-elenco .achado .rotulo{font-family:var(--mono);font-size:.72rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;line-height:1.3;color:#7a6a52;padding-top:.1rem}
+body[data-mode="mesa"] .momento.folha-elenco .achado .texto{font-family:var(--serif);font-size:1.08rem;line-height:1.35;color:#241d12;text-wrap:balance}
+body[data-mode="mesa"] .momento.folha-elenco .achado.pista .rotulo,
+body[data-mode="mesa"] .momento.folha-elenco .achado.solta .rotulo{color:var(--agua)}
+body[data-mode="mesa"] .momento.folha-elenco .achado.solta{border:none;padding:0;margin:.32rem 0 0;font-size:inherit;font-style:normal;color:inherit}
+body[data-mode="mesa"] .momento.folha-elenco .achado.solta .texto{font-style:italic}
+body[data-mode="mesa"] .momento.folha-elenco .achado.pista .mini{
+  display:inline-block;justify-self:start;max-width:13.8rem;margin:0 0 0 -.45rem;
+  background:transparent;border:1.6px solid var(--agua);
+  border-radius:48% 52% 55% 45%/58% 48% 52% 44%;
+  padding:.12rem .65rem .16rem;font-size:1.08rem;line-height:1.35;color:#241d12
+}
+body[data-mode="mesa"] .momento.folha-elenco .achado.pista .refs{grid-column:2;margin:0}
+body[data-mode="mesa"] .momento.folha-elenco .achado.dial .texto,
+body[data-mode="mesa"] .momento.folha-elenco .achado.travar .texto{color:#3a2e20}
+body[data-mode="mesa"] .momento.folha-elenco .elenco .quem-linha{margin:0}
+body[data-mode="mesa"] .col.sai{justify-content:flex-start}
+body[data-mode="mesa"] .col.sai .grupo{margin-bottom:auto}
+body[data-mode="mesa"] .col.sai .grupo:only-of-type{margin-block:auto}
+body[data-mode="mesa"] .col.sai .bestas{margin-bottom:auto}
+body[data-mode="mesa"] .col.sai .solta{margin-top:auto}
+body[data-mode="mesa"] .col.sai .mini{font-size:.8em;padding:.2vh .5rem}
+body[data-mode="mesa"] .col.sai .solta{font-size:.84em}
+body[data-mode="mesa"] .improviso{font-size:clamp(.78rem,1.9vh,.95rem)}
+body[data-mode="mesa"] .midia figcaption{font-size:.62rem;padding:.15rem 0 .1rem}
+body[data-mode="mesa"] .rodape-mesa{background:#191008;color:#efe4cd}
+@media (max-width:800px){
+  body[data-mode="mesa"] .momento{width:auto;transform:none}
+  .momento::before,.momento::after{display:none}
+  .carimbo{white-space:normal}
+  body[data-mode="mesa"] .momento[data-momento="1"] .ficha,
+  body[data-mode="mesa"] .momento.folha-elenco .ficha{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+  body[data-mode="mesa"] .momento[data-momento="1"] .midia,
+  body[data-mode="mesa"] .momento.folha-elenco .midia{min-height:190px}
+}
+
+/* ============ PREPARO ============ */
+#app-preparo{max-width:min(1000px,94vw);margin:0 auto;padding:.8rem 1rem 2.5rem}
+.menu-preparo{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:.35rem;padding:.45rem 0;background:#0f1418;border-bottom:1px solid rgba(150,170,190,.28)}
+.menu-preparo a{display:inline-block;text-decoration:none;font-family:var(--mono);font-size:.74rem;padding:.28rem .55rem;border-radius:6px;color:#cfe0ee}
+.menu-preparo a:hover{background:rgba(127,214,189,.16);color:#fff}
+.menu-preparo button.limpar{margin-left:auto;border-color:#7fd6bd;color:#c8f2e6}
+.hero{border:1px solid #2c343c;border-left:8px solid #3d5f78;border-radius:10px;background:#171c21;padding:.9rem 1rem;margin:.8rem 0 1rem}
+.hero .rotulo{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:bold;color:#7fd6bd}
+.hero p.abertura{font-family:var(--serif);font-size:clamp(1.05rem,2.2vw,1.3rem);line-height:1.6;margin:.5rem 0 0}
+.hero h3{margin:1rem 0 .3rem;font-size:.95rem;font-family:var(--mono);text-transform:uppercase;letter-spacing:.05em;color:#a9c3d6}
+.hero ul{margin:.3rem 0 .6rem;padding-left:1.2rem}
+.hero li{margin:.28rem 0}
+details.secao{border:1px solid #2c343c;border-radius:10px;background:#171c21;margin:.7rem 0;overflow:hidden}
+details.secao>summary{cursor:pointer;list-style:none;padding:.7rem .9rem;display:flex;align-items:center;gap:.65rem;font-weight:bold;background:#1e242b}
+details.secao>summary::-webkit-details-marker{display:none}
+details.secao>summary:hover{background:#232b34}
+details.secao>summary .num{font-family:var(--mono);font-size:.74rem;font-weight:normal;opacity:.7}
+details.secao>summary .titulo{font-family:var(--serif);font-size:1.1rem}
+details.secao>summary .conta{margin-left:auto;font-family:var(--mono);font-size:.7rem;opacity:.75;white-space:nowrap}
+details.secao .conteudo{padding:.85rem 1rem}
+.conteudo h4{margin:.9rem 0 .35rem;font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;font-family:var(--mono);color:#a9c3d6}
+.conteudo h4:first-child{margin-top:0}
+.conteudo ul,.conteudo ol{margin:.3rem 0 .7rem;padding-left:1.2rem}
+.conteudo li{margin:.3rem 0}
+ul.marcavel{list-style:none;padding-left:0}
+ul.marcavel>li{margin:.3rem 0}
+ul.marcavel label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer;border-radius:6px;padding:.2rem .3rem}
+ul.marcavel label:hover{background:rgba(127,214,189,.1)}
+input[type=checkbox]{width:1.15rem;height:1.15rem;flex:0 0 auto;margin-top:.2rem;accent-color:#7fd6bd;cursor:pointer}
+li.feito>.texto,li.feito label .texto,li.feito .texto{opacity:.55;text-decoration:line-through}
+.cartao{border:1px solid #2c343c;border-radius:8px;padding:.65rem .8rem;margin:.5rem 0;background:#12171c}
+.cartao h4{margin:0 0 .25rem;font-size:.95rem;color:#e7ebee}
+details.sub{border:1px dashed rgba(150,170,190,.4);border-radius:8px;margin:.4rem 0}
+details.sub>summary{cursor:pointer;padding:.4rem .7rem;font-family:var(--mono);font-size:.76rem;font-weight:bold}
+details.sub .sub-corpo{padding:.1rem .8rem .55rem}
+.meta{font-family:var(--mono);font-size:.76rem;opacity:.85}
+.cr{font-family:var(--mono);font-size:.78rem;font-weight:bold;color:#ffd08a}
+.nota-fora{font-size:.9rem;opacity:.85;border-left:3px solid rgba(150,170,190,.5);padding-left:.65rem;margin:.7rem 0}
+.amostra-cor{display:flex;gap:.4rem;margin-top:.4rem}
+.amostra-cor span{width:1.3rem;height:1.3rem;border-radius:4px;border:1px solid rgba(150,170,190,.5)}
+#notas-preparo{width:100%;min-height:7rem;resize:vertical;border:1px solid #2c343c;border-radius:8px;padding:.65rem;font-family:var(--sans);font-size:.95rem;line-height:1.5;background:#12171c;color:inherit}
+.barra-ferramentas{display:flex;flex-wrap:wrap;gap:.5rem;margin:.4rem 0 .2rem}
+.barra-ferramentas button{cursor:pointer;border-radius:8px;padding:.4rem .8rem;font-family:var(--mono);font-size:.76rem;border:1px solid #7fd6bd;background:transparent;color:#c8f2e6}
+.barra-ferramentas button:hover{background:rgba(127,214,189,.16)}
+.rodape-preparo{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;justify-content:space-between;margin-top:1rem;font-size:.82rem;opacity:.85}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body data-mode="mesa">
+<a class="pular" href="#palco">Pular para o palco</a>
+
+<header class="topo">
+  <div class="marca">
+    <h1>Sessão 3 — trilha</h1>
+    <p class="sub">~5h · nível 2 · madrugada em Ffin · abre no flashback da Maya · Ffin, a madrugada das máscaras</p>
+  </div>
+  <div class="modo-linha">
+    <fieldset>
+      <legend>Modo de uso</legend>
+      <label><input type="radio" name="modo" value="mesa" checked> MESA</label>
+      <label><input type="radio" name="modo" value="preparo"> PREPARO</label>
+    </fieldset>
+    <span class="progresso" id="progresso" role="status" aria-live="polite"></span>
+  </div>
+</header>
+
+<div id="app-mesa">
+  <nav class="trilha" id="trilha" role="tablist" aria-label="Momentos sugeridos da sessão">
+    <button role="tab" id="aba-1" aria-controls="mom-1" aria-selected="true" tabindex="0" data-momento="1"><span class="n">1</span> Cela</button>
+    <button role="tab" id="aba-2" aria-controls="mom-2" aria-selected="false" tabindex="-1" data-momento="2"><span class="n">2</span> Rescaldo</button>
+    <button role="tab" id="aba-3" aria-controls="mom-3" aria-selected="false" tabindex="-1" data-momento="3"><span class="n">3</span> Universidade</button>
+    <button role="tab" id="aba-4" aria-controls="mom-4" aria-selected="false" tabindex="-1" data-momento="4"><span class="n">4</span> Madrugada</button>
+    <button role="tab" id="aba-5" aria-controls="mom-5" aria-selected="false" tabindex="-1" data-momento="5"><span class="n">5</span> Amanhecer</button>
+    <button role="tab" id="aba-6" aria-controls="mom-6" aria-selected="false" tabindex="-1" data-momento="6"><span class="n">6</span> Fechamento</button>
+    <span class="dica">ordem sugerida, não trilho — teclas 1–6 ou as setas do teclado trocam de momento</span>
+  </nav>
+
+  <main id="palco">
+    <div id="momens">
+
+      <section class="momento" id="mom-1" data-momento="1" role="tabpanel" aria-labelledby="aba-1" tabindex="-1">
+        <div class="mom-cabeca">
+          <div class="bloco">
+            <span class="mom-num">momento 1 · arquivo da madrugada</span>
+            <h2>A cela</h2>
+            <span class="mom-tempo">madrugada · abrir a sessão</span>
+          </div>
+          <span class="carimbo" aria-hidden="true">Momento 1 · Madrugada</span>
+          <a class="ver-preparo" href="#abertura" data-alvo="abertura">ver no preparo</a>
+        </div>
+        <p class="mom-decisao"><strong>Decide a cena:</strong> o flashback passa informação de propósito. Corte assim que alguém, jogador ou Rhiannon, disser em voz alta que foi o assistente.</p>
+        <div class="ficha">
+          <div class="col puxa">
+            <h3>Puxa a cena</h3>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-1-1"><span class="texto"><strong>Carta anônima com dinheiro</strong><span class="linha">Chega a Maya; Ava mandou e pede que proteja o nativo recém-chegado.</span><span class="refs"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a> · <a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a> · <a href="#abertura" data-alvo="abertura">no preparo</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-1-2"><span class="texto"><strong>Casse não cala a boca</strong><span class="linha">Era da guarda do cristal; deslocado por ordem entregue por Cyfrin em nome de Rhiannon.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Casse" href="#">Casse</a> · <a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-1-3"><span class="texto"><strong>Rhiannon e o assistente</strong><span class="linha">Ela chega com Cyfrin; a defensiva dele é um dial e ela pode desconfiar sozinha.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a> · <a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a> · <a href="#abertura" data-alvo="abertura">no preparo</a></span></span></label>
+          </div>
+          <aside class="col quem" aria-labelledby="quem-titulo-1">
+            <h3 id="quem-titulo-1">Quem está aqui</h3>
+            <ol class="elenco">
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-maya"><span class="nome"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a></span><span class="papel">infiltrada; investiga a morte do pai</span></label>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-yawar"><span class="nome"><a class="wiki" data-wiki="Personagens/Yawar" href="#">Yawar</a></span><span class="papel">divide a cela</span></label>
+                <p class="achado solta"><span class="rotulo">Solta</span><span class="texto">Com o culpado identificado, a acusação contra ele cai.</span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-casse"><span class="nome"><a class="wiki" data-wiki="NPCs/Casse" href="#">Casse</a></span><span class="papel">tagarela; fonte da contradição</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-3"><span>A ordem em nome de Rhiannon nunca foi dada.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-cyfrin"><span class="nome"><a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a></span><span class="papel">o assistente</span></label>
+                <p class="achado dial"><span class="rotulo">Dial</span><span class="texto">A defensiva dele.</span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-rhiannon"><span class="nome"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a></span><span class="papel">a Chanceler</span></label>
+              </li>
+            </ol>
+          </aside>
+          <figure class="midia">
+            <div class="moldura"><img src="../../NPCs/Casse com estandarte.png" width="480" height="360" alt="Casse, tiefling velho preso na mesma leva que Yawar, com o estandarte de Ffin."></div>
+            <figcaption>A prisão está cheia.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="momento folha-elenco" id="mom-2" data-momento="2" role="tabpanel" aria-labelledby="aba-2" tabindex="-1" hidden>
+        <div class="mom-cabeca">
+          <div class="bloco">
+            <span class="mom-num">momento 2 · arquivo da madrugada</span>
+            <h2>Rescaldo e Celidwen</h2>
+            <span class="mom-tempo">minutos depois · casa alugada</span>
+          </div>
+          <span class="carimbo" aria-hidden="true">Momento 2 · Madrugada</span>
+          <a class="ver-preparo" href="#cenas" data-alvo="cenas">ver no preparo</a>
+        </div>
+        <p class="mom-decisao"><strong>Decide a cena:</strong> só acontece se o grupo ainda estiver na casa; se já saiu, Celidwen chega tarde demais. Atilla não morre de qualquer forma.</p>
+        <div class="ficha">
+          <div class="col puxa">
+            <h3>Puxa a cena</h3>
+            <label class="gatilho"><input type="checkbox" data-marca="cena-1"><span class="texto"><strong>Rescaldo</strong><span class="linha">Mephits viraram areia e fumaça; o grupo ferido decide com o que o flashback revelou.</span><span class="refs"><a href="#cenas" data-alvo="cenas">cenas</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="cena-2"><span class="texto"><strong>Celidwen pede ajuda</strong><span class="linha">Atilla atacado na mesma noite; Ludger falha em curá-lo e Kadur tem cura.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Celidwen" href="#">Celidwen</a> · <a class="wiki" data-wiki="NPCs/Atilla" href="#">Atilla</a> · <a class="wiki" data-wiki="NPCs/Ludger" href="#">Ludger</a> · <a class="wiki" data-wiki="Personagens/Kadur" href="#">Kadur</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-2-3"><span class="texto"><strong>Proteger Atilla</strong><span class="linha">Se ficam, decidem juntos com ele, Celidwen e Ludger; Ludger pode anunciar a morte dele.</span><span class="refs"><a href="#cenas" data-alvo="cenas">no preparo</a></span></span></label>
+          </div>
+          <aside class="col quem" aria-labelledby="quem-titulo-2">
+            <h3 id="quem-titulo-2">Quem está aqui</h3>
+            <ol class="elenco">
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-celidwen"><span class="nome"><a class="wiki" data-wiki="NPCs/Celidwen" href="#">Celidwen</a></span><span class="papel">assistente; pede ajuda</span></label>
+                <p class="achado solta"><span class="rotulo">Solta</span><span class="texto">Se o grupo já saiu, chega tarde demais.</span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-atilla"><span class="nome"><a class="wiki" data-wiki="NPCs/Atilla" href="#">Atilla</a></span><span class="papel">gravemente ferido; não morre</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="recompensa-sending"><span>Sending stones, se o salvarem de novo.</span></label><span class="refs"><a href="#recompensas" data-alvo="recompensas">recompensas</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-ludger"><span class="nome"><a class="wiki" data-wiki="NPCs/Ludger" href="#">Ludger</a></span><span class="papel">tenta curar</span></label>
+                <p class="achado dial"><span class="rotulo">Dial</span><span class="texto">Pode anunciar a morte; trata em segredo.</span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-kadur"><span class="nome"><a class="wiki" data-wiki="Personagens/Kadur" href="#">Kadur</a></span><span class="papel">tem cura; decide se ajuda</span></label>
+              </li>
+            </ol>
+          </aside>
+          <figure class="midia retrato">
+            <div class="moldura"><img src="../../NPCs/Celidwen.png" width="480" height="600" alt="Celidwen, assistente de Atilla, com o rosto preocupado."></div>
+            <figcaption>Celidwen sabe a verdade.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="momento folha-elenco" id="mom-3" data-momento="3" role="tabpanel" aria-labelledby="aba-3" tabindex="-1" hidden>
+        <div class="mom-cabeca">
+          <div class="bloco">
+            <span class="mom-num">momento 3 · arquivo da madrugada</span>
+            <h2>Universidade e Llosg</h2>
+            <span class="mom-tempo">ainda de madrugada · Athroniaeth</span>
+          </div>
+          <span class="carimbo" aria-hidden="true">Momento 3 · Madrugada</span>
+          <a class="ver-preparo" href="#cenas" data-alvo="cenas">ver no preparo</a>
+        </div>
+        <p class="mom-decisao"><strong>Decide a cena:</strong> o diário está no fundo falso da caixa. Arcana CD 15 ou Investigação CD 20 para encontrar; o mímico ataca ao destravar o fundo.</p>
+        <div class="ficha">
+          <div class="col puxa">
+            <h3>Puxa a cena</h3>
+            <label class="gatilho"><input type="checkbox" data-marca="cena-3"><span class="texto"><strong>Universidade em alerta</strong><span class="linha">Llosg entre os mortos, com os magos da Tumba Brilhante; cena montada às pressas.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Llosg" href="#">Llosg</a> · <a class="wiki" data-wiki="Locais/Tumba Brilhante" href="#">Tumba Brilhante</a> · <a href="#cenas" data-alvo="cenas">cenas</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-3-2"><span class="texto"><strong>Gwydion protesta</strong><span class="linha">Na reitoria, com magos jovens, pede a saída de Hywel; saque de Simeno.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Gwydion" href="#">Gwydion</a> · <a class="wiki" data-wiki="NPCs/Hywel" href="#">Hywel</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="cena-8"><span class="texto"><strong>Escritório do Llosg</strong><span class="linha">O mímico disfarça a caixa de fundo falso onde está o diário.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Llosg" href="#">Llosg</a> · <a href="#criaturas" data-alvo="criaturas">criaturas</a></span></span></label>
+          </div>
+          <aside class="col quem" aria-labelledby="quem-titulo-3">
+            <h3 id="quem-titulo-3">Quem está aqui</h3>
+            <ol class="elenco">
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-llosg"><span class="nome"><a class="wiki" data-wiki="NPCs/Llosg" href="#">Llosg</a></span><span class="papel">morto; escritório encenado</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-1"><span>O diário no fundo falso da caixa.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-gwydion"><span class="nome"><a class="wiki" data-wiki="NPCs/Gwydion" href="#">Gwydion</a></span><span class="papel">protesta na reitoria</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-6"><span>Não controla as células.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-hywel"><span class="nome"><a class="wiki" data-wiki="NPCs/Hywel" href="#">Hywel</a></span><span class="papel">pressionado; mantém o apoio</span></label>
+              </li>
+            </ol>
+          </aside>
+          <figure class="midia">
+            <div class="moldura"><img src="../../Facções/Athroniaeth.png" width="480" height="360" alt="Brasão da universidade de Athroniaeth: coruja de asas retas em forma de livro aberto."></div>
+            <figcaption>Coruja sobre fundo coral.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="momento folha-elenco" id="mom-4" data-momento="4" role="tabpanel" aria-labelledby="aba-4" tabindex="-1" hidden>
+        <div class="mom-cabeca">
+          <div class="bloco">
+            <span class="mom-num">momento 4 · arquivo da madrugada</span>
+            <h2>Outras cenas de madrugada</h2>
+            <span class="mom-tempo">conforme a mesa · sem ordem fixa</span>
+          </div>
+          <span class="carimbo" aria-hidden="true">Momento 4 · Madrugada</span>
+          <a class="ver-preparo" href="#cenas" data-alvo="cenas">ver no preparo</a>
+        </div>
+        <p class="mom-decisao"><strong>Decide a cena:</strong> a ordem é sugestão, não trilho. Puxe a cena que a ficção pedir.</p>
+        <div class="ficha">
+          <div class="col puxa">
+            <h3>Puxa a cena</h3>
+            <label class="gatilho"><input type="checkbox" data-marca="cena-4"><span class="texto"><strong>Ajuda de madrugada</strong><span class="linha">Procurar Rhiannon ou Ava para apoio no meio da noite.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a> · <a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="cena-5"><span class="texto"><strong>Checar Maion</strong><span class="linha">A estalajadeira pode ter sido atacada pela relação com o grupo.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Maion" href="#">Maion</a> · <a href="#cenas" data-alvo="cenas">cenas</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="cena-7"><span class="texto"><strong>O assistente na prisão</strong><span class="linha">Cyfrin cumpre mais quatro anos por não entregar ninguém; a trilha leva até ele.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a> · <a class="wiki" data-wiki="NPCs/Gwydion" href="#">Gwydion</a></span></span></label>
+          </div>
+          <aside class="col quem" aria-labelledby="quem-titulo-4">
+            <h3 id="quem-titulo-4">Quem puxa a noite</h3>
+            <ol class="elenco">
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-rhiannon"><span class="nome"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a></span><span class="papel">reúne relatos; sem o assistente</span></label>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-ava"><span class="nome"><a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a></span><span class="papel">reúne Doreán no reservatório</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="recompensa-amuleto"><span>Amuleto de Bless, se o grupo se vincular.</span></label><span class="refs"><a href="#recompensas" data-alvo="recompensas">recompensas</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-maion"><span class="nome"><a class="wiki" data-wiki="NPCs/Maion" href="#">Maion</a></span><span class="papel">estalajadeira</span></label>
+                <p class="achado dial"><span class="rotulo">Dial</span><span class="texto">Possível alvo.</span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-cyfrin"><span class="nome"><a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a></span><span class="papel">preso</span></label>
+                <p class="achado dial"><span class="rotulo">Dial</span><span class="texto">Não entregou ninguém.</span></p>
+              </li>
+            </ol>
+          </aside>
+          <figure class="midia retrato">
+            <div class="moldura"><img src="../../NPCs/Maion.png" width="480" height="600" alt="Maion, a estalajadeira da Estalagem da Pedra Dura."></div>
+            <figcaption>Maion é possível alvo.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="momento folha-elenco" id="mom-5" data-momento="5" role="tabpanel" aria-labelledby="aba-5" tabindex="-1" hidden>
+        <div class="mom-cabeca">
+          <div class="bloco">
+            <span class="mom-num">momento 5 · arquivo da madrugada</span>
+            <h2>Amanhecer e cerco</h2>
+            <span class="mom-tempo">amanhecer · Ffin</span>
+          </div>
+          <span class="carimbo" aria-hidden="true">Momento 5 · Madrugada</span>
+          <a class="ver-preparo" href="#mundo" data-alvo="mundo">ver no preparo</a>
+        </div>
+        <p class="mom-decisao"><strong>Decide a cena:</strong> o amanhecer e os acontecimentos da universidade ocorrem de qualquer forma, com ou sem o grupo.</p>
+        <div class="ficha">
+          <div class="col puxa">
+            <h3>Puxa a cena</h3>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-5-2"><span class="texto"><strong>O cerco se arma</strong><span class="linha">Gente deixa a cidade; soldados arcanos reforçam os portões com encantamentos e estandartes.</span><span class="refs"><a class="wiki" data-wiki="Cidades/Ffin" href="#">Ffin</a> · <a href="#mundo" data-alvo="mundo">mundo</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-5-3"><span class="texto"><strong>Água racionada</strong><span class="linha">Theron a três noites de Ffin com seis sobreviventes e o Simeno da caravana.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Theron" href="#">Theron</a> · <a class="wiki" data-wiki="Items e Objetos/Simeno" href="#">Simeno</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="cena-6"><span class="texto"><strong>Fugir de Ffin</strong><span class="linha">Ava leva a outros Doreán; a mesa pode seguir atrás de Vialis.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a> · <a class="wiki" data-wiki="NPCs/Vialis" href="#">Vialis</a> · <a class="wiki" data-wiki="Facções/Doreán" href="#">Doreán</a></span></span></label>
+          </div>
+          <aside class="col quem" aria-labelledby="quem-titulo-5">
+            <h3 id="quem-titulo-5">Quem está aqui</h3>
+            <ol class="elenco">
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-theron"><span class="nome"><a class="wiki" data-wiki="NPCs/Theron" href="#">Theron</a></span><span class="papel">a três noites; traz o Simeno</span></label>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-ava"><span class="nome"><a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a></span><span class="papel">leva a outros Doreán</span></label>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-vialis"><span class="nome"><a class="wiki" data-wiki="NPCs/Vialis" href="#">Vialis</a></span><span class="papel">refém</span></label>
+                <p class="achado dial"><span class="rotulo">Dial</span><span class="texto">Sending stone com Atilla.</span></p>
+              </li>
+            </ol>
+          </aside>
+          <figure class="midia">
+            <div class="moldura"><img src="../../Cidades/Estandarte de Ffin.png" width="480" height="360" alt="Estandarte de Ffin: montanhas cinzas sobre fundo azul, com uma lua no centro."></div>
+            <figcaption>Estandartes nos portões.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="momento folha-elenco" id="mom-6" data-momento="6" role="tabpanel" aria-labelledby="aba-6" tabindex="-1" hidden>
+        <div class="mom-cabeca">
+          <div class="bloco">
+            <span class="mom-num">momento 6 · arquivo da madrugada</span>
+            <h2>Fechamento</h2>
+            <span class="mom-tempo">fim de sessão · ganchos</span>
+          </div>
+          <span class="carimbo" aria-hidden="true">Momento 6 · Madrugada</span>
+          <a class="ver-preparo" href="#segredos" data-alvo="segredos">ver no preparo</a>
+        </div>
+        <p class="mom-decisao"><strong>Decide a cena:</strong> amarre o que ficou e aponte o próximo passo. O Markdown é a fonte de verdade.</p>
+        <div class="ficha">
+          <div class="col puxa">
+            <h3>Puxa a cena</h3>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-6-1"><span class="texto"><strong>Doutrina do diário</strong><span class="linha">Sem nomes; liga a Mão a assassinatos e à sabotagem, alcança a morte do pai de Maya.</span><span class="refs"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a> · <a class="wiki" data-wiki="Facções/A Mão de Athroniaeth" href="#">A Mão de Athroniaeth</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-6-2"><span class="texto"><strong>Recompensas na mesa</strong><span class="linha">Pérola do Poder, amuleto de Bless, varinha de Detectar Magia, sending stones.</span><span class="refs"><a href="#recompensas" data-alvo="recompensas">recompensas</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-6-3"><span class="texto"><strong>Próximo passo</strong><span class="linha">Vialis refém em Kariate Aljusur; passagem sob o Salão; reservatório Doreán.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Vialis" href="#">Vialis</a> · <a class="wiki" data-wiki="Locais/Kariate Aljusur" href="#">Kariate Aljusur</a> · <a class="wiki" data-wiki="Locais/Salão Acromático" href="#">Salão Acromático</a> · <a class="wiki" data-wiki="Locais/Reservatório escondido dos Doreán" href="#">Reservatório escondido dos Doreán</a></span></span></label>
+          </div>
+          <aside class="col quem" aria-labelledby="quem-titulo-6">
+            <h3 id="quem-titulo-6">Quem puxa o próximo</h3>
+            <ol class="elenco">
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-maya"><span class="nome"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a></span><span class="papel">a morte do pai entra na doutrina</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-11"><span>Pais assassinados.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-vialis"><span class="nome"><a class="wiki" data-wiki="NPCs/Vialis" href="#">Vialis</a></span><span class="papel">refém em Kariate Aljusur</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-7"><span>O templo da bota.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-yawar"><span class="nome"><a class="wiki" data-wiki="Personagens/Yawar" href="#">Yawar</a></span><span class="papel">os sonhos</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-10"><span>A profecia do dilúvio.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+              </li>
+            </ol>
+          </aside>
+          <figure class="midia">
+            <div class="moldura"><img src="../../Locais/Kariate Aljusur - casas de pedra.png" width="480" height="360" alt="Kariate Aljusur, a vila dos Colorados suspensa nos picos, ligada por pontes."></div>
+            <figcaption>Atrás de Vialis.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="rodape-mesa">
+    <details class="gaveta" id="gaveta-notas">
+      <summary>Notas rápidas</summary>
+      <div class="gaveta-corpo">
+        <p class="dica">Nomes improvisados, decisões e pendências. Salvo só neste navegador.</p>
+        <textarea id="notas-mesa" placeholder="O que a mesa decidiu agora..."></textarea>
+        <p class="estado" id="estado-mesa"></p>
+      </div>
+    </details>
+    <span class="aviso">Ordem sugerida, não trilho. Teclas 1–6 ou setas trocam de momento. O Markdown é a fonte de verdade.</span>
+    <button class="limpar" id="limpar" type="button">Limpar modo, momento, marcações e notas</button>
+  </footer>
+</div>
+
+<div id="app-preparo">
+  <nav class="menu-preparo" aria-label="Seções do preparo">
+    <a href="#abertura">Abertura</a>
+    <a href="#estado">Estado inicial</a>
+    <a href="#revisao">Personagens</a>
+    <a href="#cenas">Cenas</a>
+    <a href="#segredos">Segredos</a>
+    <a href="#locais">Locais</a>
+    <a href="#npcs">NPCs</a>
+    <a href="#criaturas">Criaturas</a>
+    <a href="#recompensas">Recompensas</a>
+    <a href="#mundo">Mundo vivo</a>
+    <a href="#auditoria">Auditoria</a>
+    <a href="#notas">Notas</a>
+    <button class="limpar" id="limpar-preparo" type="button">Voltar à mesa</button>
+  </nav>
+
+  <div class="barra-ferramentas" role="group" aria-label="Controles de expansão">
+    <button type="button" id="expandir">Expandir seções</button>
+    <button type="button" id="recolher">Recolher seções</button>
+  </div>
+
+  <section class="hero" id="abertura" aria-label="Abertura forte" tabindex="-1">
+    <div class="rotulo">Abertura forte — começa aqui</div>
+    <p class="abertura">Cela temporária da prefeitura de Ffin, logo depois de Yawar se entregar. A prisão está cheia. Antes que os dois se estranhem, uma carta anônima com dinheiro chega às mãos de Maya: alguém pede que ela proteja o nativo recém-chegado. Um preso intrometido não para de falar. E a Chanceler vem a caminho com o assistente.</p>
+    <h3>O que os jogadores devem sair sabendo</h3>
+    <ul>
+      <li>Maya não era prisioneira de verdade: estava infiltrada com aval de Rhiannon, investigando primeiro a morte do pai e depois o atentado.</li>
+      <li>A sabotagem do Isolamento Arkalico existiu e fracassou porque a pessoa encarregada recuou no último momento.</li>
+      <li>O assistente de Rhiannon deslocou a guarda do cristal de Simeno com uma ordem que ela não deu.</li>
+      <li>O assistente pressiona para encerrar a investigação da Maya e mantê-la presa.</li>
+      <li>Com o culpado identificado, a acusação contra Yawar cai; não há razão para mantê-lo preso.</li>
+      <li>Ava mandou o dinheiro e pediu que a Maya protegesse o Yawar.</li>
+    </ul>
+    <h3>Marcos e flexibilidades</h3>
+    <ul>
+      <li>O flashback pode ser mais trilho, decisão consciente: o objetivo é passar informação.</li>
+      <li>O preso intrometido: soldado da guarda do cristal de Simeno, deslocado para a Oficina d'Água por uma ordem entregue pelo assistente. Chato mas bem-humorado, indelicado mas inofensivo. A intenção é que ele fale antes da chegada de Rhiannon; se a cena tomar outro rumo, ele se intromete depois.</li>
+      <li>A defensiva do assistente é um dial: se a cena fugir do previsto, o Mestre improvisa o quanto ele se compromete, e Rhiannon pode começar a desconfiar por conta própria.</li>
+      <li>Corte: o flashback termina assim que alguém, um jogador ou a própria Rhiannon, disser em voz alta que foi o assistente.</li>
+    </ul>
+  </section>
+
+  <details class="secao" id="estado">
+    <summary><span class="num">01</span><span class="titulo">Estado inicial validado</span><span class="conta">situação e pendências</span></summary>
+    <div class="conteudo">
+      <h4>Situação atual</h4>
+      <ul>
+        <li>Madrugada em Ffin. O grupo está na casa alugada, ferido, com sete mephits mortos no chão e areia espalhada.</li>
+        <li>O plano combinado antes de a Sessão 2 acabar: ir à universidade de Athroniaeth e começar pelo escritório de Llosg.</li>
+        <li>Atilla está vivo na cidade, recusou esconderijo, aguarda a correspondência de Vialis e tenta marcar reunião com uma autoridade da escola ainda não nomeada; o grupo entra como testemunha, com o código público "continuar estudando arqueologia".</li>
+        <li>Ava espera resposta na Estalagem da Pedra Dura sobre o segundo conselho.</li>
+        <li>Theron está a três noites de Ffin com seis sobreviventes e o Simeno da caravana; a cidade deve racionar água.</li>
+        <li>O grupo ficou com armaduras e lâminas retiradas dos construtos (Kadur começou a raspar o brasão), uma adaga, uma amostra de Simeno com Ignis Fênix, o Periapt of Health com Golimar, uma coruja familiar e o lagarto Nelson.</li>
+      </ul>
+      <h4>Personagens</h4>
+      <ul>
+        <li>Kadur quer entender o clima como fonte de energia; a academia entrou no caminho dela.</li>
+        <li>Yawar não vai lutar contra os próprios Doreán e aceitou ser o contraponto ao método de Aella.</li>
+        <li>Golimar quer impedir que a areia e o calor cheguem ao monastério da montanha de neve eterna; a guerra Doreán não é o eixo dela.</li>
+        <li>Ignis Fênix quer o traje do deserto acima de qualquer outra coisa e guardou uma amostra de Simeno para estudar.</li>
+        <li>Maya quer descobrir quem é a facção dentro da academia e matá-los, não a escola.</li>
+        <li>Nenhuma preferência de jogador está registrada.</li>
+      </ul>
+      <h4>Orientações de condução</h4>
+      <ul>
+        <li>A Sessão 2 foi muito acelerada e foi difícil para todos acompanhar; dosar o ritmo desta sessão.</li>
+        <li>Descrever mais <em>como</em> os jogadores fazem as coisas, sobretudo em batalhas.</li>
+        <li>Em debates, conferir o que os jogadores mais calados estão pensando.</li>
+        <li>Não tomar decisões pelos jogadores sem conversar antes.</li>
+      </ul>
+      <h4>Pendências estabelecidas</h4>
+      <ul>
+        <li>Quem mandou os mephits e como vento e areia surgiram dentro do Isolamento Arkalico, onde não há vento; se foram invocados ou trazidos do plano elemental.</li>
+        <li>Se o broche em forma de mão é emblema da própria Athroniaeth ou marca de um grupo dentro dela.</li>
+        <li>Se Gwydion comanda a célula ou só se aproveita da onda que ela cria.</li>
+        <li>O que Vialis escreveu a Atilla e onde está a próxima peça do traje do deserto.</li>
+        <li>O que aconteceu na mina atacada por Gundrada e o que será dos mineradores feitos reféns.</li>
+        <li>Como Yawar responderá ao segundo conselho de Ava.</li>
+        <li>O que é o vento do Salão Acromático e o que existe abaixo dele.</li>
+        <li>Por que Golimar estava escondida no subterrâneo do Templo de Planetar.</li>
+        <li>Se a profecia do dilúvio é superstição ou o mesmo aviso dos sonhos de Yawar.</li>
+        <li>Se a morte do pai de Maya e a do pai adotivo de Ignis Fênix têm a mesma assinatura.</li>
+        <li>Quem são os outros que sonham como Yawar.</li>
+        <li>O destino das outras quatro peças do traje e o que o grupo fará com a que possui.</li>
+        <li>A reunião de Atilla com a autoridade da escola ainda não foi marcada.</li>
+      </ul>
+      <h4>Possibilidades anteriores que não ocorreram em mesa</h4>
+      <ul>
+        <li>Kariate Aljusur, a vila dos Colorados, nunca foi visitada.</li>
+        <li>O pedido de Rhiannon para investigar grupos violentos antes da eleição nunca chegou ao grupo.</li>
+        <li>Seren como agente de A Mão de Athroniaeth infiltrada junto a Hywel.</li>
+        <li>A existência e a identidade do articulador oculto da Mão.</li>
+        <li>Aella ter explorado a Tumba Brilhante anos atrás e acreditar que retirou tudo de valor.</li>
+        <li>O salamander como invocação possível da Mão e os agentes que nunca apareceram (cultistas, aprendizes e fanáticos).</li>
+      </ul>
+      <h4>Pontos mantidos em aberto</h4>
+      <ul>
+        <li>A natureza real da magia intensificada e da passagem do tempo no Salão Acromático.</li>
+        <li>A relação entre abrir o coração do deserto e um possível despertar de Planetar.</li>
+        <li>Quantidades e composição dos encontros.</li>
+        <li>Nomes e forma final dos itens recuperados dos construtos.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="secao" id="revisao">
+    <summary><span class="num">02</span><span class="titulo">1. Revisão dos personagens</span><span class="conta">quem abre a cena</span></summary>
+    <div class="conteudo">
+      <ul>
+        <li>O flashback da Maya abre a sessão e dá a ela a frente; Yawar divide a cena na cela.</li>
+        <li>As motivações e os desejos atuais de cada personagem estão no estado inicial validado.</li>
+        <li>Orientações de condução: ritmo mais dosado que a Sessão 2, mais descrição de <em>como</em> as ações acontecem, espaço para os jogadores mais calados e nenhuma decisão tomada pelos jogadores.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="secao" id="cenas">
+    <summary><span class="num">03</span><span class="titulo">2. Cenas potenciais</span><span class="conta" data-conta="cena"></span></summary>
+    <div class="conteudo">
+      <ul class="marcavel">
+        <li><label><input type="checkbox" data-marca="cena-1"><span class="texto"><strong>1. Rescaldo na casa alugada:</strong> os mephits já viraram areia e fumaça; o grupo ferido decide o que fazer com o que o flashback revelou.</span></label></li>
+        <li><label><input type="checkbox" data-marca="cena-2"><span class="texto"><strong>2. Celidwen pede ajuda:</strong> minutos depois, a assistente de Atilla chega dizendo que ele também foi atacado por mephits e está gravemente ferido; Ludger tenta curá-lo sem muito sucesso, e ela lembra que Kadur tem cura. Se o grupo já tiver saído, ela chega tarde demais.</span></label></li>
+        <li><label><input type="checkbox" data-marca="cena-3"><span class="texto"><strong>3. Universidade agitada:</strong> apesar do horário, a universidade está acordada e em alerta por assassinatos noturnos. Llosg está entre os mortos, junto com os outros magos que atacaram o grupo na Tumba Brilhante; para a academia, foram mortos enquanto dormiam. Gwydion protesta em frente à reitoria com magos mais jovens pedindo a saída de Hywel por falta de segurança. Alguns magos aproveitam a confusão para estocar ou saquear Simeno.</span></label></li>
+        <li><label><input type="checkbox" data-marca="cena-4"><span class="texto"><strong>4. Ajuda de madrugada:</strong> procurar Rhiannon ou Ava para apoio no meio da noite.</span></label></li>
+        <li><label><input type="checkbox" data-marca="cena-5"><span class="texto"><strong>5. Checar Maion:</strong> a estalajadeira pode ter sido atacada pela relação com o grupo.</span></label></li>
+        <li><label><input type="checkbox" data-marca="cena-6"><span class="texto"><strong>6. Fugir de Ffin:</strong> o grupo pode temer que a escalada saia de controle.</span></label></li>
+        <li><label><input type="checkbox" data-marca="cena-7"><span class="texto"><strong>7. O assistente na prisão:</strong> condenado a mais quatro anos por não ter entregado ninguém. Não foi executado nem exilado graças à investigação da Maya, que corroborou o arrependimento e que ele não executou a sabotagem. Quando o grupo ligar a mão à sabotagem e a Gwydion, a trilha leva até ele.</span></label></li>
+        <li><label><input type="checkbox" data-marca="cena-8"><span class="texto"><strong>8. Escritório do Llosg:</strong> a Mão tentou apagar os rastros de que ele fazia parte de uma organização e simulou uma cena de crime, mas o trabalho é imperfeito. Arcana CD 15 ou Investigação CD 20 encontram o diário secreto: sem nomes, fala da mão e da crença de que o Simeno levará os magos a um nível acima da compreensão e da civilização, como deuses viajando pelo espaço e tempo; isso justifica qualquer meio.</span></label></li>
+      </ul>
+      <details class="sub">
+        <summary>Ramificações e mundo em movimento</summary>
+        <div class="sub-corpo">
+          <ul>
+            <li>Execução e exílio são equivalentes na prática para quem não sabe viver no deserto.</li>
+            <li>Atilla não morre de qualquer forma. Se o grupo não encontrar Celidwen, Ludger alega que ele morreu e o trata em segredo no Salão Acromático; Celidwen sabe da verdade.</li>
+            <li>Se o grupo fica e socorre Atilla, decide junto com ele, Celidwen e Ludger como protegê-lo; a mesa traz as ideias, sem Ludger precisar sugerir escondê-lo.</li>
+            <li>A chegada de Celidwen só acontece se o grupo ainda estiver na casa.</li>
+            <li>Os acontecimentos da universidade ocorrem de qualquer forma, com ou sem o grupo.</li>
+            <li>Ffin amanhece pronta para um cerco: muita gente deixando a cidade enquanto soldados arcanos da academia se juntam à pequena guarda para fortalecer os portões, com encantamentos de proteção e estandartes da cidade e da academia espalhados.</li>
+            <li>Se o grupo não quiser se envolver na política ou estiver do lado errado da guerra, Ava pode levá-los a outros Doreán, ou Maya pode informar de um grupo que foi se encontrar com membros de Aella; a mesa pode seguir para fora de Ffin, talvez atrás de Vialis.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="sub">
+        <summary>Símbolos</summary>
+        <div class="sub-corpo">
+          <div class="cartao">
+            <h4>Brasão de Athroniaeth</h4>
+            <p>Uma coruja com asas retas que parecem um livro aberto; do livro saem runas. A coruja tem a cor do Simeno (verde-água) sobre fundo coral (FF7F80), e as runas são coloridas.</p>
+            <div class="amostra-cor" aria-hidden="true"><span style="background:#FF7F80"></span><span style="background:#4fd1a5"></span><span style="background:#e3c479"></span><span style="background:#8ab6d6"></span></div>
+          </div>
+          <div class="cartao">
+            <h4>Estandarte de Ffin</h4>
+            <p>Montanhas cinzas sobre fundo azul, com uma lua no centro.</p>
+            <div class="amostra-cor" aria-hidden="true"><span style="background:#37536b"></span><span style="background:#9aa7ad"></span><span style="background:#e9f2ef"></span></div>
+          </div>
+        </div>
+      </details>
+    </div>
+  </details>
+
+  <details class="secao" id="segredos">
+    <summary><span class="num">04</span><span class="titulo">3. Segredos e pistas</span><span class="conta" data-conta="pista"></span></summary>
+    <div class="conteudo">
+      <ul class="marcavel">
+        <li><label><input type="checkbox" data-marca="pista-1"><span class="texto"><strong>1.</strong> O diário de Llosg não cita nomes, mas expõe a doutrina: o Simeno elevará os magos acima da compreensão, como deuses viajando pelo espaço e tempo, e qualquer meio se justifica. Deixa claro que a Mão esteve por trás de vários assassinatos — dá para ligar à morte do pai de Maya sem que ele seja citado — e sugere o envolvimento dela na sabotagem. Ler com cuidado, buscando segredos, exige Investigação ou Percepção 15.</span></label></li>
+        <li><label><input type="checkbox" data-marca="pista-2"><span class="texto"><strong>2.</strong> A morte dos magos da expedição da Tumba Brilhante foi encenada como assassinato durante o sono; a cena foi montada às pressas e tem falhas.</span></label></li>
+        <li><label><input type="checkbox" data-marca="pista-3"><span class="texto"><strong>3.</strong> A ordem que deslocou a guarda do cristal de Simeno foi dada em nome de Rhiannon, que nunca a deu.</span></label></li>
+        <li><label><input type="checkbox" data-marca="pista-4"><span class="texto"><strong>4.</strong> O broche de mão é a marca de uma corrente interna de Athroniaeth, não um emblema público da escola.</span></label></li>
+        <li><label><input type="checkbox" data-marca="pista-5"><span class="texto"><strong>5.</strong> Seren serve à Mão e alimenta Hywel com informação misturada.</span></label></li>
+        <li><label><input type="checkbox" data-marca="pista-6"><span class="texto"><strong>6.</strong> Gwydion cavalga o radicalismo sem controlar todas as células; pode haver alguém acima dele articulando tudo.</span></label></li>
+        <li><label><input type="checkbox" data-marca="pista-7"><span class="texto"><strong>7.</strong> Vialis foi capturado por Gundrada e conhece o templo ligado à bota do traje do deserto; Atilla sabe do cativeiro por uma sending stone que mantém com ele.</span></label></li>
+        <li><label><input type="checkbox" data-marca="pista-8"><span class="texto"><strong>8.</strong> Abaixo do Salão Acromático há uma passagem selada que Atilla não consegue abrir.</span></label></li>
+        <li><label><input type="checkbox" data-marca="pista-9"><span class="texto"><strong>9.</strong> Duas ou três peças do traje bastam para atravessar Ammódes; nas mãos de Athroniaeth, o princípio arcano abriria o coração do deserto e pode acordar Planetar.</span></label></li>
+        <li><label><input type="checkbox" data-marca="pista-10"><span class="texto"><strong>10.</strong> A profecia do dilúvio pode ser o mesmo aviso dos sonhos de Yawar, e mais gente sonha igual.</span></label></li>
+        <li><label><input type="checkbox" data-marca="pista-11"><span class="texto"><strong>11.</strong> A morte do pai de Maya e a do pai adotivo de Ignis Fênix podem ter a mesma assinatura.</span></label></li>
+        <li><label><input type="checkbox" data-marca="pista-12"><span class="texto"><strong>12.</strong> Golimar estava escondida no subterrâneo do Templo de Planetar por um motivo que ainda não contou, e a areia que ela investiga chegou ao monastério antes dela.</span></label></li>
+      </ul>
+      <p class="nota-fora">Fora da lista por serem conhecidos: o assistente está preso por quatro anos e não entregou ninguém (o Mestre informa se perguntarem depois do flashback); a ausência de vento em Ffin por causa do Isolamento Arkalico.</p>
+    </div>
+  </details>
+
+  <details class="secao" id="locais">
+    <summary><span class="num">05</span><span class="titulo">4. Locais fantásticos</span><span class="conta" data-conta="local"></span></summary>
+    <div class="conteudo">
+      <ul class="marcavel">
+        <li><label><input type="checkbox" data-marca="local-universidade"><span class="texto"><strong>Universidade de Athroniaeth em Ffin.</strong> Construção modular brutalista: salas de aula, bibliotecas e alojamentos empilhados como uma única construção grande e apertada. Apesar da falta de materiais, o conjunto é bem feito. Verticalização para baixo: a falta de espaço levou a escola a crescer para o subsolo, onde cavernas se misturam a um labirinto de corredores, depósitos e laboratórios. Jaulas de criaturas: parte do subterrâneo guarda jaulas com todo tipo de criatura fantástica, entre pesquisa e experimentos.</span></label></li>
+        <li><label><input type="checkbox" data-marca="local-kariate"><span class="texto"><strong>Kariate Aljusur.</strong> Vila suspensa nos picos: a maior parte da vila fica nas alturas, ligada por pontes; a areia não alcança os cumes. Base soterrada: ao pé das montanhas restam poucas construções, engolidas pelas dunas. Sede de Aella: onde os Colorados decidem a guerra e onde Vialis pode estar preso, a caminho do próximo templo que ele conhece.</span></label></li>
+        <li><label><input type="checkbox" data-marca="local-reservatorio"><span class="texto"><strong>Reservatório escondido dos Doreán.</strong> Água no subterrâneo: um reservatório escondido, segredo dos Doreán. Entrada velada: só se chega desacordado ou de olhos vendados; forasteiros não aprendem o caminho. Conselho dos que recusaram Aella: Ava reúne ali os líderes de preservação, longe da guerra.</span></label></li>
+        <li><label><input type="checkbox" data-marca="local-salao"><span class="texto"><strong>Salão Acromático.</strong> Abaixo dele há uma passagem selada que Atilla não consegue abrir; a natureza real da magia intensificada e da passagem do tempo no salão segue em aberto.</span></label></li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="secao" id="npcs">
+    <summary><span class="num">06</span><span class="titulo">5. NPCs importantes</span><span class="conta" data-conta="npc"></span></summary>
+    <div class="conteudo">
+      <ul class="marcavel">
+        <li><label><input type="checkbox" data-marca="npc-cyfrin"><span class="texto"><strong>Cyfrin.</strong> Elfo, assistente de Rhiannon. Aparência: cabelo castanho claro, orelhas pontudas, túnica bege com detalhes dourados; trabalha à mesa com pena e pergaminho, de expressão cansada ou resignada. Ligação com a situação: membro ou ex-membro de A Mão de Athroniaeth. Deslocou a guarda do cristal de Simeno com uma ordem dada em nome de Rhiannon; ia executar a sabotagem e recuou no último momento. Foi preso e cumpre mais quatro anos por não entregar ninguém. Interpretação: referência Gaius Baltar, de Battlestar Galactica; sotaque pomposo e autoconfiante, sem a menor compostura quando está ameaçado. Relação atual: Maya o conhece da investigação e intermediou com ele o mandato falso; o grupo ainda não o procurou na prisão.</span></label></li>
+        <li><label><input type="checkbox" data-marca="npc-casse"><span class="texto"><strong>Casse.</strong> Tiefling velho, preso na mesma leva que Yawar; ocupa o espaço e se intromete na conversa, porque a prisão está cheia. Nome vem de <em>jacasser</em>, tagarelar. Personalidade: chato mas bem-humorado, indelicado mas inofensivo; não cala a boca. Ligação com a situação: era da guarda do cristal de Simeno e foi deslocado para a Oficina d'Água por uma ordem entregue por Cyfrin em nome de Rhiannon. É a fonte da contradição que liga Cyfrin à sabotagem. Interpretação: referência Seu Madruga, de Chaves; frustrado por estar preso mesmo tendo seguido ordens, com timing de comédia. Deixas: "Pode gritar, pode bater. Mas antes me deixa terminar a frase."; imita a última frase de alguém com deboche e resmunga "era só o que me faltava"; ao ouvir uma revelação, exclama "Ah! Pronto!".</span></label></li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="secao" id="criaturas">
+    <summary><span class="num">07</span><span class="titulo">6. Criaturas relevantes</span><span class="conta" data-conta="criatura"></span></summary>
+    <div class="conteudo">
+      <p class="nota-fora">Lista solta, sem quantidades nem composição fixa. O grupo está no nível 2.</p>
+      <h4>Soltas no saque da universidade</h4>
+      <ul class="marcavel">
+        <li><label><input type="checkbox" data-marca="criatura-grell"><span class="texto"><a href="https://www.dndbeyond.com/sources/dnd/mm-2024/monsters-g#Grell">Grell</a> <span class="cr">CR 3</span> — aberração flutuante com tentáculos paralisantes; ataca de cima.</span></label></li>
+        <li><label><input type="checkbox" data-marca="criatura-devourer"><span class="texto"><a href="https://www.dndbeyond.com/sources/dnd/mm-2024/monsters-i#IntellectDevourer">Intellect Devourer</a> <span class="cr">CR 2</span> — parasita psíquico que devora a mente.</span></label></li>
+        <li><label><input type="checkbox" data-marca="criatura-toad"><span class="texto"><a href="https://www.dndbeyond.com/monsters/5195029-giant-toad">Giant Toad</a> <span class="cr">CR 1</span> — engole e imobiliza.</span></label></li>
+        <li><label><input type="checkbox" data-marca="criatura-snake"><span class="texto"><a href="https://www.dndbeyond.com/monsters/5194999-flying-snake">Flying Snake</a> <span class="cr">CR 1/8</span> — várias, rápidas, com veneno.</span></label></li>
+      </ul>
+      <h4>Guardião do escritório do Llosg</h4>
+      <ul class="marcavel">
+        <li><label><input type="checkbox" data-marca="criatura-mimic"><span class="texto"><a href="https://www.dndbeyond.com/monsters/5195123-mimic">Mimic</a> — disfarçado de caixa com fundo falso; o diário fica no fundo. Ataca assim que alguém destrava o fundo. Ao morrer, revela a Pérola do Poder.</span></label></li>
+      </ul>
+      <h4>Opções já conhecidas</h4>
+      <ul class="marcavel">
+        <li><label><input type="checkbox" data-marca="criatura-mephit"><span class="texto"><span class="cr">CR 1/2</span> Mephits de poeira e fumaça, permanecem disponíveis.</span></label></li>
+        <li><label><input type="checkbox" data-marca="criatura-construto"><span class="texto"><span class="cr">CR 1/4 e 1</span> Construtos animados (armadura e espada), permanecem disponíveis.</span></label></li>
+        <li><label><input type="checkbox" data-marca="criatura-cultista"><span class="texto"><span class="cr">CR 1/8</span> Cultistas da Mão, permanecem disponíveis.</span></label></li>
+        <li><label><input type="checkbox" data-marca="criatura-aprendiz"><span class="texto"><span class="cr">CR 2</span> Aprendiz de mago, permanece disponível.</span></label></li>
+        <li><label><input type="checkbox" data-marca="criatura-fanatico"><span class="texto"><span class="cr">CR 2</span> Fanático da Mão, permanece disponível.</span></label></li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="secao" id="recompensas">
+    <summary><span class="num">08</span><span class="titulo">7. Recompensas possíveis</span><span class="conta" data-conta="recompensa"></span></summary>
+    <div class="conteudo">
+      <ul class="marcavel">
+        <li><label><input type="checkbox" data-marca="recompensa-sending"><span class="texto"><strong>Par de <a href="https://www.dndbeyond.com/magic-items/9180147-sending-stones">sending stones</a></strong> <span class="meta">— Atilla, se salvarem a vida dele de novo</span></span></label>
+          <details class="sub"><summary>Mecânica completa</summary><div class="sub-corpo"><p>Recompensa de Atilla se o grupo salvar a vida dele de novo.</p></div></details>
+        </li>
+        <li><label><input type="checkbox" data-marca="recompensa-perola"><span class="texto"><strong><a href="https://www.dndbeyond.com/magic-items/9228918-pearl-of-power">Pérola do Poder</a></strong> <span class="meta">— no mímico; requer sintonia</span></span></label>
+          <details class="sub"><summary>Mecânica completa</summary><div class="sub-corpo"><p>Escondida no mímico do escritório do Llosg; revelada quando ele morre. Requer sintonia.</p></div></details>
+        </li>
+        <li><label><input type="checkbox" data-marca="recompensa-amuleto"><span class="texto"><strong>Amuleto sagrado de Bless</strong> <span class="meta">— Ava, se o grupo se vincular a ela; requer sintonia</span></span></label>
+          <details class="sub"><summary>Mecânica completa</summary><div class="sub-corpo"><p>Presente de Ava se o grupo se vincular a ela; de tradição Doreán, não arcano. Enquanto sintonizado, uma vez por dia o portador conjura <em>Bless</em> sem gastar espaço de magia, com concentração normal; 20 usos no total. Requer sintonia.</p></div></details>
+        </li>
+        <li><label><input type="checkbox" data-marca="recompensa-varinha"><span class="texto"><strong>Varinha de Detectar Magia</strong> <span class="meta">— de um mago salvo; requer sintonia</span></span></label>
+          <details class="sub"><summary>Mecânica completa</summary><div class="sub-corpo"><p>Recompensa de um mago salvo na luta contra as bestas soltas. Enquanto sintonizada, uma vez por dia o portador conjura <em>Detectar Magia</em> sem gastar espaço de magia; 10 usos no total. Requer sintonia.</p></div></details>
+        </li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="secao" id="mundo">
+    <summary><span class="num">09</span><span class="titulo">Mundo vivo</span><span class="conta">o que se move sem o grupo</span></summary>
+    <div class="conteudo">
+      <ul>
+        <li><strong>A Mão de Athroniaeth:</strong> quer aproveitar a confusão para dominar Ffin e usar o Simeno sem restrição para atacar os Doreán de Aella, inclusive com evocações e rituais instáveis e perigosos. Como Hywel ainda tem a maioria do apoio, precisa agir rápido, enquanto a academia está atordoada. Não sabe que o grupo sobreviveu ao ataque dos mephits; tudo acontece praticamente ao mesmo tempo.</li>
+        <li><strong>Gwydion:</strong> protesta na reitoria com magos jovens, pede a saída de Hywel e caça um bode expiatório; cavalga o radicalismo sem controlar todas as células.</li>
+        <li><strong>Hywel:</strong> mantém a maioria do apoio, pressionado pelo protesto e pelos assassinatos; suspeita de Gwydion, ainda sem conhecer a Mão.</li>
+        <li><strong>Rhiannon:</strong> sem o assistente, reunindo relatos de violência interna antes da eleição; pode começar a desconfiar de Cyfrin.</li>
+        <li><strong>Ava:</strong> reúne os líderes que recusaram Aella no reservatório escondido; mandou dinheiro para proteger Yawar e espera o grupo.</li>
+        <li><strong>Atilla:</strong> atacado na mesma noite; recupera-se em segredo no ramo do Ludger e mandou Celidwen buscar ajuda. Mantém contato com Vialis pela sending stone.</li>
+        <li><strong>Ludger:</strong> trata Atilla em segredo e pode anunciar a morte dele.</li>
+        <li><strong>Maion:</strong> possível alvo pela proximidade com o grupo.</li>
+        <li><strong>Vialis:</strong> refém de Gundrada, pode estar em Kariate Aljusur; continua em contato com Atilla.</li>
+        <li><strong>Aella, Gundrada e Theron:</strong> fora de cena, em guerra; Ffin amanhece racionando água e se preparando para um cerco.</li>
+        <li><strong>Llosg:</strong> morto; o escritório foi encenado pelos integrantes da Mão.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="secao" id="auditoria">
+    <summary><span class="num">10</span><span class="titulo">Auditoria de trilhos</span><span class="conta">decisões e lacunas</span></summary>
+    <div class="conteudo">
+      <h4>Decisões conscientes</h4>
+      <ul>
+        <li>O flashback é guiado de propósito, com marcos fixos para passar informação; outros NPCs podem revelar partes durante ou depois, então os pontos não dependem só da Maya.</li>
+        <li>Atilla não morre de qualquer forma.</li>
+        <li>Os acontecimentos da universidade e o amanhecer de Ffin ocorrem de qualquer forma.</li>
+        <li>A Mão não sabe que o grupo sobreviveu ao ataque.</li>
+        <li>A Pérola do Poder é bônus; quem evitar o mímico sai sem ela.</li>
+        <li>O conteúdo do diário do Llosg tem outras fontes: membros da Mão conhecem a doutrina, os assassinatos e a sabotagem, inclusive Cyfrin.</li>
+      </ul>
+      <h4>Lacunas deliberadas</h4>
+      <ul>
+        <li>Como o grupo liga a mão ao Gwydion, deixado para emergir na mesa.</li>
+        <li>A identidade do articulador oculto da Mão.</li>
+        <li>A natureza real da magia intensificada e da passagem do tempo no Salão Acromático.</li>
+        <li>Quantidades e composição dos encontros.</li>
+        <li>Nomes e forma final dos itens recuperados dos construtos.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="secao" id="notas">
+    <summary><span class="num">11</span><span class="titulo">Notas rápidas</span><span class="conta">auto-salvas</span></summary>
+    <div class="conteudo">
+      <p class="nota-fora">Tudo aqui fica salvo apenas neste navegador; as mesmas notas aparecem no modo mesa.</p>
+      <textarea id="notas-preparo" placeholder="Nomes improvisados, decisões da mesa, o que ficou pendente..."></textarea>
+      <p class="estado" id="estado-preparo"></p>
+    </div>
+  </details>
+
+  <footer class="rodape-preparo">
+    <span>Painel descartável da Sessão 3. O Markdown é a fonte de verdade.</span>
+    <button class="limpar" id="limpar-preparo-2" type="button">Limpar marcações e notas</button>
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var KEY = "ammodes-sessao-3-cena-dossie";
+  var TOTAL_MOMENTOS = 6;
+  var estado = {modo:"mesa", momento:1, marcas:{}, notas:"", abertas:null};
+
+  try {
+    var bruto = JSON.parse(localStorage.getItem(KEY) || "null");
+    if (bruto && typeof bruto === "object") {
+      if (bruto.modo === "mesa" || bruto.modo === "preparo") estado.modo = bruto.modo;
+      if (typeof bruto.momento === "number" && bruto.momento >= 1 && bruto.momento <= TOTAL_MOMENTOS) estado.momento = bruto.momento;
+      if (bruto.marcas && typeof bruto.marcas === "object") estado.marcas = bruto.marcas;
+      if (typeof bruto.notas === "string") estado.notas = bruto.notas;
+      if (bruto.abertas && typeof bruto.abertas === "object") estado.abertas = bruto.abertas;
+    }
+  } catch (e) { estado = {modo:"mesa", momento:1, marcas:{}, notas:"", abertas:null}; }
+
+  function salvar() {
+    try { localStorage.setItem(KEY, JSON.stringify(estado)); } catch (e) {}
+    atualizarContas();
+  }
+
+  function pintarCaixa(cx) {
+    var id = cx.getAttribute("data-marca");
+    var feito = !!estado.marcas[id];
+    cx.checked = feito;
+    var bloco = cx.closest("label") || cx.closest("li");
+    if (bloco) bloco.classList.toggle("feito", feito);
+  }
+
+  function definirMarca(id, feito) {
+    estado.marcas[id] = feito;
+    var todas = document.querySelectorAll('[data-marca="' + id + '"]');
+    for (var i = 0; i < todas.length; i++) pintarCaixa(todas[i]);
+    salvar();
+  }
+
+  function atualizarContas() {
+    var totais = {}, feitos = {};
+    document.querySelectorAll("[data-marca]").forEach(function (cx) {
+      var id = cx.getAttribute("data-marca");
+      var p = id.split("-")[0];
+      totais[p] = totais[p] || {};
+      totais[p][id] = 1;
+      if (cx.checked) { feitos[p] = feitos[p] || {}; feitos[p][id] = 1; }
+    });
+    var nomes = {batida:"Gatilhos", cena:"Cenas", pista:"Pistas", npc:"NPCs", local:"Locais", criatura:"Criaturas", recompensa:"Recompensas"};
+    var total = 0, feitas = 0, partes = [];
+    for (var p in totais) {
+      var t = Object.keys(totais[p]).length;
+      var f = feitos[p] ? Object.keys(feitos[p]).length : 0;
+      total += t; feitas += f;
+      partes.push(nomes[p] + " " + f + "/" + t);
+    }
+    var p1 = document.getElementById("progresso");
+    if (p1) p1.textContent = estado.modo === "mesa"
+      ? (feitas + "/" + total + " munição")
+      : ("PREPARO — " + partes.join(" · "));
+    var em = document.getElementById("estado-mesa");
+    if (em) em.textContent = feitas + " de " + total + " marcações salvas neste navegador.";
+    var ep = document.getElementById("estado-preparo");
+    if (ep) ep.textContent = feitas + " de " + total + " marcações salvas neste navegador.";
+    document.querySelectorAll("[data-conta]").forEach(function (el) {
+      var pref = el.getAttribute("data-conta");
+      var sec = el.closest("details.secao");
+      var vistos = {}, tt = 0, ff = 0;
+      if (sec) {
+        sec.querySelectorAll('[data-marca^="' + pref + '-"]').forEach(function (cx) {
+          var id = cx.getAttribute("data-marca");
+          if (vistos[id]) return;
+          vistos[id] = 1;
+          tt++;
+          if (cx.checked) ff++;
+        });
+      }
+      el.textContent = ff + "/" + tt;
+    });
+  }
+
+  function restaurarPreparo() {
+    if (!estado.abertas) return;
+    document.querySelectorAll("#app-preparo details.secao").forEach(function (sec) {
+      if (typeof estado.abertas[sec.id] === "boolean") sec.open = estado.abertas[sec.id];
+    });
+  }
+
+  function aplicarModo(modo, gravar) {
+    estado.modo = modo;
+    document.body.setAttribute("data-mode", modo);
+    document.querySelectorAll('input[name="modo"]').forEach(function (r) {
+      r.checked = (r.value === modo);
+    });
+    if (modo === "preparo") restaurarPreparo();
+    atualizarContas();
+    if (gravar) salvar();
+  }
+
+  function focarAba(n) {
+    var aba = document.getElementById("aba-" + n);
+    if (aba) { try { aba.focus({preventScroll:true}); } catch (e) { aba.focus(); } }
+  }
+
+  function mostrarMomento(n, gravar, focar) {
+    if (n < 1 || n > TOTAL_MOMENTOS) return;
+    estado.momento = n;
+    document.querySelectorAll(".momento").forEach(function (sec) {
+      sec.hidden = (parseInt(sec.getAttribute("data-momento"), 10) !== n);
+    });
+    document.querySelectorAll("#trilha [role=tab]").forEach(function (b) {
+      var ativo = (parseInt(b.getAttribute("data-momento"), 10) === n);
+      b.setAttribute("aria-selected", ativo ? "true" : "false");
+      b.tabIndex = ativo ? 0 : -1;
+    });
+    if (gravar) salvar(); else atualizarContas();
+    if (focar) focarAba(n);
+  }
+
+  function irParaPreparo(id) {
+    aplicarModo("preparo", false);
+    var alvo = document.getElementById(id);
+    if (alvo) {
+      if (alvo.tagName === "DETAILS") {
+        alvo.open = true;
+        estado.abertas = estado.abertas || {};
+        estado.abertas[id] = true;
+      }
+      alvo.scrollIntoView({block:"start"});
+      try { alvo.focus({preventScroll:true}); } catch (e) {}
+    }
+    salvar();
+  }
+
+  document.querySelectorAll('input[name="modo"]').forEach(function (r) {
+    r.addEventListener("change", function () {
+      if (r.checked) aplicarModo(r.value, true);
+    });
+  });
+
+  document.querySelectorAll("[data-alvo]").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      irParaPreparo(a.getAttribute("data-alvo"));
+    });
+  });
+
+  document.querySelectorAll("a[href^='#']").forEach(function (a) {
+    if (a.hasAttribute("data-alvo")) return;
+    a.addEventListener("click", function () {
+      var id = a.getAttribute("href").slice(1);
+      var alvo = document.getElementById(id);
+      if (alvo && alvo.tagName === "DETAILS") {
+        alvo.open = true;
+        estado.abertas = estado.abertas || {};
+        estado.abertas[id] = true;
+        salvar();
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-marca]").forEach(function (cx) {
+    pintarCaixa(cx);
+    cx.addEventListener("change", function () {
+      definirMarca(cx.getAttribute("data-marca"), cx.checked);
+    });
+  });
+
+  var nMes = document.getElementById("notas-mesa");
+  var nPre = document.getElementById("notas-preparo");
+  if (nMes) nMes.value = estado.notas;
+  if (nPre) nPre.value = estado.notas;
+  function aoDigitar(campo) {
+    campo.addEventListener("input", function () {
+      estado.notas = campo.value;
+      if (nMes && campo !== nMes) nMes.value = campo.value;
+      if (nPre && campo !== nPre) nPre.value = campo.value;
+      salvar();
+    });
+  }
+  if (nMes) aoDigitar(nMes);
+  if (nPre) aoDigitar(nPre);
+
+  document.querySelectorAll("#app-preparo details.secao").forEach(function (sec) {
+    sec.addEventListener("toggle", function () {
+      estado.abertas = estado.abertas || {};
+      estado.abertas[sec.id] = sec.open;
+      salvar();
+    });
+  });
+
+  var expandir = document.getElementById("expandir");
+  if (expandir) expandir.addEventListener("click", function () {
+    estado.abertas = estado.abertas || {};
+    document.querySelectorAll("#app-preparo details.secao").forEach(function (sec) {
+      sec.open = true; estado.abertas[sec.id] = true;
+    });
+    salvar();
+  });
+  var recolher = document.getElementById("recolher");
+  if (recolher) recolher.addEventListener("click", function () {
+    estado.abertas = estado.abertas || {};
+    document.querySelectorAll("#app-preparo details.secao").forEach(function (sec) {
+      sec.open = false; estado.abertas[sec.id] = false;
+    });
+    salvar();
+  });
+
+  document.querySelectorAll("[data-wiki]").forEach(function (a) {
+    a.href = "obsidian://open?vault=rpg-ammodes&file=" + encodeURIComponent(a.getAttribute("data-wiki"));
+    a.title = "Abrir no Obsidian: " + a.getAttribute("data-wiki");
+  });
+
+  document.querySelectorAll('a[href^="http"]').forEach(function (a) {
+    a.setAttribute("target", "_blank");
+    a.setAttribute("rel", "noopener noreferrer");
+  });
+
+  function limparTudo() {
+    if (!window.confirm("Apagar modo, momento, marcações, notas e expansão desta sessão neste navegador?")) return;
+    try { localStorage.removeItem(KEY); } catch (e) {}
+    location.reload();
+  }
+  ["limpar", "limpar-preparo", "limpar-preparo-2"].forEach(function (id) {
+    var b = document.getElementById(id);
+    if (b) b.addEventListener("click", limparTudo);
+  });
+
+  document.querySelectorAll("#trilha [role=tab]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      mostrarMomento(parseInt(b.getAttribute("data-momento"), 10), true, false);
+    });
+  });
+
+  document.addEventListener("keydown", function (e) {
+    var tag = (e.target && e.target.tagName) || "";
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+    if (estado.modo !== "mesa") {
+      if (e.key === "Escape") { aplicarModo("mesa", true); }
+      return;
+    }
+    if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+      e.preventDefault();
+      var d = (e.key === "ArrowRight") ? 1 : -1;
+      mostrarMomento(((estado.momento - 1 + d) % TOTAL_MOMENTOS + TOTAL_MOMENTOS) % TOTAL_MOMENTOS + 1, true, true);
+    } else if (/^[1-6]$/.test(e.key)) {
+      e.preventDefault();
+      mostrarMomento(parseInt(e.key, 10), true, true);
+    } else if (e.key === "Home") {
+      e.preventDefault(); mostrarMomento(1, true, true);
+    } else if (e.key === "End") {
+      e.preventDefault(); mostrarMomento(TOTAL_MOMENTOS, true, true);
+    }
+  });
+
+  aplicarModo(estado.modo, false);
+  mostrarMomento(estado.momento, false, false);
+  atualizarContas();
+})();
+</script>
+</body>
+</html>
