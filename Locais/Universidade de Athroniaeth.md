@@ -8,6 +8,8 @@ estado: Ativa
 
 # Universidade de Athroniaeth
 
+![[Universidade de Athroniaeth.png]]
+
 Escola local de [[Athroniaeth]] em [[Ffin]]. Ocupa uma construção grande e apertada, modular e brutalista, com salas de aula, bibliotecas e alojamentos empilhados; apesar da falta de materiais, o conjunto é bem feito.
 
 - **Verticalização para baixo:** a falta de espaço levou a escola a crescer para o subsolo, onde cavernas se misturam a um labirinto de corredores, depósitos e laboratórios.
