@@ -15,7 +15,7 @@ Preparação antiga não utilizada é inspiração, não cânone. Quando houver 
 
 Detecte a próxima numeração a partir dos registros e pastas existentes. Crie um único Markdown em `Sessões/Sessão N/Sessão N.md`. Atualize-o após cada passo confirmado. Não crie arquivos separados por cena.
 
-O HTML irmão é derivado e ignorado pelo Git por `Sessões/**/*.html`.
+O HTML irmão (`Sessões/Sessão N/Sessão N.html`) é derivado do Markdown e deve ser versionado no Git, para que o painel exista em qualquer clone.
 
 ## Momentos de persistência
 

@@ -2,7 +2,7 @@
 
 ## Papel do painel
 
-Gere `Sessões/Sessão N/Sessão N.html` diretamente. O Markdown é a fonte de verdade; o HTML é um painel descartável para consulta durante o jogo. Não crie script, template ou gerador e não sincronize alterações de volta ao repositório.
+Gere `Sessões/Sessão N/Sessão N.html` diretamente e grave-o no Git junto com o Markdown da sessão. O Markdown continua sendo a fonte de verdade; o HTML é o painel de consulta durante o jogo. Não crie script, template ou gerador e não sincronize marcações ou notas do painel de volta ao repositório.
 
 ## Liberdade visual
 
