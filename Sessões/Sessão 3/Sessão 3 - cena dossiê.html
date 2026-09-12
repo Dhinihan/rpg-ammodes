@@ -299,7 +299,7 @@ body[data-mode="mesa"] .col.quem{justify-content:flex-start;gap:.5vh}
 body[data-mode="mesa"] .col.quem .quem-linha{margin-bottom:auto}
 body[data-mode="mesa"] .col.quem .improviso{margin-top:auto}
 body[data-mode="mesa"] .quem-linha{padding:.45vh .35rem;font-size:clamp(.78rem,1.95vh,.98rem)}
-body[data-mode="mesa"] .momento[data-momento="1"] .ficha{grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:.75rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .ficha{grid-template-columns:minmax(0,2fr) minmax(0,1fr) clamp(150px,19vw,268px);gap:.7rem}
 body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa{gap:.7rem}
 body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa>h3{font-size:.82rem;padding-bottom:.2rem}
 body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho{padding:1.25rem .45rem 1.25rem 3.7rem;border-bottom:3px solid rgba(36,29,18,.72)}
@@ -307,20 +307,22 @@ body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho::before{wid
 body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho strong{font-size:clamp(1.55rem,4.6vh,2.15rem);line-height:1.1}
 body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho .linha{font-size:clamp(1.02rem,2.6vh,1.28rem);margin-top:.32rem;color:#241d12;line-height:1.28}
 body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho .refs{font-size:.95em;margin-top:.28rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-arquivo{justify-content:flex-start;gap:.32rem;background:rgba(253,251,244,.7);border:1px solid rgba(36,29,18,.32);box-shadow:3px 4px 0 rgba(36,29,18,.16);padding:.32rem .4rem .38rem;transform:rotate(.45deg);min-height:0}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-arquivo>h3{font-size:.62rem;letter-spacing:.12em}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-corpo{flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(108px,42%);grid-template-rows:minmax(0,1fr) auto;grid-template-areas:"elenco foto" "achado achado";gap:.28rem .4rem;align-items:stretch}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-elenco{grid-area:elenco;display:flex;flex-direction:column;gap:.22rem;min-height:0;overflow:hidden}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-foto{grid-area:foto;margin:0;height:100%;min-height:0;transform:rotate(-2.2deg);align-self:stretch}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-achado{grid-area:achado;background:rgba(28,122,99,.08);border:1px dashed #1c7a63;padding:.28rem .4rem .32rem;transform:rotate(-.5deg)}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-rotulo{font-family:var(--mono);font-size:.52rem;letter-spacing:.1em;text-transform:uppercase;color:#1c7a63;margin:0 0 .12rem;font-weight:bold}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-elenco .quem-linha{margin:0;padding:.22rem .32rem;font-size:clamp(.68rem,1.7vh,.86rem);line-height:1.28}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-elenco .quem-linha:nth-of-type(odd){transform:rotate(-.6deg)}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-elenco .quem-linha:nth-of-type(even){transform:rotate(.55deg);margin-left:.35rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-achado .mini{display:inline-flex;margin:.06rem .25rem .12rem 0;font-size:.72em;padding:.18rem .48rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-achado .solta{margin:.18rem 0 0;font-size:.78em}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-arquivo .improviso{margin:.05rem 0 0;padding:.16rem .32rem;font-size:clamp(.64rem,1.55vh,.8rem)}
-body[data-mode="mesa"] .momento[data-momento="1"] .cela-arquivo .improviso ul{margin:.04rem 0 0}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-texto{justify-content:flex-start;gap:.5rem;min-height:0;padding-left:.15rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-texto>h3{font-size:.82rem;padding-bottom:.2rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .elenco{display:flex;flex-direction:column;gap:.32rem;margin:0;flex:1 1 auto;min-height:0;justify-content:flex-start}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-texto .quem-linha{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:.12rem;margin:0;width:100%;flex:1 1 0;padding:.38rem .55rem;border:1px solid rgba(36,29,18,.22);border-radius:2px;background:#fbf6ea;box-shadow:none;transform:none;font-size:inherit;line-height:1.3}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-texto .quem-linha:nth-of-type(n){transform:none;margin-left:0;margin-right:0}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-texto .nome{font-family:var(--serif);font-size:clamp(.92rem,2.15vh,1.08rem);font-weight:bold;color:#241d12;line-height:1.15}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-texto .papel{font-family:var(--sans);font-size:clamp(.74rem,1.75vh,.88rem);font-weight:normal;color:#5a4a36;line-height:1.4}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-achado{flex:0 0 auto;margin:0;padding:.4rem 0 0;border:none;border-top:2px solid rgba(36,29,18,.35);background:transparent;box-shadow:none;transform:none}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-rotulo{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:#5a4a36;margin:0 0 .32rem;font-weight:bold}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-achado .mini{display:inline-flex;margin:0 .3rem .18rem 0;font-size:.8em;padding:.2rem .55rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-achado .refs{display:inline-block;margin-left:.1rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-achado .solta{margin:.22rem 0 0;padding:0;border-left:none;font-size:.84em;line-height:1.4;color:#3a2e20}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-texto .improviso{flex:0 0 auto;margin:0;padding:.32rem 0 0;border:none;border-top:1px dashed #c4ae86;background:transparent;transform:none;font-size:clamp(.74rem,1.7vh,.86rem)}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-texto .improviso h4{margin:0 0 .14rem;color:#7a6a52}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-texto .improviso ul{margin:0;padding-left:.95rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .cela-texto .improviso li{margin:.12rem 0;font-size:inherit;line-height:1.35}
 body[data-mode="mesa"] .momento[data-momento="2"] .quem-linha:nth-of-type(1){margin-right:.8rem}
 body[data-mode="mesa"] .momento[data-momento="2"] .quem-linha:nth-of-type(3){margin-left:.7rem}
 body[data-mode="mesa"] .momento[data-momento="3"] .quem-linha:nth-of-type(2){margin-right:.6rem}
@@ -342,9 +344,8 @@ body[data-mode="mesa"] .rodape-mesa{background:#191008;color:#efe4cd}
   body[data-mode="mesa"] .momento{width:auto;transform:none}
   .momento::before,.momento::after{display:none}
   .carimbo{white-space:normal}
-  body[data-mode="mesa"] .momento[data-momento="1"] .ficha{grid-template-columns:minmax(0,1fr)}
-  body[data-mode="mesa"] .momento[data-momento="1"] .cela-arquivo{transform:none}
-  body[data-mode="mesa"] .momento[data-momento="1"] .cela-corpo{grid-template-columns:minmax(0,1fr) minmax(120px,36%);min-height:220px}
+  body[data-mode="mesa"] .momento[data-momento="1"] .ficha{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+  body[data-mode="mesa"] .momento[data-momento="1"] .midia{min-height:190px}
 }
 
 /* ============ PREPARO ============ */
@@ -449,30 +450,27 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
             <label class="gatilho"><input type="checkbox" data-marca="batida-1-2"><span class="texto"><strong>Casse não cala a boca</strong><span class="linha">Era da guarda do cristal; deslocado por ordem entregue por Cyfrin em nome de Rhiannon.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Casse" href="#">Casse</a> · <a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a></span></span></label>
             <label class="gatilho"><input type="checkbox" data-marca="batida-1-3"><span class="texto"><strong>Rhiannon e o assistente</strong><span class="linha">Ela chega com Cyfrin; a defensiva dele é um dial e ela pode desconfiar sozinha.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a> · <a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a> · <a href="#abertura" data-alvo="abertura">no preparo</a></span></span></label>
           </div>
-          <aside class="col cela-arquivo">
-            <h3>Arquivo da cela</h3>
-            <div class="cela-corpo">
-              <div class="cela-elenco">
-                <p class="cela-rotulo">Quem está aqui</p>
-                <label class="quem-linha"><input type="checkbox" data-marca="npc-maya"><span><span class="nome"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a></span> — infiltrada, investiga a morte do pai.</span></label>
-                <label class="quem-linha"><input type="checkbox" data-marca="npc-yawar"><span><span class="nome"><a class="wiki" data-wiki="Personagens/Yawar" href="#">Yawar</a></span> — divide a cela; a acusação contra ele cai.</span></label>
-                <label class="quem-linha"><input type="checkbox" data-marca="npc-casse"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Casse" href="#">Casse</a></span> — tagarela; é a fonte da contradição.</span></label>
-                <label class="quem-linha"><input type="checkbox" data-marca="npc-cyfrin"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a></span> — o assistente; a defensiva dele é um dial.</span></label>
-                <label class="quem-linha"><input type="checkbox" data-marca="npc-rhiannon"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a></span> — a Chanceler; pode desconfiar sozinha.</span></label>
-              </div>
-              <figure class="midia cela-foto">
-                <div class="moldura"><img src="../../NPCs/Casse com estandarte.png" width="480" height="360" alt="Casse, tiefling velho preso na mesma leva que Yawar, com o estandarte de Ffin."></div>
-                <figcaption>A prisão está cheia.</figcaption>
-              </figure>
-              <div class="cela-achado">
-                <p class="cela-rotulo">O que se descobre / o que se solta</p>
-                <label class="mini"><input type="checkbox" data-marca="pista-3"><span>a ordem em nome de Rhiannon nunca foi dada</span></label>
-                <span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span>
-                <p class="solta">Com o culpado identificado, a acusação contra Yawar cai.</p>
-              </div>
+          <aside class="col cela-texto">
+            <h3>Quem está aqui</h3>
+            <div class="elenco">
+              <label class="quem-linha"><input type="checkbox" data-marca="npc-maya"><span class="nome"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a></span><span class="papel">infiltrada; investiga a morte do pai</span></label>
+              <label class="quem-linha"><input type="checkbox" data-marca="npc-yawar"><span class="nome"><a class="wiki" data-wiki="Personagens/Yawar" href="#">Yawar</a></span><span class="papel">divide a cela; a acusação contra ele cai</span></label>
+              <label class="quem-linha"><input type="checkbox" data-marca="npc-casse"><span class="nome"><a class="wiki" data-wiki="NPCs/Casse" href="#">Casse</a></span><span class="papel">tagarela; é a fonte da contradição</span></label>
+              <label class="quem-linha"><input type="checkbox" data-marca="npc-cyfrin"><span class="nome"><a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a></span><span class="papel">o assistente; a defensiva dele é um dial</span></label>
+              <label class="quem-linha"><input type="checkbox" data-marca="npc-rhiannon"><span class="nome"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a></span><span class="papel">a Chanceler; pode desconfiar sozinha</span></label>
+            </div>
+            <div class="cela-achado">
+              <p class="cela-rotulo">O que se descobre / o que se solta</p>
+              <label class="mini"><input type="checkbox" data-marca="pista-3"><span>a ordem em nome de Rhiannon nunca foi dada</span></label>
+              <span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span>
+              <p class="solta">Com o culpado identificado, a acusação contra Yawar cai.</p>
             </div>
             <div class="grupo improviso"><h4>Se a mesa travar</h4><ul><li>O preso intrometido fala antes de Rhiannon; se a cena mudar, ele se intromete depois.</li><li>A defensiva de Cyfrin é um dial; Rhiannon pode desconfiar sozinha.</li></ul></div>
           </aside>
+          <figure class="midia">
+            <div class="moldura"><img src="../../NPCs/Casse com estandarte.png" width="480" height="360" alt="Casse, tiefling velho preso na mesma leva que Yawar, com o estandarte de Ffin."></div>
+            <figcaption>A prisão está cheia.</figcaption>
+          </figure>
         </div>
       </section>
 
