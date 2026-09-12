@@ -376,7 +376,6 @@ body[data-mode="mesa"] .momento.folha-elenco .achado.pista .refs{grid-column:2;m
 body[data-mode="mesa"] .momento.folha-elenco .achado.dial .texto,
 body[data-mode="mesa"] .momento.folha-elenco .achado.travar .texto{color:#3a2e20}
 body[data-mode="mesa"] .momento.folha-elenco .elenco .quem-linha{margin:0}
-body[data-mode="mesa"] .momento[data-momento="5"] .quem-linha:nth-of-type(2){margin-left:.8rem}
 body[data-mode="mesa"] .momento[data-momento="6"] .quem-linha:nth-of-type(2){margin-right:.6rem}
 body[data-mode="mesa"] .col.sai{justify-content:flex-start}
 body[data-mode="mesa"] .col.sai .grupo{margin-bottom:auto}
@@ -662,7 +661,7 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
         </div>
       </section>
 
-      <section class="momento" id="mom-5" data-momento="5" role="tabpanel" aria-labelledby="aba-5" tabindex="-1" hidden>
+      <section class="momento folha-elenco" id="mom-5" data-momento="5" role="tabpanel" aria-labelledby="aba-5" tabindex="-1" hidden>
         <div class="mom-cabeca">
           <div class="bloco">
             <span class="mom-num">momento 5 · arquivo da madrugada</span>
@@ -680,19 +679,21 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
             <label class="gatilho"><input type="checkbox" data-marca="batida-5-3"><span class="texto"><strong>Água racionada</strong><span class="linha">Theron a três noites de Ffin com seis sobreviventes e o Simeno da caravana.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Theron" href="#">Theron</a> · <a class="wiki" data-wiki="Items e Objetos/Simeno" href="#">Simeno</a></span></span></label>
             <label class="gatilho"><input type="checkbox" data-marca="cena-6"><span class="texto"><strong>Fugir de Ffin</strong><span class="linha">Ava leva a outros Doreán; a mesa pode seguir atrás de Vialis.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a> · <a class="wiki" data-wiki="NPCs/Vialis" href="#">Vialis</a> · <a class="wiki" data-wiki="Facções/Doreán" href="#">Doreán</a></span></span></label>
           </div>
-          <div class="col quem">
-            <h3>Quem está aqui</h3>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-theron"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Theron" href="#">Theron</a></span> — a três noites; traz o Simeno.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-ava"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a></span> — leva a outros Doreán.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-vialis"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Vialis" href="#">Vialis</a></span> — refém; contato por sending stone.</span></label>
-            <div class="grupo improviso"><h4>Se a mesa travar</h4><ul><li>Ffin amanhece de qualquer forma; Ava pode levar a outros Doreán.</li><li>Atilla não morre; Ludger anuncia e trata em segredo.</li></ul></div>
-          </div>
-          <div class="col sai">
-            <h3>O que se descobre / o que se solta</h3>
-            <div class="grupo"><h4>Pistas</h4><div class="itens"><label class="mini"><input type="checkbox" data-marca="pista-9"><span>duas peças do traje bastam para atravessar Ammódes</span></label></div><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></div>
-            <div class="grupo"><h4>Recompensa</h4><div class="itens"><label class="mini"><input type="checkbox" data-marca="recompensa-varinha"><span>varinha de Detectar Magia, de um mago salvo</span></label></div><span class="refs"><a href="#recompensas" data-alvo="recompensas">recompensas</a></span></div>
-            <p class="solta"><a class="wiki" data-wiki="Cidades/Ffin" href="#">Ffin</a> amanhece pronta para um cerco, com ou sem o grupo.</p>
-          </div>
+          <aside class="col quem" aria-labelledby="quem-titulo-5">
+            <h3 id="quem-titulo-5">Quem está aqui</h3>
+            <ol class="elenco">
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-theron"><span class="nome"><a class="wiki" data-wiki="NPCs/Theron" href="#">Theron</a></span><span class="papel">a três noites; traz o Simeno</span></label>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-ava"><span class="nome"><a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a></span><span class="papel">leva a outros Doreán</span></label>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-vialis"><span class="nome"><a class="wiki" data-wiki="NPCs/Vialis" href="#">Vialis</a></span><span class="papel">refém</span></label>
+                <p class="achado dial"><span class="rotulo">Dial</span><span class="texto">Sending stone com Atilla.</span></p>
+              </li>
+            </ol>
+          </aside>
           <figure class="midia">
             <div class="moldura"><img src="../../Cidades/Estandarte de Ffin.png" width="480" height="360" alt="Estandarte de Ffin: montanhas cinzas sobre fundo azul, com uma lua no centro."></div>
             <figcaption>Estandartes nos portões.</figcaption>
