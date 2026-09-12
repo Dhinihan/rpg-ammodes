@@ -376,8 +376,6 @@ body[data-mode="mesa"] .momento.folha-elenco .achado.pista .refs{grid-column:2;m
 body[data-mode="mesa"] .momento.folha-elenco .achado.dial .texto,
 body[data-mode="mesa"] .momento.folha-elenco .achado.travar .texto{color:#3a2e20}
 body[data-mode="mesa"] .momento.folha-elenco .elenco .quem-linha{margin:0}
-body[data-mode="mesa"] .momento[data-momento="4"] .quem-linha:nth-of-type(1){margin-left:.6rem}
-body[data-mode="mesa"] .momento[data-momento="4"] .quem-linha:nth-of-type(3){margin-right:.7rem}
 body[data-mode="mesa"] .momento[data-momento="5"] .quem-linha:nth-of-type(2){margin-left:.8rem}
 body[data-mode="mesa"] .momento[data-momento="6"] .quem-linha:nth-of-type(2){margin-right:.6rem}
 body[data-mode="mesa"] .col.sai{justify-content:flex-start}
@@ -619,7 +617,7 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
         </div>
       </section>
 
-      <section class="momento" id="mom-4" data-momento="4" role="tabpanel" aria-labelledby="aba-4" tabindex="-1" hidden>
+      <section class="momento folha-elenco" id="mom-4" data-momento="4" role="tabpanel" aria-labelledby="aba-4" tabindex="-1" hidden>
         <div class="mom-cabeca">
           <div class="bloco">
             <span class="mom-num">momento 4 · arquivo da madrugada</span>
@@ -637,19 +635,26 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
             <label class="gatilho"><input type="checkbox" data-marca="cena-5"><span class="texto"><strong>Checar Maion</strong><span class="linha">A estalajadeira pode ter sido atacada pela relação com o grupo.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Maion" href="#">Maion</a> · <a href="#cenas" data-alvo="cenas">cenas</a></span></span></label>
             <label class="gatilho"><input type="checkbox" data-marca="cena-7"><span class="texto"><strong>O assistente na prisão</strong><span class="linha">Cyfrin cumpre mais quatro anos por não entregar ninguém; a trilha leva até ele.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a> · <a class="wiki" data-wiki="NPCs/Gwydion" href="#">Gwydion</a></span></span></label>
           </div>
-          <div class="col quem">
-            <h3>Quem está aqui</h3>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-rhiannon"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a></span> — reúne relatos; sem o assistente.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-ava"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a></span> — reúne Doreán no reservatório.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-maion"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Maion" href="#">Maion</a></span> — estalajadeira; possível alvo.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-cyfrin"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a></span> — preso; não entregou ninguém.</span></label>
-            <div class="grupo improviso"><h4>Se a mesa travar</h4><ul><li>Ordem é sugestão; puxe o que a ficção pedir.</li><li>Maya pode informar de um grupo que foi se encontrar com membros de Aella.</li></ul></div>
-          </div>
-          <div class="col sai">
-            <h3>O que se descobre / o que se solta</h3>
-            <div class="grupo"><h4>Pistas</h4><div class="itens"><label class="mini"><input type="checkbox" data-marca="pista-5"><span>Seren serve à Mão e alimenta Hywel</span></label><label class="mini"><input type="checkbox" data-marca="pista-12"><span>Golimar e a areia</span></label></div><span class="refs"><a class="wiki" data-wiki="NPCs/Seren" href="#">Seren</a> · <a class="wiki" data-wiki="NPCs/Hywel" href="#">Hywel</a> · <a class="wiki" data-wiki="Personagens/Golimar" href="#">Golimar</a> · <a href="#segredos" data-alvo="segredos">segredos</a></span></div>
-            <div class="grupo"><h4>Recompensa</h4><div class="itens"><label class="mini"><input type="checkbox" data-marca="recompensa-amuleto"><span>amuleto de Bless, se o grupo se vincular a Ava</span></label></div><span class="refs"><a href="#recompensas" data-alvo="recompensas">recompensas</a></span></div>
-          </div>
+          <aside class="col quem" aria-labelledby="quem-titulo-4">
+            <h3 id="quem-titulo-4">Quem puxa a noite</h3>
+            <ol class="elenco">
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-rhiannon"><span class="nome"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a></span><span class="papel">reúne relatos; sem o assistente</span></label>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-ava"><span class="nome"><a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a></span><span class="papel">reúne Doreán no reservatório</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="recompensa-amuleto"><span>Amuleto de Bless, se o grupo se vincular.</span></label><span class="refs"><a href="#recompensas" data-alvo="recompensas">recompensas</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-maion"><span class="nome"><a class="wiki" data-wiki="NPCs/Maion" href="#">Maion</a></span><span class="papel">estalajadeira</span></label>
+                <p class="achado dial"><span class="rotulo">Dial</span><span class="texto">Possível alvo.</span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-cyfrin"><span class="nome"><a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a></span><span class="papel">preso</span></label>
+                <p class="achado dial"><span class="rotulo">Dial</span><span class="texto">Não entregou ninguém.</span></p>
+              </li>
+            </ol>
+          </aside>
           <figure class="midia retrato">
             <div class="moldura"><img src="../../NPCs/Maion.png" width="480" height="600" alt="Maion, a estalajadeira da Estalagem da Pedra Dura."></div>
             <figcaption>Maion é possível alvo.</figcaption>
