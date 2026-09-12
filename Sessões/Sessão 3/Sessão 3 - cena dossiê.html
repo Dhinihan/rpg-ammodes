@@ -337,8 +337,45 @@ body[data-mode="mesa"] .momento[data-momento="1"] .achado.pista .mini{
 body[data-mode="mesa"] .momento[data-momento="1"] .achado.pista .refs{grid-column:2;margin:0}
 body[data-mode="mesa"] .momento[data-momento="1"] .achado.dial .texto,
 body[data-mode="mesa"] .momento[data-momento="1"] .achado.travar .texto{color:#3a2e20}
-body[data-mode="mesa"] .momento[data-momento="2"] .quem-linha:nth-of-type(1){margin-right:.8rem}
-body[data-mode="mesa"] .momento[data-momento="2"] .quem-linha:nth-of-type(3){margin-left:.7rem}
+body[data-mode="mesa"] .momento.folha-elenco .ficha{grid-template-columns:minmax(0,2fr) minmax(0,1fr) clamp(150px,19vw,268px);gap:.7rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa{gap:.7rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa>h3{font-size:.82rem;padding-bottom:.2rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho{padding:1.25rem .45rem 1.25rem 3.7rem;border-bottom:3px solid rgba(36,29,18,.72)}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho::before{width:2.45rem;height:2.45rem;font-size:1.2rem;border-width:3.5px;left:.06rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho strong{font-size:clamp(1.55rem,4.6vh,2.15rem);line-height:1.1}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho .linha{font-size:clamp(1.02rem,2.6vh,1.28rem);margin-top:.32rem;color:#241d12;line-height:1.28}
+body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho .refs{font-size:.95em;margin-top:.28rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.quem{justify-content:flex-start;gap:.15rem;min-height:0;padding-left:.1rem}
+body[data-mode="mesa"] .momento.folha-elenco .col.quem>h3{font-size:.78rem;font-weight:bold;padding-bottom:.2rem}
+body[data-mode="mesa"] .momento.folha-elenco .elenco{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;flex:1 1 auto;min-height:0}
+body[data-mode="mesa"] .momento.folha-elenco .pessoa{padding:.6rem .15rem .65rem;border-bottom:1px solid rgba(36,29,18,.4)}
+body[data-mode="mesa"] .momento.folha-elenco .pessoa:last-child{border-bottom:none}
+body[data-mode="mesa"] .momento.folha-elenco .elenco .quem-linha,
+body[data-mode="mesa"] .momento.folha-elenco .elenco label.quem-linha:nth-of-type(n){
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .5rem;
+  margin:0;padding:0;width:100%;
+  background:transparent;border:none;border-radius:0;box-shadow:none;transform:none;
+  font-size:inherit;line-height:1.15
+}
+body[data-mode="mesa"] .momento.folha-elenco .elenco .nome{font-family:var(--serif);font-size:1.28rem;font-weight:bold;color:#241d12;line-height:1.15}
+body[data-mode="mesa"] .momento.folha-elenco .elenco .papel{font-family:var(--sans);font-size:.95rem;font-weight:normal;color:#5a4a36;line-height:1.35}
+body[data-mode="mesa"] .momento.folha-elenco .achado{margin:.32rem 0 0;display:grid;grid-template-columns:5.6rem minmax(0,1fr);column-gap:.4rem;align-items:baseline}
+body[data-mode="mesa"] .momento.folha-elenco .achado .rotulo{font-family:var(--mono);font-size:.72rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;line-height:1.3;color:#7a6a52;padding-top:.1rem}
+body[data-mode="mesa"] .momento.folha-elenco .achado .texto{font-family:var(--serif);font-size:1.08rem;line-height:1.35;color:#241d12;text-wrap:balance}
+body[data-mode="mesa"] .momento.folha-elenco .achado.pista .rotulo,
+body[data-mode="mesa"] .momento.folha-elenco .achado.solta .rotulo{color:var(--agua)}
+body[data-mode="mesa"] .momento.folha-elenco .achado.solta{border:none;padding:0;margin:.32rem 0 0;font-size:inherit;font-style:normal;color:inherit}
+body[data-mode="mesa"] .momento.folha-elenco .achado.solta .texto{font-style:italic}
+body[data-mode="mesa"] .momento.folha-elenco .achado.pista .mini{
+  display:inline-block;justify-self:start;max-width:13.8rem;margin:0 0 0 -.45rem;
+  background:transparent;border:1.6px solid var(--agua);
+  border-radius:48% 52% 55% 45%/58% 48% 52% 44%;
+  padding:.12rem .65rem .16rem;font-size:1.08rem;line-height:1.35;color:#241d12
+}
+body[data-mode="mesa"] .momento.folha-elenco .achado.pista .refs{grid-column:2;margin:0}
+body[data-mode="mesa"] .momento.folha-elenco .achado.dial .texto,
+body[data-mode="mesa"] .momento.folha-elenco .achado.travar .texto{color:#3a2e20}
+body[data-mode="mesa"] .momento.folha-elenco .elenco .quem-linha{margin:0}
 body[data-mode="mesa"] .momento[data-momento="3"] .quem-linha:nth-of-type(2){margin-right:.6rem}
 body[data-mode="mesa"] .momento[data-momento="4"] .quem-linha:nth-of-type(1){margin-left:.6rem}
 body[data-mode="mesa"] .momento[data-momento="4"] .quem-linha:nth-of-type(3){margin-right:.7rem}
@@ -358,8 +395,10 @@ body[data-mode="mesa"] .rodape-mesa{background:#191008;color:#efe4cd}
   body[data-mode="mesa"] .momento{width:auto;transform:none}
   .momento::before,.momento::after{display:none}
   .carimbo{white-space:normal}
-  body[data-mode="mesa"] .momento[data-momento="1"] .ficha{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
-  body[data-mode="mesa"] .momento[data-momento="1"] .midia{min-height:190px}
+  body[data-mode="mesa"] .momento[data-momento="1"] .ficha,
+  body[data-mode="mesa"] .momento.folha-elenco .ficha{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+  body[data-mode="mesa"] .momento[data-momento="1"] .midia,
+  body[data-mode="mesa"] .momento.folha-elenco .midia{min-height:190px}
 }
 
 /* ============ PREPARO ============ */
@@ -495,7 +534,7 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
         </div>
       </section>
 
-      <section class="momento" id="mom-2" data-momento="2" role="tabpanel" aria-labelledby="aba-2" tabindex="-1" hidden>
+      <section class="momento folha-elenco" id="mom-2" data-momento="2" role="tabpanel" aria-labelledby="aba-2" tabindex="-1" hidden>
         <div class="mom-cabeca">
           <div class="bloco">
             <span class="mom-num">momento 2 · arquivo da madrugada</span>
@@ -513,19 +552,26 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
             <label class="gatilho"><input type="checkbox" data-marca="cena-2"><span class="texto"><strong>Celidwen pede ajuda</strong><span class="linha">Atilla atacado na mesma noite; Ludger falha em curá-lo e Kadur tem cura.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Celidwen" href="#">Celidwen</a> · <a class="wiki" data-wiki="NPCs/Atilla" href="#">Atilla</a> · <a class="wiki" data-wiki="NPCs/Ludger" href="#">Ludger</a> · <a class="wiki" data-wiki="Personagens/Kadur" href="#">Kadur</a></span></span></label>
             <label class="gatilho"><input type="checkbox" data-marca="batida-2-3"><span class="texto"><strong>Proteger Atilla</strong><span class="linha">Se ficam, decidem juntos com ele, Celidwen e Ludger; Ludger pode anunciar a morte dele.</span><span class="refs"><a href="#cenas" data-alvo="cenas">no preparo</a></span></span></label>
           </div>
-          <div class="col quem">
-            <h3>Quem está aqui</h3>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-celidwen"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Celidwen" href="#">Celidwen</a></span> — assistente; pede ajuda e sabe a verdade.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-atilla"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Atilla" href="#">Atilla</a></span> — gravemente ferido; não morre.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-ludger"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Ludger" href="#">Ludger</a></span> — tenta curar; trata em segredo.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-kadur"><span><span class="nome"><a class="wiki" data-wiki="Personagens/Kadur" href="#">Kadur</a></span> — tem cura; decide se ajuda.</span></label>
-            <div class="grupo improviso"><h4>Se a mesa travar</h4><ul><li>A chegada de Celidwen só acontece se o grupo ainda estiver na casa.</li><li>Ludger pode alegar a morte de Atilla e tratá-lo em segredo; Celidwen sabe.</li></ul></div>
-          </div>
-          <div class="col sai">
-            <h3>O que se descobre / o que se solta</h3>
-            <div class="grupo"><h4>Recompensa</h4><div class="itens"><label class="mini"><input type="checkbox" data-marca="recompensa-sending"><span>sending stones, se salvarem Atilla de novo</span></label></div><span class="refs"><a href="#recompensas" data-alvo="recompensas">recompensas</a></span></div>
-            <p class="solta">Se o grupo já saiu, Celidwen chega tarde demais.</p>
-          </div>
+          <aside class="col quem" aria-labelledby="quem-titulo-2">
+            <h3 id="quem-titulo-2">Quem está aqui</h3>
+            <ol class="elenco">
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-celidwen"><span class="nome"><a class="wiki" data-wiki="NPCs/Celidwen" href="#">Celidwen</a></span><span class="papel">assistente; pede ajuda</span></label>
+                <p class="achado solta"><span class="rotulo">Solta</span><span class="texto">Se o grupo já saiu, chega tarde demais.</span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-atilla"><span class="nome"><a class="wiki" data-wiki="NPCs/Atilla" href="#">Atilla</a></span><span class="papel">gravemente ferido; não morre</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="recompensa-sending"><span>Sending stones, se o salvarem de novo.</span></label><span class="refs"><a href="#recompensas" data-alvo="recompensas">recompensas</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-ludger"><span class="nome"><a class="wiki" data-wiki="NPCs/Ludger" href="#">Ludger</a></span><span class="papel">tenta curar</span></label>
+                <p class="achado dial"><span class="rotulo">Dial</span><span class="texto">Pode anunciar a morte; trata em segredo.</span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-kadur"><span class="nome"><a class="wiki" data-wiki="Personagens/Kadur" href="#">Kadur</a></span><span class="papel">tem cura; decide se ajuda</span></label>
+              </li>
+            </ol>
+          </aside>
           <figure class="midia retrato">
             <div class="moldura"><img src="../../NPCs/Celidwen.png" width="480" height="600" alt="Celidwen, assistente de Atilla, com o rosto preocupado."></div>
             <figcaption>Celidwen sabe a verdade.</figcaption>
