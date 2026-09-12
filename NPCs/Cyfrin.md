@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Cyfrin
 
+![[Cyfrin.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** Sotaque pomposo e autoconfiante; perde a compostura quando está ameaçado.
 > **Personalidade:** Referência: Gaius Baltar, de *Battlestar Galactica*.
