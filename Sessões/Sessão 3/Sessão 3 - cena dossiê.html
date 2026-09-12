@@ -309,7 +309,7 @@ body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho .linha{font
 body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho .refs{font-size:.95em;margin-top:.28rem}
 body[data-mode="mesa"] .momento[data-momento="1"] .col.quem{justify-content:flex-start;gap:.15rem;min-height:0;padding-left:.1rem}
 body[data-mode="mesa"] .momento[data-momento="1"] .col.quem>h3{font-size:.78rem;font-weight:bold;padding-bottom:.2rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .elenco{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;flex:0 1 auto;min-height:0}
+body[data-mode="mesa"] .momento[data-momento="1"] .elenco{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;flex:1 1 auto;min-height:0}
 body[data-mode="mesa"] .momento[data-momento="1"] .pessoa{padding:.6rem .15rem .65rem;border-bottom:1px solid rgba(36,29,18,.4)}
 body[data-mode="mesa"] .momento[data-momento="1"] .pessoa:last-child{border-bottom:none}
 body[data-mode="mesa"] .momento[data-momento="1"] .elenco .quem-linha,
@@ -347,7 +347,7 @@ body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho .linha{font-size
 body[data-mode="mesa"] .momento.folha-elenco .col.puxa .gatilho .refs{font-size:.95em;margin-top:.28rem}
 body[data-mode="mesa"] .momento.folha-elenco .col.quem{justify-content:flex-start;gap:.15rem;min-height:0;padding-left:.1rem}
 body[data-mode="mesa"] .momento.folha-elenco .col.quem>h3{font-size:.78rem;font-weight:bold;padding-bottom:.2rem}
-body[data-mode="mesa"] .momento.folha-elenco .elenco{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;flex:0 1 auto;min-height:0}
+body[data-mode="mesa"] .momento.folha-elenco .elenco{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;flex:1 1 auto;min-height:0}
 body[data-mode="mesa"] .momento.folha-elenco .pessoa{padding:.6rem .15rem .65rem;border-bottom:1px solid rgba(36,29,18,.4)}
 body[data-mode="mesa"] .momento.folha-elenco .pessoa:last-child{border-bottom:none}
 body[data-mode="mesa"] .momento.folha-elenco .elenco .quem-linha,
@@ -376,13 +376,6 @@ body[data-mode="mesa"] .momento.folha-elenco .achado.pista .refs{grid-column:2;m
 body[data-mode="mesa"] .momento.folha-elenco .achado.dial .texto,
 body[data-mode="mesa"] .momento.folha-elenco .achado.travar .texto{color:#3a2e20}
 body[data-mode="mesa"] .momento.folha-elenco .elenco .quem-linha{margin:0}
-body[data-mode="mesa"] .momento[data-momento="1"] .sussurro,
-body[data-mode="mesa"] .momento.folha-elenco .sussurro{
-  margin-top:auto;margin-bottom:0;padding:.2rem .1rem 0;
-  border:none;background:none;box-shadow:none;
-  font-family:var(--serif);font-size:.78rem;font-weight:normal;font-style:italic;
-  line-height:1.35;color:#8a7a64;text-wrap:balance
-}
 body[data-mode="mesa"] .col.sai{justify-content:flex-start}
 body[data-mode="mesa"] .col.sai .grupo{margin-bottom:auto}
 body[data-mode="mesa"] .col.sai .grupo:only-of-type{margin-block:auto}
@@ -527,7 +520,6 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
                 <label class="quem-linha"><input type="checkbox" data-marca="npc-rhiannon"><span class="nome"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a></span><span class="papel">a Chanceler</span></label>
               </li>
             </ol>
-            <p class="sussurro">Rhiannon pode desconfiar sozinha.</p>
           </aside>
           <figure class="midia">
             <div class="moldura"><img src="../../NPCs/Casse com estandarte.png" width="480" height="360" alt="Casse, tiefling velho preso na mesma leva que Yawar, com o estandarte de Ffin."></div>
@@ -573,7 +565,6 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
                 <label class="quem-linha"><input type="checkbox" data-marca="npc-kadur"><span class="nome"><a class="wiki" data-wiki="Personagens/Kadur" href="#">Kadur</a></span><span class="papel">tem cura; decide se ajuda</span></label>
               </li>
             </ol>
-            <p class="sussurro">Ludger pode alegar a morte de Atilla e tratá-lo em segredo.</p>
           </aside>
           <figure class="midia retrato">
             <div class="moldura"><img src="../../NPCs/Celidwen.png" width="480" height="600" alt="Celidwen, assistente de Atilla, com o rosto preocupado."></div>
@@ -615,7 +606,6 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
                 <label class="quem-linha"><input type="checkbox" data-marca="npc-hywel"><span class="nome"><a class="wiki" data-wiki="NPCs/Hywel" href="#">Hywel</a></span><span class="papel">pressionado; mantém o apoio</span></label>
               </li>
             </ol>
-            <p class="sussurro">O diário tem outras fontes: membros da Mão conhecem a doutrina.</p>
           </aside>
           <figure class="midia">
             <div class="moldura"><img src="../../Facções/Athroniaeth.png" width="480" height="360" alt="Brasão da universidade de Athroniaeth: coruja de asas retas em forma de livro aberto."></div>
@@ -661,7 +651,6 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
                 <p class="achado dial"><span class="rotulo">Dial</span><span class="texto">Não entregou ninguém.</span></p>
               </li>
             </ol>
-            <p class="sussurro">Maya pode informar de um grupo que foi se encontrar com Aella.</p>
           </aside>
           <figure class="midia retrato">
             <div class="moldura"><img src="../../NPCs/Maion.png" width="480" height="600" alt="Maion, a estalajadeira da Estalagem da Pedra Dura."></div>
@@ -702,7 +691,6 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
                 <p class="achado dial"><span class="rotulo">Dial</span><span class="texto">Sending stone com Atilla.</span></p>
               </li>
             </ol>
-            <p class="sussurro">Ffin amanhece de qualquer forma.</p>
           </aside>
           <figure class="midia">
             <div class="moldura"><img src="../../Cidades/Estandarte de Ffin.png" width="480" height="360" alt="Estandarte de Ffin: montanhas cinzas sobre fundo azul, com uma lua no centro."></div>
@@ -745,7 +733,6 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
                 <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-10"><span>A profecia do dilúvio.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
               </li>
             </ol>
-            <p class="sussurro">Quem evitar o mímico sai sem a Pérola do Poder.</p>
           </aside>
           <figure class="midia">
             <div class="moldura"><img src="../../Locais/Kariate Aljusur - casas de pedra.png" width="480" height="360" alt="Kariate Aljusur, a vila dos Colorados suspensa nos picos, ligada por pontes."></div>
