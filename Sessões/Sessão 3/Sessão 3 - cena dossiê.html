@@ -299,44 +299,51 @@ body[data-mode="mesa"] .col.quem{justify-content:flex-start;gap:.5vh}
 body[data-mode="mesa"] .col.quem .quem-linha{margin-bottom:auto}
 body[data-mode="mesa"] .col.quem .improviso{margin-top:auto}
 body[data-mode="mesa"] .quem-linha{padding:.45vh .35rem;font-size:clamp(.78rem,1.95vh,.98rem)}
-body[data-mode="mesa"] .momento[data-momento="1"] .ficha{grid-template-columns:minmax(0,2fr) minmax(0,1fr) clamp(150px,19vw,268px);gap:.7rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa{gap:.7rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa>h3{font-size:.82rem;padding-bottom:.2rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho{padding:1.25rem .45rem 1.25rem 3.7rem;border-bottom:3px solid rgba(36,29,18,.72)}
-body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho::before{width:2.45rem;height:2.45rem;font-size:1.2rem;border-width:3.5px;left:.06rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho strong{font-size:clamp(1.55rem,4.6vh,2.15rem);line-height:1.1}
-body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho .linha{font-size:clamp(1.02rem,2.6vh,1.28rem);margin-top:.32rem;color:#241d12;line-height:1.28}
-body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho .refs{font-size:.95em;margin-top:.28rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .col.quem{justify-content:flex-start;gap:.2rem;min-height:0;padding-left:.1rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .col.quem>h3{font-size:.82rem;padding-bottom:.2rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .elenco{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;justify-content:space-evenly;flex:1 1 auto;min-height:0}
-body[data-mode="mesa"] .momento[data-momento="1"] .pessoa{padding:.4rem .08rem .45rem;border-bottom:1px solid rgba(36,29,18,.4)}
+body[data-mode="mesa"] .momento[data-momento="1"]{container-type:size;container-name:folha1}
+body[data-mode="mesa"] .momento[data-momento="1"] .mom-cabeca h2{font-size:clamp(1.35rem,4.2cqh,2.1rem)}
+body[data-mode="mesa"] .momento[data-momento="1"] .mom-num,
+body[data-mode="mesa"] .momento[data-momento="1"] .mom-tempo{font-size:clamp(.58rem,1.2cqh,.72rem)}
+body[data-mode="mesa"] .momento[data-momento="1"] .carimbo{font-size:clamp(.58rem,1.25cqh,.74rem);padding:.08rem .45rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .ver-preparo{font-size:clamp(.55rem,1.15cqh,.7rem)}
+body[data-mode="mesa"] .momento[data-momento="1"] .mom-decisao{font-size:clamp(1.05rem,2.6cqh,1.45rem);padding:clamp(.22rem,.7cqh,.4rem) .55rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .ficha{grid-template-columns:minmax(0,2fr) minmax(0,1fr) clamp(150px,19vw,268px);gap:clamp(.5rem,1.4cqh,.85rem)}
+body[data-mode="mesa"] .momento[data-momento="1"] .col>h3{font-size:clamp(.7rem,1.5cqh,.92rem);padding-bottom:.18em}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa{gap:clamp(.35rem,1.1cqh,.7rem)}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho{padding:clamp(.55rem,1.8cqh,1.1rem) .4rem clamp(.55rem,1.8cqh,1.1rem) clamp(3.4rem,8cqh,4.6rem);border-bottom-width:clamp(2px,.35cqh,4px)}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho::before{width:clamp(2.3rem,6.2cqh,3.4rem);height:clamp(2.3rem,6.2cqh,3.4rem);font-size:clamp(1.15rem,3cqh,1.7rem);border-width:clamp(3px,.45cqh,4.5px);left:.04rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho strong{font-size:clamp(1.7rem,5.4cqh + .25cqw,3.05rem);line-height:1.08}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho .linha{display:none}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.puxa .gatilho .refs{font-size:clamp(.62rem,1.25cqh,.78rem);margin-top:.18em}
+body[data-mode="mesa"] .momento[data-momento="1"] .col.quem{justify-content:stretch;gap:.1em;min-height:0;padding-left:.08rem}
+body[data-mode="mesa"] .momento[data-momento="1"] .elenco{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;justify-content:stretch;flex:1 1 auto;min-height:0}
+body[data-mode="mesa"] .momento[data-momento="1"] .pessoa{flex:1 1 0;min-height:0;display:flex;flex-direction:column;justify-content:center;padding:clamp(.12rem,.55cqh,.35rem) .06rem;border-bottom:1px solid rgba(36,29,18,.4)}
 body[data-mode="mesa"] .momento[data-momento="1"] .pessoa:last-child{border-bottom:none}
 body[data-mode="mesa"] .momento[data-momento="1"] .elenco .quem-linha,
 body[data-mode="mesa"] .momento[data-momento="1"] .elenco label.quem-linha:nth-of-type(n){
-  display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .45rem;
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .4em;
   margin:0;padding:0;width:100%;
   background:transparent;border:none;border-radius:0;box-shadow:none;transform:none;
-  font-size:inherit;line-height:1.2
+  font-size:inherit;line-height:1.1
 }
-body[data-mode="mesa"] .momento[data-momento="1"] .elenco .nome{font-family:var(--serif);font-size:clamp(.98rem,2.2vh,1.08rem);font-weight:bold;color:#241d12;line-height:1.15}
-body[data-mode="mesa"] .momento[data-momento="1"] .elenco .papel{font-family:var(--sans);font-size:clamp(.72rem,1.7vh,.8rem);font-weight:normal;color:#5a4a36;line-height:1.35}
-body[data-mode="mesa"] .momento[data-momento="1"] .achado{margin:.28rem 0 0;display:grid;grid-template-columns:4.7rem minmax(0,1fr);column-gap:.4rem;row-gap:.08rem;align-items:baseline}
-body[data-mode="mesa"] .momento[data-momento="1"] .achado .rotulo{font-family:var(--mono);font-size:.6rem;font-weight:bold;letter-spacing:.1em;text-transform:uppercase;line-height:1.3;color:#7a6a52;padding-top:.08rem}
-body[data-mode="mesa"] .momento[data-momento="1"] .achado .texto{font-family:var(--serif);font-size:.9rem;line-height:1.35;color:#241d12}
+body[data-mode="mesa"] .momento[data-momento="1"] .elenco .nome{font-family:var(--serif);font-size:clamp(1.35rem,4cqh + .2cqw,2.35rem);font-weight:bold;color:#241d12;line-height:1.08}
+body[data-mode="mesa"] .momento[data-momento="1"] .elenco .papel{font-family:var(--sans);font-size:clamp(.7rem,1.55cqh,.92rem);font-weight:normal;color:#5a4a36;line-height:1.25}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado{margin:.22em 0 0;display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:.4em;row-gap:.06em;align-items:baseline}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado .rotulo{font-family:var(--mono);font-size:clamp(.58rem,1.3cqh,.74rem);font-weight:bold;letter-spacing:.1em;text-transform:uppercase;line-height:1.25;color:#7a6a52;padding-top:.06em}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado .texto{font-family:var(--serif);font-size:clamp(1.05rem,2.9cqh + .12cqw,1.7rem);line-height:1.2;color:#241d12}
 body[data-mode="mesa"] .momento[data-momento="1"] .achado.pista .rotulo,
 body[data-mode="mesa"] .momento[data-momento="1"] .achado.solta .rotulo{color:var(--agua)}
-body[data-mode="mesa"] .momento[data-momento="1"] .achado.solta{border:none;padding:0;margin:.28rem 0 0;font-size:inherit;font-style:normal;color:inherit}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado.solta{border:none;padding:0;margin:.22em 0 0;font-size:inherit;font-style:normal;color:inherit}
 body[data-mode="mesa"] .momento[data-momento="1"] .achado.solta .texto{font-style:italic}
 body[data-mode="mesa"] .momento[data-momento="1"] .achado.pista .mini{
-  display:inline-block;justify-self:start;max-width:11.6rem;margin:0;
-  background:transparent;border:1.6px solid var(--agua);
+  display:inline-block;justify-self:start;max-width:12.5em;margin:0;
+  background:transparent;border:clamp(1.5px,.2cqh,2.2px) solid var(--agua);
   border-radius:48% 52% 55% 45%/58% 48% 52% 44%;
-  padding:.12rem .6rem .16rem;font-size:.9rem;line-height:1.35;color:#241d12
+  padding:.12em .55em .14em;font-size:clamp(1.05rem,2.9cqh + .12cqw,1.7rem);line-height:1.2;color:#241d12
 }
-body[data-mode="mesa"] .momento[data-momento="1"] .achado.pista .refs{grid-column:2;margin:0}
+body[data-mode="mesa"] .momento[data-momento="1"] .achado.pista .refs{grid-column:2;margin:0;font-size:clamp(.55rem,1.15cqh,.7rem)}
 body[data-mode="mesa"] .momento[data-momento="1"] .achado.dial .texto,
 body[data-mode="mesa"] .momento[data-momento="1"] .achado.travar .texto{color:#3a2e20}
+body[data-mode="mesa"] .momento[data-momento="1"] .midia figcaption{font-size:clamp(.52rem,1.15cqh,.68rem)}
 body[data-mode="mesa"] .momento[data-momento="2"] .quem-linha:nth-of-type(1){margin-right:.8rem}
 body[data-mode="mesa"] .momento[data-momento="2"] .quem-linha:nth-of-type(3){margin-left:.7rem}
 body[data-mode="mesa"] .momento[data-momento="3"] .quem-linha:nth-of-type(2){margin-right:.6rem}
@@ -456,27 +463,27 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
           <span class="carimbo" aria-hidden="true">Momento 1 · Madrugada</span>
           <a class="ver-preparo" href="#abertura" data-alvo="abertura">ver no preparo</a>
         </div>
-        <p class="mom-decisao"><strong>Decide a cena:</strong> o flashback passa informação de propósito. Corte assim que alguém, jogador ou Rhiannon, disser em voz alta que foi o assistente.</p>
+        <p class="mom-decisao"><strong>Corte:</strong> alguém diz que foi o assistente.</p>
         <div class="ficha">
           <div class="col puxa">
             <h3>Puxa a cena</h3>
-            <label class="gatilho"><input type="checkbox" data-marca="batida-1-1"><span class="texto"><strong>Carta anônima com dinheiro</strong><span class="linha">Chega a Maya; Ava mandou e pede que proteja o nativo recém-chegado.</span><span class="refs"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a> · <a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a> · <a href="#abertura" data-alvo="abertura">no preparo</a></span></span></label>
-            <label class="gatilho"><input type="checkbox" data-marca="batida-1-2"><span class="texto"><strong>Casse não cala a boca</strong><span class="linha">Era da guarda do cristal; deslocado por ordem entregue por Cyfrin em nome de Rhiannon.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Casse" href="#">Casse</a> · <a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a></span></span></label>
-            <label class="gatilho"><input type="checkbox" data-marca="batida-1-3"><span class="texto"><strong>Rhiannon e o assistente</strong><span class="linha">Ela chega com Cyfrin; a defensiva dele é um dial e ela pode desconfiar sozinha.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a> · <a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a> · <a href="#abertura" data-alvo="abertura">no preparo</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-1-1"><span class="texto"><strong>Carta anônima com dinheiro</strong><span class="refs"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a> · <a class="wiki" data-wiki="NPCs/Ava" href="#">Ava</a> · <a href="#abertura" data-alvo="abertura">no preparo</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-1-2"><span class="texto"><strong>Casse não cala a boca</strong><span class="refs"><a class="wiki" data-wiki="NPCs/Casse" href="#">Casse</a> · <a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a></span></span></label>
+            <label class="gatilho"><input type="checkbox" data-marca="batida-1-3"><span class="texto"><strong>Rhiannon e o assistente</strong><span class="refs"><a class="wiki" data-wiki="NPCs/Rhiannon" href="#">Rhiannon</a> · <a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a> · <a href="#abertura" data-alvo="abertura">no preparo</a></span></span></label>
           </div>
           <aside class="col quem" aria-labelledby="quem-titulo-1">
             <h3 id="quem-titulo-1">Quem está aqui</h3>
             <ol class="elenco">
               <li class="pessoa">
-                <label class="quem-linha"><input type="checkbox" data-marca="npc-maya"><span class="nome"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a></span><span class="papel">infiltrada; investiga a morte do pai</span></label>
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-maya"><span class="nome"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a></span><span class="papel">infiltrada</span></label>
               </li>
               <li class="pessoa">
                 <label class="quem-linha"><input type="checkbox" data-marca="npc-yawar"><span class="nome"><a class="wiki" data-wiki="Personagens/Yawar" href="#">Yawar</a></span><span class="papel">divide a cela</span></label>
-                <p class="achado solta"><span class="rotulo">Solta</span><span class="texto">Com o culpado identificado, a acusação contra ele cai.</span></p>
+                <p class="achado solta"><span class="rotulo">Solta</span><span class="texto">A acusação cai.</span></p>
               </li>
               <li class="pessoa">
-                <label class="quem-linha"><input type="checkbox" data-marca="npc-casse"><span class="nome"><a class="wiki" data-wiki="NPCs/Casse" href="#">Casse</a></span><span class="papel">tagarela; fonte da contradição</span></label>
-                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-3"><span>A ordem em nome de Rhiannon nunca foi dada.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-casse"><span class="nome"><a class="wiki" data-wiki="NPCs/Casse" href="#">Casse</a></span><span class="papel">tagarela</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-3"><span>A ordem nunca foi dada.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
               </li>
               <li class="pessoa">
                 <label class="quem-linha"><input type="checkbox" data-marca="npc-cyfrin"><span class="nome"><a class="wiki" data-wiki="NPCs/Cyfrin" href="#">Cyfrin</a></span><span class="papel">o assistente</span></label>
