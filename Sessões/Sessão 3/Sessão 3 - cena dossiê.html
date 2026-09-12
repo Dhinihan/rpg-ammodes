@@ -376,7 +376,6 @@ body[data-mode="mesa"] .momento.folha-elenco .achado.pista .refs{grid-column:2;m
 body[data-mode="mesa"] .momento.folha-elenco .achado.dial .texto,
 body[data-mode="mesa"] .momento.folha-elenco .achado.travar .texto{color:#3a2e20}
 body[data-mode="mesa"] .momento.folha-elenco .elenco .quem-linha{margin:0}
-body[data-mode="mesa"] .momento[data-momento="6"] .quem-linha:nth-of-type(2){margin-right:.6rem}
 body[data-mode="mesa"] .col.sai{justify-content:flex-start}
 body[data-mode="mesa"] .col.sai .grupo{margin-bottom:auto}
 body[data-mode="mesa"] .col.sai .grupo:only-of-type{margin-block:auto}
@@ -701,7 +700,7 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
         </div>
       </section>
 
-      <section class="momento" id="mom-6" data-momento="6" role="tabpanel" aria-labelledby="aba-6" tabindex="-1" hidden>
+      <section class="momento folha-elenco" id="mom-6" data-momento="6" role="tabpanel" aria-labelledby="aba-6" tabindex="-1" hidden>
         <div class="mom-cabeca">
           <div class="bloco">
             <span class="mom-num">momento 6 · arquivo da madrugada</span>
@@ -719,19 +718,23 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
             <label class="gatilho"><input type="checkbox" data-marca="batida-6-2"><span class="texto"><strong>Recompensas na mesa</strong><span class="linha">Pérola do Poder, amuleto de Bless, varinha de Detectar Magia, sending stones.</span><span class="refs"><a href="#recompensas" data-alvo="recompensas">recompensas</a></span></span></label>
             <label class="gatilho"><input type="checkbox" data-marca="batida-6-3"><span class="texto"><strong>Próximo passo</strong><span class="linha">Vialis refém em Kariate Aljusur; passagem sob o Salão; reservatório Doreán.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Vialis" href="#">Vialis</a> · <a class="wiki" data-wiki="Locais/Kariate Aljusur" href="#">Kariate Aljusur</a> · <a class="wiki" data-wiki="Locais/Salão Acromático" href="#">Salão Acromático</a> · <a class="wiki" data-wiki="Locais/Reservatório escondido dos Doreán" href="#">Reservatório escondido dos Doreán</a></span></span></label>
           </div>
-          <div class="col quem">
-            <h3>Quem está aqui</h3>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-maya"><span><span class="nome"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a></span> — a morte do pai entra na doutrina.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-vialis"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Vialis" href="#">Vialis</a></span> — refém em Kariate Aljusur.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-yawar"><span><span class="nome"><a class="wiki" data-wiki="Personagens/Yawar" href="#">Yawar</a></span> — os sonhos e a profecia do dilúvio.</span></label>
-            <div class="grupo improviso"><h4>Se a mesa travar</h4><ul><li>Quem evitar o mímico sai sem a Pérola do Poder.</li><li>O diário tem outras fontes: membros da Mão conhecem a doutrina.</li></ul></div>
-          </div>
-          <div class="col sai">
-            <h3>O que se descobre / o que se solta</h3>
-            <div class="grupo"><h4>Pistas em aberto</h4><div class="itens"><label class="mini"><input type="checkbox" data-marca="pista-7"><span>Vialis e o templo da bota</span></label><label class="mini"><input type="checkbox" data-marca="pista-10"><span>profecia do dilúvio</span></label><label class="mini"><input type="checkbox" data-marca="pista-11"><span>pais assassinados</span></label></div><span class="refs"><a class="wiki" data-wiki="Personagens/Yawar" href="#">Yawar</a> · <a class="wiki" data-wiki="Personagens/Ignis Fênix" href="#">Ignis Fênix</a> · <a href="#segredos" data-alvo="segredos">segredos</a></span></div>
-            <div class="grupo"><h4>Locais</h4><div class="itens"><label class="mini"><input type="checkbox" data-marca="local-kariate"><span>Kariate Aljusur</span></label><label class="mini"><input type="checkbox" data-marca="local-salao"><span>Salão Acromático</span></label><label class="mini"><input type="checkbox" data-marca="local-reservatorio"><span>reservatório Doreán</span></label></div><span class="refs"><a href="#locais" data-alvo="locais">locais</a></span></div>
-            <div class="grupo"><h4>Recompensas</h4><div class="itens"><label class="mini"><input type="checkbox" data-marca="recompensa-perola"><span>Pérola do Poder</span></label><label class="mini"><input type="checkbox" data-marca="recompensa-amuleto"><span>amuleto de Bless</span></label><label class="mini"><input type="checkbox" data-marca="recompensa-varinha"><span>varinha</span></label><label class="mini"><input type="checkbox" data-marca="recompensa-sending"><span>sending stones</span></label></div><span class="refs"><a href="#recompensas" data-alvo="recompensas">recompensas</a></span></div>
-          </div>
+          <aside class="col quem" aria-labelledby="quem-titulo-6">
+            <h3 id="quem-titulo-6">Quem puxa o próximo</h3>
+            <ol class="elenco">
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-maya"><span class="nome"><a class="wiki" data-wiki="Personagens/Maya" href="#">Maya</a></span><span class="papel">a morte do pai entra na doutrina</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-11"><span>Pais assassinados.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-vialis"><span class="nome"><a class="wiki" data-wiki="NPCs/Vialis" href="#">Vialis</a></span><span class="papel">refém em Kariate Aljusur</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-7"><span>O templo da bota.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-yawar"><span class="nome"><a class="wiki" data-wiki="Personagens/Yawar" href="#">Yawar</a></span><span class="papel">os sonhos</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-10"><span>A profecia do dilúvio.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+              </li>
+            </ol>
+          </aside>
           <figure class="midia">
             <div class="moldura"><img src="../../Locais/Kariate Aljusur - casas de pedra.png" width="480" height="360" alt="Kariate Aljusur, a vila dos Colorados suspensa nos picos, ligada por pontes."></div>
             <figcaption>Atrás de Vialis.</figcaption>
