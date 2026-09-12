@@ -2,7 +2,7 @@
 name: preparar-sessao-ammodes
 description: Prepara a próxima sessão da campanha Ammódes em D&D 2024 com o método Lazy DM adaptado.
 disable-model-invocation: true
-compatibility: Requer acesso de leitura e escrita ao repositório e automação de navegador para validar o painel HTML.
+compatibility: Requer acesso de leitura e escrita ao repositório.
 ---
 
 # Preparar a próxima sessão de Ammódes
@@ -99,6 +99,6 @@ Resolva links de referências mecânicas antes de apresentar o Markdown completo
 Depois da aprovação:
 
 1. sincronize NPCs e locais confirmados conforme [repositório e persistência](references/repositorio.md);
-2. materialize e valide o painel seguindo integralmente [painel HTML](references/painel-html.md).
+2. preencha o painel seguindo o contrato da mesa em [painel HTML](references/painel-html.md). Não gere um layout novo.
 
 **Concluído quando:** o Markdown aprovado e as notas não publicadas sincronizadas existem, nenhum artigo ou índice público recebeu preparação e todos os critérios de conclusão do painel foram exercitados.
