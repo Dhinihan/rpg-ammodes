@@ -376,7 +376,6 @@ body[data-mode="mesa"] .momento.folha-elenco .achado.pista .refs{grid-column:2;m
 body[data-mode="mesa"] .momento.folha-elenco .achado.dial .texto,
 body[data-mode="mesa"] .momento.folha-elenco .achado.travar .texto{color:#3a2e20}
 body[data-mode="mesa"] .momento.folha-elenco .elenco .quem-linha{margin:0}
-body[data-mode="mesa"] .momento[data-momento="3"] .quem-linha:nth-of-type(2){margin-right:.6rem}
 body[data-mode="mesa"] .momento[data-momento="4"] .quem-linha:nth-of-type(1){margin-left:.6rem}
 body[data-mode="mesa"] .momento[data-momento="4"] .quem-linha:nth-of-type(3){margin-right:.7rem}
 body[data-mode="mesa"] .momento[data-momento="5"] .quem-linha:nth-of-type(2){margin-left:.8rem}
@@ -579,7 +578,7 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
         </div>
       </section>
 
-      <section class="momento" id="mom-3" data-momento="3" role="tabpanel" aria-labelledby="aba-3" tabindex="-1" hidden>
+      <section class="momento folha-elenco" id="mom-3" data-momento="3" role="tabpanel" aria-labelledby="aba-3" tabindex="-1" hidden>
         <div class="mom-cabeca">
           <div class="bloco">
             <span class="mom-num">momento 3 · arquivo da madrugada</span>
@@ -597,19 +596,22 @@ details.sub .sub-corpo{padding:.1rem .8rem .55rem}
             <label class="gatilho"><input type="checkbox" data-marca="batida-3-2"><span class="texto"><strong>Gwydion protesta</strong><span class="linha">Na reitoria, com magos jovens, pede a saída de Hywel; saque de Simeno.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Gwydion" href="#">Gwydion</a> · <a class="wiki" data-wiki="NPCs/Hywel" href="#">Hywel</a></span></span></label>
             <label class="gatilho"><input type="checkbox" data-marca="cena-8"><span class="texto"><strong>Escritório do Llosg</strong><span class="linha">O mímico disfarça a caixa de fundo falso onde está o diário.</span><span class="refs"><a class="wiki" data-wiki="NPCs/Llosg" href="#">Llosg</a> · <a href="#criaturas" data-alvo="criaturas">criaturas</a></span></span></label>
           </div>
-          <div class="col quem">
-            <h3>Quem está aqui</h3>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-llosg"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Llosg" href="#">Llosg</a></span> — morto; o escritório foi encenado.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-gwydion"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Gwydion" href="#">Gwydion</a></span> — protesta; não controla as células.</span></label>
-            <label class="quem-linha"><input type="checkbox" data-marca="npc-hywel"><span><span class="nome"><a class="wiki" data-wiki="NPCs/Hywel" href="#">Hywel</a></span> — pressionado; mantém o apoio.</span></label>
-            <div class="grupo improviso"><h4>Se a mesa travar</h4><ul><li>Universidade e amanhecer ocorrem de qualquer forma.</li><li>A Mão não sabe que o grupo sobreviveu ao ataque.</li><li>O diário tem outras fontes: membros da Mão conhecem a doutrina.</li></ul></div>
-          </div>
-          <div class="col sai">
-            <h3>O que se descobre / o que se solta</h3>
-            <div class="bestas"><strong class="t">Como as bestas entram.</strong> O subterrâneo guarda jaulas entre pesquisa e experimentos (<a class="wiki" data-wiki="Locais/Universidade de Athroniaeth" href="#">Universidade de Athroniaeth</a>); no saque, as jaulas se abrem no caos — quem abre fica a critério da mesa. <span class="refs"><a href="#locais" data-alvo="locais">locais</a> · <a href="#criaturas" data-alvo="criaturas">criaturas</a></span><div class="itens"><label class="mini"><input type="checkbox" data-marca="criatura-grell"><span><a href="https://www.dndbeyond.com/sources/dnd/mm-2024/monsters-g#Grell">Grell</a> CR 3</span></label><label class="mini"><input type="checkbox" data-marca="criatura-devourer"><span><a href="https://www.dndbeyond.com/sources/dnd/mm-2024/monsters-i#IntellectDevourer">Intellect Devourer</a> CR 2</span></label><label class="mini"><input type="checkbox" data-marca="criatura-toad"><span><a href="https://www.dndbeyond.com/monsters/5195029-giant-toad">Giant Toad</a> CR 1</span></label><label class="mini"><input type="checkbox" data-marca="criatura-snake"><span><a href="https://www.dndbeyond.com/monsters/5194999-flying-snake">Flying Snake</a> CR 1/8</span></label><label class="mini"><input type="checkbox" data-marca="criatura-mimic"><span><a href="https://www.dndbeyond.com/monsters/5195123-mimic">Mímico</a> no escritório</span></label></div></div>
-            <div class="grupo"><h4>Pistas</h4><div class="itens"><label class="mini"><input type="checkbox" data-marca="pista-1"><span>diário/doutrina</span></label><label class="mini"><input type="checkbox" data-marca="pista-2"><span>crime encenado</span></label><label class="mini"><input type="checkbox" data-marca="pista-4"><span>broche: corrente interna</span></label><label class="mini"><input type="checkbox" data-marca="pista-6"><span>Gwydion e as células</span></label><label class="mini"><input type="checkbox" data-marca="pista-8"><span>passagem sob o Salão</span></label></div><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></div>
-            <div class="grupo"><h4>Recompensa e Mão</h4><div class="itens"><label class="mini"><input type="checkbox" data-marca="recompensa-perola"><span>Pérola do Poder no mímico</span></label><label class="mini"><input type="checkbox" data-marca="local-universidade"><span>universidade</span></label></div><span class="refs"><a class="wiki" data-wiki="Facções/A Mão de Athroniaeth" href="#">A Mão de Athroniaeth</a> quer Ffin e o <a class="wiki" data-wiki="Items e Objetos/Simeno" href="#">Simeno</a> sem restrição · <a href="#recompensas" data-alvo="recompensas">recompensas</a></span></div>
-          </div>
+          <aside class="col quem" aria-labelledby="quem-titulo-3">
+            <h3 id="quem-titulo-3">Quem está aqui</h3>
+            <ol class="elenco">
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-llosg"><span class="nome"><a class="wiki" data-wiki="NPCs/Llosg" href="#">Llosg</a></span><span class="papel">morto; escritório encenado</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-1"><span>O diário no fundo falso da caixa.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-gwydion"><span class="nome"><a class="wiki" data-wiki="NPCs/Gwydion" href="#">Gwydion</a></span><span class="papel">protesta na reitoria</span></label>
+                <p class="achado pista"><span class="rotulo">Pista</span><label class="mini"><input type="checkbox" data-marca="pista-6"><span>Não controla as células.</span></label><span class="refs"><a href="#segredos" data-alvo="segredos">segredos</a></span></p>
+              </li>
+              <li class="pessoa">
+                <label class="quem-linha"><input type="checkbox" data-marca="npc-hywel"><span class="nome"><a class="wiki" data-wiki="NPCs/Hywel" href="#">Hywel</a></span><span class="papel">pressionado; mantém o apoio</span></label>
+              </li>
+            </ol>
+          </aside>
           <figure class="midia">
             <div class="moldura"><img src="../../Facções/Athroniaeth.png" width="480" height="360" alt="Brasão da universidade de Athroniaeth: coruja de asas retas em forma de livro aberto."></div>
             <figcaption>Coruja sobre fundo coral.</figcaption>
