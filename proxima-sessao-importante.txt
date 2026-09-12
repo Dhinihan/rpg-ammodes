@@ -1,0 +1,5 @@
+Coisas a melhorar:
+
+- Mais descrições de *como* um jogador fez algo, principalmente em batalhas
+- Em debates, conferir o que os jogadores mais calados estão pensando
+- Não tomar muitas decisões pelos jogadores sem conversar com eles antes

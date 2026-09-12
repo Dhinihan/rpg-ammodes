@@ -24,5 +24,8 @@ intimidacao: 0
 - [[Gundrada]] é uma anã adotada pelos [[Doreán]] na adolescência depois de sofrer nas mãos de mineradores de Simeno; hoje está na meia-idade.
 - Cresceu em [[Kariate Aljusur]]. Depois de se tornar uma das lideranças dos [[Colorados]], passou a viver viajando.
 - Lidera os Colorados e é a principal líder de [[Aella]], que também conta com outras lideranças.
-- Lidera um ataque à mina de Simeno simultaneamente à operação de [[Theron]].
-- Captura [[Vialis]] ao encontrá-lo com mapas do coração do deserto.
+
+### Fatos observados em mesa
+
+- Liderou um ataque de [[Aella]] a uma mina de [[Simeno]], com mineradores feitos reféns. ([[Sessão 2 - A Guerra do Simeno]])
+- Capturou [[Vialis]] ao encontrá-lo com mapas do coração do deserto. ([[Sessão 2 - A Guerra do Simeno]])

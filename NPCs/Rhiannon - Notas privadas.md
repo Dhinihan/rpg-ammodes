@@ -37,3 +37,9 @@ intimidacao: 0
 - Seus indícios incluem a sabotagem da proteção alkálica, acidentes convenientes de moderados e liberais e, se souber dele, o ataque contra [[Atilla]].
 - Ainda não conhece [[A Mão de Athroniaeth]] pelo nome.
 - Pretende pedir que o grupo descubra grupos violentos e suas lideranças para que possa prendê-los antes da eleição.
+
+### Preparação da Sessão 3
+
+- Deu à [[Maya]] permissão para se infiltrar na prisão e investigar a morte do pai; a conversa foi estranha, desarmando a Maya com a excentricidade, e terminou com liberdade total e oferta de recursos e braços, recusados por desconfiança e orgulho.
+- Seu assistente, [[Cyfrin]], deslocou a guarda do cristal de [[Simeno]] com uma ordem dada em nome dela; ela nunca deu a ordem. [[Cyfrin]] foi preso e cumpre quatro anos por não entregar ninguém.
+- Se a defensiva de [[Cyfrin]] aparecer na cena da prisão, [[Rhiannon]] pode começar a desconfiar dele por conta própria.

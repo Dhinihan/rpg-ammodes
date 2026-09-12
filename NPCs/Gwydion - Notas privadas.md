@@ -32,3 +32,8 @@ intimidacao: 0
 - Sua aparência é conhecida: é elfo. O carisma e a excentricidade também podem constar na nota pública.
 - Suas propostas são uma plataforma pública de campanha, não informações exclusivas de [[Dylan]].
 - No relato da [[Sessão 2 - A Guerra do Simeno]], [[Dylan]] identifica Gwydion como líder da investigação da sabotagem. A atribuição anterior a Llosg foi corrigida por decisão do mestre.
+
+### Preparação da Sessão 3
+
+- Na madrugada seguinte ao ataque ao grupo, protesta em frente à reitoria com magos mais jovens, pedindo a saída de [[Hywel]] pela falta de segurança na academia.
+- Alguns magos aproveitam a confusão para estocar ou saquear [[Simeno]]; não há indício de ligação direta dele com isso.
