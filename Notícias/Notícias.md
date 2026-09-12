@@ -13,7 +13,7 @@ Acompanhe os anúncios, atualizações e comunicados oficiais da campanha de Amm
 
 ### Setembro
 
-- [[Sessão 3 e novas ilustrações]] — Painel da mesa da sessão 3, skills de preparação, retratos, estandartes e o pátio da universidade em Ffin.
+- [[Retrato de Dylan e estandartes]] — Retrato de Dylan; estandartes de Athroniaeth e Ffin.
 - [[A wiki após a Sessão 2]] — Registro da Guerra do Simeno, facções, NPCs, locais e itens da sessão.
 
 ### Junho

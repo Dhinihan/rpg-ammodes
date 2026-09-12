@@ -16,14 +16,9 @@ Para quem olha de fora, as cidades parecem bolhas de esperança flutuando em um 
 
 O que entrou nas últimas 24 horas.
 
-- A [[Sessão 3]] ganhou o painel HTML da mesa.
-- As skills de preparação da campanha foram reunidas em `.agents/skills/`.
-- [[Dylan]] e [[Cyfrin]] ganharam retrato.
+- [[Dylan]] ganhou retrato.
 - A página de [[Athroniaeth]] agora tem o estandarte da coruja, além da ilustração que a página já tinha.
-- A [[Universidade de Athroniaeth]] ganhou uma vista do pátio em [[Ffin]].
 - [[Ffin]] ganhou o estandarte da cidade: montanhas cinzas sobre fundo azul, com uma lua no centro.
-- [[Casse]] entrou com uma ilustração ao lado do estandarte.
-- Também entraram as notas da universidade em Ffin e do [[Reservatório escondido dos Doreán]]. As notas dos personagens jogadores foram atualizadas com o que já estava estabelecido depois da [[Sessão 2 - A Guerra do Simeno]].
 
 O histórico de anúncios da campanha está em [[Notícias]].
 
