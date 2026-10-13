@@ -12,9 +12,8 @@ Conduza uma preparação de 3–4 horas para uma sessão de jogo de aproximadame
 Antes de começar, leia integralmente:
 
 - [método Lazy DM adaptado](references/metodo.md);
-- [repositório e persistência](references/repositorio.md).
-
-Leia [painel HTML](references/painel-html.md) somente ao finalizar o Markdown aprovado.
+- [repositório e persistência](references/repositorio.md);
+- [formato para o painel](references/painel.md).
 
 ## Regras de condução
 
@@ -92,13 +91,10 @@ Resolva um achado por vez com o usuário. Mantenha uma seção de lacunas delibe
 
 **Concluído quando:** cada achado foi reformulado ou mantido conscientemente pelo usuário, e toda lacuna deliberada está identificada.
 
-## 6. Finalizar e materializar
+## 6. Finalizar
 
 Resolva links de referências mecânicas antes de apresentar o Markdown completo para aprovação final. Se o D&D Beyond impedir a localização de um link, peça-o ao usuário.
 
-Depois da aprovação:
+Depois da aprovação, sincronize NPCs e locais confirmados conforme [repositório e persistência](references/repositorio.md). O painel de mesa lê o Markdown aprovado direto.
 
-1. sincronize NPCs e locais confirmados conforme [repositório e persistência](references/repositorio.md);
-2. preencha o painel seguindo o contrato da mesa em [painel HTML](references/painel-html.md). Não gere um layout novo.
-
-**Concluído quando:** o Markdown aprovado e as notas não publicadas sincronizadas existem, nenhum artigo ou índice público recebeu preparação e todos os critérios de conclusão do painel foram exercitados.
+**Concluído quando:** o Markdown aprovado e as notas não publicadas sincronizadas existem, nenhum artigo ou índice público recebeu preparação, os trechos citam com `[[ ]]` as entidades que devem lembrá-los e cada monstro e recompensa segue a forma de [formato para o painel](references/painel.md).
