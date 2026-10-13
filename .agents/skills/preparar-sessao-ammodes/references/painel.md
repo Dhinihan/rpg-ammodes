@@ -10,6 +10,7 @@ O painel de mesa (`painel/`) lê ao vivo o Markdown da sessão e o torna pesquis
 - Os títulos de seção entram na busca: uma palavra do título lista todos os trechos da seção.
 - Um `[[link]]` no trecho, ou num título de seção acima dele, põe o trecho no bloco "Nesta sessão" do card da entidade. Uma seção `### Nome` com o nome exato de uma entidade também conta.
 - `![[imagem.png]]` aparece no card do trecho.
+- Uma seção com subtítulos lista um item por subtítulo. Um subtítulo com o nome exato de uma entidade, como `### Cyfrin` em NPCs importantes, abre o card dela, com os itens preparados no bloco "Preparação".
 - A tela inicial lista as cenas, na ordem do Markdown. A tela de uma cena mostra os detalhes dela, quem está nela, os segredos que podem surgir ali em destaque e os demais trechos que a apontam.
 
 ## Ligações
