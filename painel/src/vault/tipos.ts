@@ -62,8 +62,25 @@ export interface Trecho {
   titulo: string | null
   /** Markdown do trecho, com o título. */
   texto: string
+  /** Item de lista; falso para parágrafo solto. */
+  item: boolean
   /** Entidades citadas no trecho ou nos títulos de seção acima dele. */
   citadas: IdEntidade[]
+  /** Cenas apontadas com `[[#Cena]]` no trecho ou nos títulos de seção acima dele. */
+  cenas: IdCena[]
+}
+
+/** Título da cena normalizado: o que `[[#Título]]` resolve. */
+export type IdCena = string & { readonly __idCena: unique symbol }
+
+/** Um `###` dentro da seção de cenas da preparação. */
+export interface Cena {
+  id: IdCena
+  titulo: string
+  /** Trechos escritos dentro da cena. */
+  detalhes: string[]
+  /** Trechos de fora que apontam a cena: segredos, monstros, recompensas. */
+  ligados: string[]
 }
 
 export interface Sessao {
@@ -71,6 +88,8 @@ export interface Sessao {
   nome: string
   pasta: CaminhoNoVault
   trechos: Trecho[]
+  /** Na ordem em que aparecem na preparação. */
+  cenas: Cena[]
 }
 
 export interface Vault {

@@ -14,7 +14,9 @@ import {
   CATEGORIAS,
   type CaminhoNoVault,
   type Categoria,
+  type Cena,
   type Entidade,
+  type IdCena,
   type IdEntidade,
   type Imagem,
   type Sessao,
@@ -170,9 +172,50 @@ async function lerSessao(
           const id = resolver(link.alvo)
           if (id !== null) citadas.add(id)
         }
-        return { id: `${arquivo}#${indice}`, arquivo, ...bruto, citadas: [...citadas] }
+        const cenas = wikilinks([...bruto.secoes, bruto.texto].join("\n"))
+          .filter((link) => link.alvo === "" && link.secao !== null)
+          .map((link) => idDeCena(link.secao ?? ""))
+        return {
+          id: `${arquivo}#${indice}`,
+          arquivo,
+          ...bruto,
+          citadas: [...citadas],
+          cenas: [...new Set(cenas)],
+        }
       })
     }),
   )
-  return { numero, nome, pasta, trechos: porArquivo.flat() }
+  const todos = porArquivo.flat()
+  return { numero, nome, pasta, trechos: todos, cenas: montarCenas(todos) }
+}
+
+const SECAO_DE_CENAS = /cenas/i
+
+function idDeCena(titulo: string): IdCena {
+  return textoPlano(titulo).toLowerCase().replace(/\s+/g, " ").trim() as IdCena
+}
+
+/**
+ * Cada `###` dentro da seção de cenas é uma cena; os trechos abaixo dele são os
+ * detalhes. Trechos de fora que apontam `[[#Cena]]` ficam ligados a ela.
+ */
+function montarCenas(todos: Trecho[]): Cena[] {
+  const cenas = new Map<IdCena, Cena>()
+  for (const trecho of todos) {
+    const [secao, subsecao] = trecho.secoes
+    if (secao === undefined || subsecao === undefined || !SECAO_DE_CENAS.test(secao)) continue
+    const id = idDeCena(subsecao)
+    const cena = cenas.get(id) ?? { id, titulo: textoPlano(subsecao), detalhes: [], ligados: [] }
+    cena.detalhes.push(trecho.id)
+    cenas.set(id, cena)
+  }
+  for (const trecho of todos) {
+    for (const id of trecho.cenas) {
+      const cena = cenas.get(id)
+      if (cena !== undefined && !cena.detalhes.includes(trecho.id)) cena.ligados.push(trecho.id)
+    }
+  }
+  // Link para cena que não existe não liga nada.
+  for (const trecho of todos) trecho.cenas = trecho.cenas.filter((id) => cenas.has(id))
+  return [...cenas.values()]
 }

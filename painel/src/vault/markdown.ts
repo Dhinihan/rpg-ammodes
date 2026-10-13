@@ -19,8 +19,10 @@ export function separarFrontmatter(texto: string): {
 }
 
 export interface Wikilink {
-  /** Nome da nota ou do arquivo, sem `#seção` e sem rótulo. */
+  /** Nome da nota ou do arquivo, sem `#seção` e sem rótulo. Vazio em `[[#Seção]]`. */
   alvo: string
+  /** O que vem depois do `#`: em `[[#Escritório do Llosg]]`, a cena da mesma nota. */
+  secao: string | null
   rotulo: string | null
   embutido: boolean
 }
@@ -31,8 +33,10 @@ const WIKILINK = /(!?)\[\[([^\]]+?)\]\]/g
 export function wikilinks(texto: string): Wikilink[] {
   return [...texto.matchAll(WIKILINK)].map((achado) => {
     const [destino = "", rotulo] = (achado[2] ?? "").split(/\\?\|/, 2)
+    const [alvo = "", secao] = destino.split("#", 2)
     return {
-      alvo: (destino.split("#", 1)[0] ?? "").trim(),
+      alvo: alvo.trim(),
+      secao: secao?.trim() || null,
       rotulo: rotulo?.trim() || null,
       embutido: achado[1] === "!",
     }
@@ -44,7 +48,8 @@ export function textoPlano(md: string): string {
   return md
     .replace(WIKILINK, (_, __, conteudo: string) => {
       const [destino = "", rotulo] = conteudo.split(/\\?\|/, 2)
-      return rotulo ?? destino.split("#", 1)[0] ?? ""
+      const [alvo = "", secao = ""] = destino.split("#", 2)
+      return rotulo ?? (alvo.trim() || secao.trim())
     })
     .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
     .replace(/(\*\*|__|\*|_|`)/g, "")
@@ -86,6 +91,8 @@ export interface TrechoBruto {
   secoes: string[]
   titulo: string | null
   texto: string
+  /** Item de lista; falso para parágrafo solto. */
+  item: boolean
 }
 
 const TITULO_DE_SECAO = /^(#{1,6})\s+(.*)$/
@@ -112,6 +119,7 @@ export function trechos(corpo: string): TrechoBruto[] {
         secoes: secoesPorNivel.filter((secao) => secao),
         titulo: negrito === undefined ? null : textoPlano(negrito).replace(/:$/, "").trim(),
         texto,
+        item: aberto.tipo === "lista",
       })
     }
     aberto = null
