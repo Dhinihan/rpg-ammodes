@@ -14,6 +14,7 @@ A trajetória dos jogadores pelo deserto de [[Ammódes]], sessão a sessão. Cad
 - **[[Sessão 1 - No Olho da Tempestade]]** — O grupo recupera um cilindro lacrado de um mensageiro morto, descobre o mapa para a [[Tumba Brilhante]] e corre contra magos de [[Athroniaeth]] pelo deserto até abrir a tumba do Primeiro Sacerdote.
 - **[[Sessão 1.5 - O Traje do Deserto]]** — Um flashback revela como [[Yawar]] foi acusado de traição em [[Ffin]] e convencido por [[Ava]] a se entregar; no presente, o grupo perde os magos para um teleporte, decifra o mito do traje do deserto, atravessa a prova dos cinco sacerdotes e arranca o [[Periapt of Health]] do sarcófago — para encontrar os [[Doreán]] esperando na saída.
 - **[[Sessão 2 - A Guerra do Simeno]]** — Um flashback mostra como [[Kadur]] e [[Ignis Fênix]] invadiram o [[Salão Acromático]] e conheceram [[Atilla]]; no presente, o grupo é levado por [[Theron]] até as [[Pegadas do Gigante]], salva uma emboscada [[Doreán]] contra uma caravana de [[Simeno]] e volta a [[Ffin]] para descobrir a guerra de [[Aella]], a eleição de reitor em [[Athroniaeth]] e uma emboscada de elementais na própria casa.
+- **[[Sessão 3 - Queima de Arquivo]]** — Inocentado, [[Yawar]] sai da cela. O grupo esconde [[Atilla]] atrás de um funeral falso, descobre pelo diário de [[Llosg]] o que quer [[A Mão de Athroniaeth]] e foge de [[Ffin]] às vésperas do cerco de [[Gundrada]], rumo à mina de [[Vialis]].
 
 ---
 
