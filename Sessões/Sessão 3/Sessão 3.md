@@ -100,16 +100,48 @@ Cela temporária da prefeitura de [[Ffin]], logo depois de [[Yawar]] se entregar
 
 ## 3. Cenas potenciais
 
-1. **Rescaldo na casa alugada:** os mephits já viraram areia e fumaça; o grupo ferido decide o que fazer com o que o flashback revelou.
-2. **Celidwen pede ajuda:** minutos depois, a assistente de [[Atilla]] chega dizendo que ele também foi atacado por mephits e está gravemente ferido; [[Ludger]] tenta curá-lo sem muito sucesso, e ela lembra que [[Kadur]] tem cura. Se o grupo já tiver saído, ela chega tarde demais.
-3. **Universidade agitada:** apesar do horário, a universidade está acordada e em alerta por assassinatos noturnos. [[Llosg]] está entre os mortos, junto com os outros magos que atacaram o grupo na [[Tumba Brilhante]]; para a academia, foram mortos enquanto dormiam. [[Gwydion]] protesta em frente à reitoria com magos mais jovens pedindo a saída de [[Hywel]] por falta de segurança. Alguns magos aproveitam a confusão para estocar ou saquear [[Simeno]].
-4. **Ajuda de madrugada:** procurar [[Rhiannon]] ou [[Ava]] para apoio no meio da noite.
-5. **Checar [[Maion]]:** a estalajadeira pode ter sido atacada pela relação com o grupo.
-6. **Fugir de [[Ffin]]:** o grupo pode temer que a escalada saia de controle.
-7. **O assistente na prisão:** condenado a mais quatro anos por não ter entregado ninguém. Não foi executado nem exilado graças à investigação da [[Maya]], que corroborou o arrependimento e que ele não executou a sabotagem. Quando o grupo ligar a mão à sabotagem e a [[Gwydion]], a trilha leva até ele.
-8. **Escritório do [[Llosg]]:** a Mão tentou apagar os rastros de que ele fazia parte de uma organização e simulou uma cena de crime, mas o trabalho é imperfeito. Arcana CD 15 ou Investigação CD 20 encontram o diário secreto: sem nomes, fala da mão e da crença de que o [[Simeno]] levará os magos a um nível acima da compreensão e da civilização, como deuses viajando pelo espaço e tempo; isso justifica qualquer meio.
+### Rescaldo na casa alugada
 
-### Ramificações e mundo em movimento
+- Os mephits já viraram areia e fumaça.
+- O grupo ferido decide o que fazer com o que o flashback revelou.
+
+### Celidwen pede ajuda
+
+- Minutos depois, a assistente de [[Atilla]] chega dizendo que ele também foi atacado por mephits e está gravemente ferido.
+- [[Ludger]] tenta curá-lo sem muito sucesso, e ela lembra que [[Kadur]] tem cura.
+- Se o grupo já tiver saído, ela chega tarde demais.
+
+### Universidade agitada
+
+- Apesar do horário, a universidade está acordada e em alerta por assassinatos noturnos.
+- [[Llosg]] está entre os mortos, junto com os outros magos que atacaram o grupo na [[Tumba Brilhante]]; para a academia, foram mortos enquanto dormiam.
+- [[Gwydion]] protesta em frente à reitoria com magos mais jovens pedindo a saída de [[Hywel]] por falta de segurança.
+- Alguns magos aproveitam a confusão para estocar ou saquear [[Simeno]].
+
+### Ajuda de madrugada
+
+- Procurar [[Rhiannon]] ou [[Ava]] para apoio no meio da noite.
+
+### Checar Maion
+
+- A estalajadeira [[Maion]] pode ter sido atacada pela relação com o grupo.
+
+### Fugir de Ffin
+
+- O grupo pode temer que a escalada saia de controle e deixar [[Ffin]].
+
+### O assistente na prisão
+
+- Condenado a mais quatro anos por não ter entregado ninguém.
+- Não foi executado nem exilado graças à investigação da [[Maya]], que corroborou o arrependimento e que ele não executou a sabotagem.
+- Quando o grupo ligar a mão à sabotagem e a [[Gwydion]], a trilha leva até ele.
+
+### Escritório do Llosg
+
+- A Mão tentou apagar os rastros de que [[Llosg]] fazia parte de uma organização e simulou uma cena de crime, mas o trabalho é imperfeito.
+- Arcana CD 15 ou Investigação CD 20 encontram o diário secreto: sem nomes, fala da mão e da crença de que o [[Simeno]] levará os magos a um nível acima da compreensão e da civilização, como deuses viajando pelo espaço e tempo; isso justifica qualquer meio.
+
+## Ramificações e mundo em movimento
 
 - Execução e exílio são equivalentes na prática para quem não sabe viver no deserto.
 - [[Atilla]] não morre de qualquer forma. Se o grupo não encontrar [[Celidwen]], [[Ludger]] alega que ele morreu e o trata em segredo no [[Salão Acromático]]; Celidwen sabe da verdade.
@@ -119,24 +151,24 @@ Cela temporária da prefeitura de [[Ffin]], logo depois de [[Yawar]] se entregar
 - [[Ffin]] amanhece pronta para um cerco: muita gente deixando a cidade enquanto soldados arcanos da academia se juntam à pequena guarda para fortalecer os portões, com encantamentos de proteção e estandartes da cidade e da academia espalhados.
 - Se o grupo não quiser se envolver na política ou estiver do lado errado da guerra, [[Ava]] pode levá-los a outros Doreán, ou [[Maya]] pode informar de um grupo que foi se encontrar com membros de [[Aella]]; a mesa pode seguir para fora de [[Ffin]], talvez atrás de [[Vialis]].
 
-### Símbolos
+## Símbolos
 
 - **Brasão de [[Athroniaeth]]:** uma coruja com asas retas que parecem um livro aberto; do livro saem runas. A coruja tem a cor do [[Simeno]] (verde-água) sobre fundo coral (FF7F80), e as runas são coloridas.
 - **Estandarte de [[Ffin]]:** montanhas cinzas sobre fundo azul, com uma lua no centro.
 
 ## 4. Segredos e pistas
 
-1. O diário de [[Llosg]] não cita nomes, mas expõe a doutrina: o [[Simeno]] elevará os magos acima da compreensão, como deuses viajando pelo espaço e tempo, e qualquer meio se justifica. Deixa claro que a Mão esteve por trás de vários assassinatos — dá para ligar à morte do pai de [[Maya]] sem que ele seja citado — e sugere o envolvimento dela na sabotagem. Ler com cuidado, buscando segredos, exige Investigação ou Percepção 15.
-2. A morte dos magos da expedição da [[Tumba Brilhante]] foi encenada como assassinato durante o sono; a cena foi montada às pressas e tem falhas.
-3. A ordem que deslocou a guarda do cristal de [[Simeno]] foi dada em nome de [[Rhiannon]], que nunca a deu.
-4. O broche de mão é a marca de uma corrente interna de [[Athroniaeth]], não um emblema público da escola.
-5. [[Seren]] serve à Mão e alimenta [[Hywel]] com informação misturada.
-6. [[Gwydion]] cavalga o radicalismo sem controlar todas as células; pode haver alguém acima dele articulando tudo.
-7. [[Vialis]] foi capturado por [[Gundrada]] e conhece o templo ligado à bota do traje do deserto; [[Atilla]] sabe do cativeiro por uma sending stone que mantém com ele.
-8. Abaixo do [[Salão Acromático]] há uma passagem selada que [[Atilla]] não consegue abrir.
+1. O diário de [[Llosg]] não cita nomes, mas expõe a doutrina: o [[Simeno]] elevará os magos acima da compreensão, como deuses viajando pelo espaço e tempo, e qualquer meio se justifica. Deixa claro que a Mão esteve por trás de vários assassinatos — dá para ligar à morte do pai de [[Maya]] sem que ele seja citado — e sugere o envolvimento dela na sabotagem. Ler com cuidado, buscando segredos, exige Investigação ou Percepção 15. Pode surgir em [[#Escritório do Llosg]].
+2. A morte dos magos da expedição da [[Tumba Brilhante]] foi encenada como assassinato durante o sono; a cena foi montada às pressas e tem falhas. Pode surgir em [[#Universidade agitada]], [[#Escritório do Llosg]].
+3. A ordem que deslocou a guarda do cristal de [[Simeno]] foi dada em nome de [[Rhiannon]], que nunca a deu. Pode surgir em [[#O assistente na prisão]], [[#Ajuda de madrugada]].
+4. O broche de mão é a marca de uma corrente interna de [[Athroniaeth]], não um emblema público da escola. Pode surgir em [[#Escritório do Llosg]], [[#O assistente na prisão]].
+5. [[Seren]] serve à Mão e alimenta [[Hywel]] com informação misturada. Pode surgir em [[#Universidade agitada]].
+6. [[Gwydion]] cavalga o radicalismo sem controlar todas as células; pode haver alguém acima dele articulando tudo. Pode surgir em [[#Universidade agitada]].
+7. [[Vialis]] foi capturado por [[Gundrada]] e conhece o templo ligado à bota do traje do deserto; [[Atilla]] sabe do cativeiro por uma sending stone que mantém com ele. Pode surgir em [[#Celidwen pede ajuda]].
+8. Abaixo do [[Salão Acromático]] há uma passagem selada que [[Atilla]] não consegue abrir. Pode surgir em [[#Celidwen pede ajuda]].
 9. Duas ou três peças do traje bastam para atravessar [[Ammódes]]; nas mãos de [[Athroniaeth]], o princípio arcano abriria o coração do deserto e pode acordar [[Planetar]].
-10. A profecia do dilúvio pode ser o mesmo aviso dos sonhos de [[Yawar]], e mais gente sonha igual.
-11. A morte do pai de [[Maya]] e a do pai adotivo de [[Ignis Fênix]] podem ter a mesma assinatura.
+10. A profecia do dilúvio pode ser o mesmo aviso dos sonhos de [[Yawar]], e mais gente sonha igual. Pode surgir em [[#Ajuda de madrugada]].
+11. A morte do pai de [[Maya]] e a do pai adotivo de [[Ignis Fênix]] podem ter a mesma assinatura. Pode surgir em [[#Escritório do Llosg]].
 12. [[Golimar]] estava escondida no subterrâneo do [[Templo de Planetar]] por um motivo que ainda não contou, e a areia que ela investiga chegou ao monastério antes dela.
 
 Fora da lista por serem conhecidos: o assistente está preso por quatro anos e não entregou ninguém (o Mestre informa se perguntarem depois do flashback); a ausência de vento em [[Ffin]] por causa do [[Isolamento Arkalico]].
@@ -183,7 +215,7 @@ Fora da lista por serem conhecidos: o assistente está preso por quatro anos e n
 
 Lista solta, sem quantidades nem composição fixa. O grupo está no nível 2.
 
-### Soltas no saque da universidade
+### Soltas no saque da universidade, em [[#Universidade agitada]]
 
 - [Grell](https://www.dndbeyond.com/sources/dnd/mm-2024/monsters-g#Grell) (CR 3) — aberração flutuante com tentáculos paralisantes; ataca de cima.
 - [Intellect Devourer](https://www.dndbeyond.com/sources/dnd/mm-2024/monsters-i#IntellectDevourer) (CR 2) — parasita psíquico que devora a mente.
@@ -192,7 +224,7 @@ Lista solta, sem quantidades nem composição fixa. O grupo está no nível 2.
 
 ### Guardião do escritório do [[Llosg]]
 
-- [Mimic](https://www.dndbeyond.com/monsters/5195123-mimic) — disfarçado de caixa com fundo falso; o diário fica no fundo. Ataca assim que alguém destrava o fundo. Ao morrer, revela a Pérola do Poder.
+- [Mimic](https://www.dndbeyond.com/monsters/5195123-mimic) — disfarçado de caixa com fundo falso; o diário fica no fundo. Ataca assim que alguém destrava o fundo. Ao morrer, revela a Pérola do Poder. Cena: [[#Escritório do Llosg]].
 
 ### Opções já conhecidas
 
@@ -201,7 +233,7 @@ Lista solta, sem quantidades nem composição fixa. O grupo está no nível 2.
 ## 8. Recompensas possíveis
 
 - **Par de [sending stones](https://www.dndbeyond.com/magic-items/9180147-sending-stones)** — recompensa de [[Atilla]] se o grupo salvar a vida dele de novo.
-- **[Pérola do Poder](https://www.dndbeyond.com/magic-items/9228918-pearl-of-power)** — escondida no mímico do escritório do [[Llosg]]; revelada quando ele morre. Requer sintonia.
+- **[Pérola do Poder](https://www.dndbeyond.com/magic-items/9228918-pearl-of-power)** — escondida no mímico do escritório do [[Llosg]]; revelada quando ele morre. Requer sintonia. Cena: [[#Escritório do Llosg]].
 - **Amuleto sagrado de Bless** — presente de [[Ava]] se o grupo se vincular a ela; de tradição Doreán, não arcano. Enquanto sintonizado, uma vez por dia o portador conjura *Bless* sem gastar espaço de magia, com concentração normal; 20 usos no total. Requer sintonia.
 - **Varinha de Detectar Magia** — recompensa de um mago salvo na luta contra as bestas soltas. Enquanto sintonizada, uma vez por dia o portador conjura *Detectar Magia* sem gastar espaço de magia; 10 usos no total. Requer sintonia.
 
