@@ -2,9 +2,20 @@ import { extendedMatch, Fzf, type FzfResultItem } from "fzf"
 import { textoPlano } from "../vault/markdown.ts"
 import type { Entidade, Trecho, Vault } from "../vault/tipos.ts"
 
+// No Google, o prefixo puxa as regras da edição que a mesa joga.
 export const DESTINOS_EXTERNOS = {
-  b: { nome: "D&D Beyond", aba: "ammodes-beyond", url: "https://www.dndbeyond.com/search?q=" },
-  g: { nome: "Google", aba: "ammodes-google", url: "https://www.google.com/search?q=" },
+  b: {
+    nome: "D&D Beyond",
+    aba: "ammodes-beyond",
+    url: "https://www.dndbeyond.com/search?q=",
+    prefixo: "",
+  },
+  g: {
+    nome: "Google",
+    aba: "ammodes-google",
+    url: "https://www.google.com/search?q=",
+    prefixo: "d&d 2024 ",
+  },
 } as const
 
 export type Consulta =
@@ -21,9 +32,16 @@ export function interpretarConsulta(texto: string): Consulta {
   return texto.trim() === "" ? { tipo: "vazia" } : { tipo: "vault", termo: texto.trim() }
 }
 
-export function abrirExterna(consulta: Extract<Consulta, { tipo: "externa" }>) {
+type ConsultaExterna = Extract<Consulta, { tipo: "externa" }>
+
+/** O que de fato vai para o site, com o prefixo do destino. */
+export function termoExterno(consulta: ConsultaExterna): string {
+  return DESTINOS_EXTERNOS[consulta.destino].prefixo + consulta.termo
+}
+
+export function abrirExterna(consulta: ConsultaExterna) {
   const destino = DESTINOS_EXTERNOS[consulta.destino]
-  window.open(destino.url + encodeURIComponent(consulta.termo), destino.aba)
+  window.open(destino.url + encodeURIComponent(termoExterno(consulta)), destino.aba)
 }
 
 export type Resultado =
@@ -70,6 +88,6 @@ export function criarBusca(vault: Vault): (termo: string) => Resultado[] {
 }
 
 /** Seções entram na busca: "criatura" acha os monstros de "Criaturas relevantes". */
-export function rotuloDeBusca(trecho: Trecho): string {
+function rotuloDeBusca(trecho: Trecho): string {
   return [...trecho.secoes, trecho.texto].map(textoPlano).join(" · ")
 }

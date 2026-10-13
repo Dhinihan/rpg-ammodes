@@ -1,6 +1,5 @@
 import { beforeAll, describe, expect, test } from "bun:test"
 import { join } from "node:path"
-import { trechosQueCitam } from "./consulta.ts"
 import { lerVault } from "./ler-vault.ts"
 import { primeiroCallout, trechos, wikilinks } from "./markdown.ts"
 import type { IdEntidade, Vault } from "./tipos.ts"
@@ -71,7 +70,8 @@ describe("vault real", () => {
     vault = await lerVault(RAIZ, { sessao: 3 })
   })
   const entidade = (nome: string) => vault.entidades.find((achada) => achada.nome === nome)
-  const citam = (nome: string) => trechosQueCitam(vault.sessao, nome as IdEntidade)
+  const citam = (nome: string) =>
+    vault.sessao?.trechos.filter((trecho) => trecho.citadas.includes(nome as IdEntidade)) ?? []
 
   test("índices da wiki e notas privadas não viram entidades", () => {
     const nomes = vault.entidades.map((achada) => achada.nome)
