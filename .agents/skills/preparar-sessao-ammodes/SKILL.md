@@ -97,4 +97,4 @@ Resolva links de referências mecânicas antes de apresentar o Markdown completo
 
 Depois da aprovação, sincronize NPCs e locais confirmados conforme [repositório e persistência](references/repositorio.md). O painel de mesa lê o Markdown aprovado direto.
 
-**Concluído quando:** o Markdown aprovado e as notas não publicadas sincronizadas existem, nenhum artigo ou índice público recebeu preparação, os trechos citam com `[[ ]]` as entidades que devem lembrá-los e cada monstro e recompensa segue a forma de [formato para o painel](references/painel.md).
+**Concluído quando:** o Markdown aprovado e as notas não publicadas sincronizadas existem, nenhum artigo ou índice público recebeu preparação, os trechos citam com `[[ ]]` as entidades que devem lembrá-los, todo segredo aponta pelo menos uma cena com `[[#Cena]]` e cenas, monstros e recompensas seguem a forma de [formato para o painel](references/painel.md).

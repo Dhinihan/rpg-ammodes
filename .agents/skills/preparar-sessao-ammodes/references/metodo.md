@@ -31,6 +31,8 @@ Para uma sessão de 5 horas, use 5–10 linhas como alvo padrão. Cada linha con
 
 Produza dez frases como alvo padrão. As últimas podem exigir mais reflexão e frequentemente enriquecem a preparação. Cada frase contém informação relevante aos personagens e permanece abstrata quanto à forma de descoberta: NPC, local, objeto e teste são decididos conforme a ficção na mesa. Uma pista não revelada pode ser reaproveitada ou descartada; carregue-a para outra sessão somente após confirmação do usuário.
 
+Aponte para cada segredo pelo menos uma cena onde ele pode surgir, e quantas mais couberem. É lembrete para a mesa, não trilho: o segredo continua livre para surgir onde a ficção levar. Um segredo sem cena é oportunidade para pensar em mais cenas possíveis: pergunte ao usuário onde ele surgiria e, se a resposta for uma cena nova, acrescente-a às cenas potenciais.
+
 ## Locais fantásticos
 
 Use um nome evocativo como marcador da imagem mental e três aspectos importantes, memoráveis ou úteis. Cada aspecto deve oferecer algo que os personagens possam investigar, manipular ou enfrentar. O tamanho do local acompanha o escopo da situação: pode ser uma sala, área, edifício ou pano de fundo. Prefira aspectos a texto descritivo extenso.

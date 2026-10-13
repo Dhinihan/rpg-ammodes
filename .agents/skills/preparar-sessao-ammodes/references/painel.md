@@ -10,10 +10,34 @@ O painel de mesa (`painel/`) lê ao vivo o Markdown da sessão e o torna pesquis
 - Os títulos de seção entram na busca: uma palavra do título lista todos os trechos da seção.
 - Um `[[link]]` no trecho, ou num título de seção acima dele, põe o trecho no bloco "Nesta sessão" do card da entidade. Uma seção `### Nome` com o nome exato de uma entidade também conta.
 - `![[imagem.png]]` aparece no card do trecho.
+- A tela inicial lista as cenas, na ordem do Markdown. A tela de uma cena mostra os detalhes dela, quem está nela, os segredos que podem surgir ali em destaque e os demais trechos que a apontam.
 
 ## Ligações
 
 Ligue com `[[ ]]` toda entidade que deve lembrar o trecho na mesa: quem está na cena, o local onde ela acontece, a facção envolvida. É pelos links que o Mestre reencontra a preparação: busca o lugar onde os jogadores entraram e o card lista o que foi preparado ali. Um trecho sem link só aparece para quem lembrar as palavras dele.
+
+## Cenas e segredos
+
+Cada cena é um `###` dentro da seção de cenas potenciais. O título é a linha curta que o Mestre bate o olho, escrito sem links; os detalhes vão em itens abaixo dele, com `[[links]]` para as entidades:
+
+```markdown
+## 3. Cenas potenciais
+
+### Escritório do Llosg
+
+- A Mão simulou uma cena de crime na sala de [[Llosg]], mas o trabalho é imperfeito.
+- Arcana CD 15 ou Investigação CD 20 encontram o diário secreto.
+```
+
+Todo `###` dentro da seção de cenas vira cena no painel. O que não é cena, como ramificações e símbolos, fica numa seção `##` própria.
+
+Cada segredo aponta as cenas onde pode surgir com o link de seção do Obsidian, no fim do item:
+
+```markdown
+1. O diário de [[Llosg]] expõe a doutrina da Mão. Pode surgir em [[#Escritório do Llosg]], [[#Universidade agitada]].
+```
+
+O texto dentro de `[[#...]]` repete o título da cena. Monstros e recompensas também podem apontar cenas; um título de seção com `[[#Cena]]` liga à cena todos os itens abaixo dele.
 
 ## Monstros
 
@@ -26,7 +50,7 @@ Seção `Monstros relevantes`, um item por criatura:
 - O nome em negrito leva o link do D&D Beyond.
 - O ND vem logo depois do nome.
 - A função provável fica em uma linha.
-- Os `[[links]]` apontam para o local, o NPC ou a facção onde a criatura pode surgir.
+- Os `[[links]]` apontam para o local, o NPC, a facção ou a cena (`[[#Cena]]`) onde a criatura pode surgir.
 - A imagem, quando houver, fica na pasta da sessão e entra embutida no item.
 
 **Encontro organizado:** uma subseção `### Nome do encontro`, com o local ligado no título, e um item por criatura abaixo dela. O título liga todas as criaturas ao local.
