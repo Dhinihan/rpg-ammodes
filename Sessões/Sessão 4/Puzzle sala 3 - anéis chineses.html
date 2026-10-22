@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Sala 3: anéis chineses</title>
+<style>
+  :root{--f:var(--foreground,#e9ecef);--m:var(--muted,#343a40);--mf:var(--muted-foreground,#adb5bd);--b:var(--border,#495057);
+        --s:var(--secondary,#212529);--sf:var(--secondary-foreground,#e9ecef);--p:var(--primary,#4263eb);--pf:var(--primary-foreground,#fff);
+        --w:var(--warning-surface,#3d3000);--ok:var(--success,#51cf66);--r:var(--radius,8px)}
+  body{font-family:var(--font-sans,system-ui,sans-serif);color:var(--f);background:var(--background,#121212);margin:0;padding:16px}
+  html.embutido body{background:transparent;padding:0}
+  .wrap{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}
+  .coluna{display:flex;flex-direction:column;gap:14px;align-items:center;padding:8px 0}
+  .luz{width:64px;height:64px;border-radius:50%;border:2px solid var(--f);background:var(--m);cursor:pointer;
+       display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--mf);transition:background .15s, box-shadow .15s}
+  .luz.acesa{background:#ffd43b;color:#1e1e1e;box-shadow:0 0 16px #ffd43b}
+  .luz.presa{border-color:var(--b)}
+  .painel{flex:1;min-width:240px}
+  p{margin:0 0 10px;line-height:1.45}
+  .estado{font-family:var(--font-mono,monospace);color:var(--mf);margin:8px 0}
+  .acoes{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+  button,select{font:inherit;padding:6px 12px;border-radius:var(--r);border:1px solid var(--b);background:var(--s);color:var(--sf);cursor:pointer}
+  label{display:flex;gap:6px;align-items:center;margin-top:8px;color:var(--mf)}
+  .boca{margin-top:10px;padding:10px 12px;border-radius:var(--r);background:var(--w);min-height:22px}
+  .ok{color:var(--ok);font-weight:600}
+</style></head>
+<body>
+<div class="wrap">
+  <div class="coluna" id="coluna"></div>
+  <div class="painel">
+    <p><b>Regra:</b> a luz de baixo sempre pode mudar. Qualquer outra só muda se a luz logo abaixo dela estiver acesa e todas as de baixo dessa estiverem apagadas.</p>
+    <p><b>Objetivo:</b> apagar todas, começando com todas acesas.</p>
+    <div class="estado" id="estado"></div>
+    <div class="acoes">
+      <select id="qtd"><option value="3">3 luzes (mínimo 5 jogadas)</option><option value="4" selected>4 luzes (mínimo 10 jogadas)</option></select>
+      <button id="novo">Recomeçar</button>
+      <button id="dica">Mostrar solução</button>
+    </div>
+    <label><input type="checkbox" id="boca-on" checked> Boca mágica atrapalhando</label>
+    <label><input type="checkbox" id="presas"> Destacar luzes que não podem mudar</label>
+    <div class="boca" id="boca"></div>
+  </div>
+</div>
+<script>
+if (window.self !== window.top) document.documentElement.classList.add("embutido");
+let N = 4, luzes = [], jogadas = 0;
+// índice 0 = luz de cima; N-1 = luz de baixo
+function podeMudar(i, s){
+  if (i === N-1) return true;
+  if (!s[i+1]) return false;
+  for (let j = i+2; j < N; j++) if (s[j]) return false;
+  return true;
+}
+function resolve(s){
+  const k = x => x.join(""); const prev = {[k(s)]: null}; const fila = [s];
+  while (fila.length){
+    const a = fila.shift();
+    if (a.every(v=>!v)) { const cam=[]; let c=k(a); while(prev[c]){cam.unshift(prev[c][1]); c=prev[c][0];} return cam; }
+    for (let i=0;i<N;i++){ if(!podeMudar(i,a)) continue; const b=a.slice(); b[i]^=1; const kb=k(b); if(!(kb in prev)){prev[kb]=[k(a),i]; fila.push(b);} }
+  }
+  return [];
+}
+const nome = i => i===0 ? "de cima" : i===N-1 ? "de baixo" : (N===4 ? (i===1 ? "segunda" : "terceira") : "do meio");
+function desenha(){
+  const col = document.getElementById("coluna"); col.innerHTML = "";
+  const destacar = document.getElementById("presas").checked;
+  luzes.forEach((v,i)=>{
+    const d = document.createElement("div");
+    d.className = "luz" + (v ? " acesa" : "") + (destacar && !podeMudar(i,luzes) ? " presa" : "");
+    d.textContent = i+1; d.onclick = ()=>clique(i); col.appendChild(d);
+  });
+  const fim = luzes.every(v=>!v);
+  document.getElementById("estado").innerHTML = (fim ? '<span class="ok">Todas apagadas: as magias se desfazem e a saída abre.</span> ' : "") + "Jogadas: " + jogadas;
+}
+function atrapalha(){
+  const frases = ["A luz %s guarda a chave.","Nunca toque a luz %s.","Tudo começa pela luz %s.","A luz %s já está certa.","Você esqueceu a luz %s."];
+  const i = Math.floor(Math.random()*N);
+  return "Boca mágica: “" + frases[Math.floor(Math.random()*frases.length)].replace("%s", nome(i)) + "”";
+}
+function clique(i){
+  const boca = document.getElementById("boca");
+  if (!podeMudar(i,luzes)) { boca.textContent = "A luz " + nome(i) + " não responde."; return; }
+  luzes[i] ^= 1; jogadas++;
+  boca.textContent = (document.getElementById("boca-on").checked && !luzes.every(v=>!v) && Math.random() < .6) ? atrapalha() : "";
+  desenha();
+}
+function novo(){ N = +document.getElementById("qtd").value; luzes = Array(N).fill(1); jogadas = 0; document.getElementById("boca").textContent = ""; desenha(); }
+document.getElementById("qtd").onchange = novo;
+document.getElementById("novo").onclick = novo;
+document.getElementById("presas").onchange = desenha;
+document.getElementById("dica").onclick = ()=>{
+  const s = resolve(luzes);
+  document.getElementById("boca").textContent = s.length ? "Solução: tocar as luzes " + s.map(i=>i+1).join(", ") + " (numeradas de cima para baixo)." : "Já está resolvido.";
+};
+novo();
+</script>
+</body></html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Labirinto do Guards and Wards: mesa</title>
+<style>
+  body{font-family:var(--font-sans,system-ui,sans-serif);color:var(--foreground,#1e1e1e);margin:0}
+  .barra{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 10px}
+  .barra button{font:inherit;padding:6px 12px;border-radius:var(--radius,8px);border:1px solid var(--border,#ced4da);
+                background:var(--secondary,#f1f3f5);color:var(--secondary-foreground,#1e1e1e);cursor:pointer}
+  .barra label{display:flex;gap:6px;align-items:center;color:var(--muted-foreground,#495057)}
+  .mapa{position:relative;width:100%;max-width:942px;user-select:none;touch-action:none}
+  .mapa img{display:block;width:100%;height:auto;border-radius:6px}
+  .ficha{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;
+         display:flex;align-items:center;justify-content:center;font:700 15px system-ui,sans-serif;color:#fff;
+         border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.5);cursor:grab;touch-action:none}
+  .ficha.arrastando{cursor:grabbing;z-index:10;transform:scale(1.15)}
+</style></head>
+<body>
+<div class="barra">
+  <button id="reset">Voltar fichas para o canto</button>
+  <label><input type="checkbox" id="encaixe" checked> Encaixar no quadrado</label>
+</div>
+<div class="mapa" id="mapa">
+  <img id="img" src="Labirinto Guards and Wards.png" alt="Labirinto do Guards and Wards">
+</div>
+<script>
+const W = 942, ORX = 10, ORY = 38, Q = 40, COLS = 16, LINS = 12;   // pixels da imagem
+const PJS = [
+  {id:"M", nome:"Maya",    cor:"#c92a2a"},
+  {id:"I", nome:"Ignis",   cor:"#e8590c"},
+  {id:"G", nome:"Golimar", cor:"#1971c2"},
+  {id:"Y", nome:"Yawar",   cor:"#2b8a3e"},
+  {id:"K", nome:"Kadur",   cor:"#862e9c"},
+];
+const inicio = i => ({x: 760, y: 90 + i * 55});
+const CHAVE = "mesa-labirinto-gw";
+let pos = {};
+try { pos = JSON.parse(localStorage.getItem(CHAVE)) || {}; } catch (e) {}
+const mapa = document.getElementById("mapa"), img = document.getElementById("img");
+const escala = () => mapa.clientWidth / W;
+const fichas = {};
+function encaixa(p){
+  const c = Math.floor((p.x - ORX) / Q), l = Math.floor((p.y - ORY) / Q);
+  if (c < 0 || c >= COLS || l < 0 || l >= LINS) return p;
+  return {x: ORX + c * Q + Q / 2, y: ORY + l * Q + Q / 2};
+}
+function posiciona(){
+  const e = escala();
+  PJS.forEach((pj, i) => {
+    const p = pos[pj.id] || inicio(i);
+    fichas[pj.id].style.left = (p.x * e) + "px";
+    fichas[pj.id].style.top = (p.y * e) + "px";
+  });
+}
+function salva(){ try { localStorage.setItem(CHAVE, JSON.stringify(pos)); } catch (e) {} }
+PJS.forEach(pj => {
+  const d = document.createElement("div");
+  d.className = "ficha"; d.textContent = pj.id; d.title = pj.nome; d.style.background = pj.cor;
+  d.addEventListener("pointerdown", ev => {
+    ev.preventDefault(); d.setPointerCapture(ev.pointerId); d.classList.add("arrastando");
+    const mover = e2 => {
+      const r = mapa.getBoundingClientRect(), e = escala();
+      pos[pj.id] = {x: (e2.clientX - r.left) / e, y: (e2.clientY - r.top) / e};
+      posiciona();
+    };
+    const soltar = () => {
+      d.classList.remove("arrastando");
+      if (document.getElementById("encaixe").checked && pos[pj.id]) pos[pj.id] = encaixa(pos[pj.id]);
+      posiciona(); salva();
+      d.removeEventListener("pointermove", mover); d.removeEventListener("pointerup", soltar);
+    };
+    d.addEventListener("pointermove", mover); d.addEventListener("pointerup", soltar);
+  });
+  fichas[pj.id] = d; mapa.appendChild(d);
+});
+document.getElementById("reset").onclick = () => { pos = {}; salva(); posiciona(); };
+img.addEventListener("load", posiciona);
+window.addEventListener("resize", posiciona);
+new ResizeObserver(posiciona).observe(mapa);
+posiciona();
+</script>
+</body></html>
