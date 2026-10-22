@@ -35,3 +35,9 @@ Corrente radical clandestina dentro de [[Athroniaeth]], identificada pela insíg
 ## Lacuna deliberada
 
 Pode existir um articulador oculto por trás da radicalização, mas sua existência e identidade não estão definidas.
+
+### Fatos observados na Sessão 3
+
+- Pelo diário de [[Llosg]], o grupo entendeu a Mão como uma corrente que quer usar o poder do [[Simeno]] sem ficar abaixo do governo de [[Ffin]] nem se preocupar com os [[Doreán]]. ([[Sessão 3 - Queima de Arquivo]])
+- O grupo suspeita que as mortes dos magos da [[Tumba Brilhante]] foram queima de arquivo. ([[Sessão 3 - Queima de Arquivo]])
+- Dois mercadores que acamparam perto do grupo na travessia usavam pedras de comunicação e vigiavam o grupo; o grupo suspeita que sejam da Mão. ([[Sessão 3 - Queima de Arquivo]])

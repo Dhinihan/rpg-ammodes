@@ -60,5 +60,10 @@ intimidacao: 0
 ### O que ele esconde
 
 - Atilla esconde a importância real do [[Salão Acromático]] e minimiza seus fenômenos mágicos e temporais. O que está fora da nota pública do local está em [[Salão Acromático - Notas privadas]].
-- Vialis encontrou outro templo antigo e conhece a localização do templo associado à bota do traje do deserto.
 - A dívida de vida e o acordo de silêncio com Kadur não constam da nota pública dele.
+
+### Fatos observados na Sessão 3
+
+- Foi atacado por mephits no [[Templo de Planetar]]; [[Ludger]] tentou curá-lo, fraco depois da luta, e [[Kadur]] o recuperou com a cura pelas mãos. ([[Sessão 3 - Queima de Arquivo]])
+- Ficou combinado escondê-lo no [[Salão Acromático]]; depois [[Ludger]] conduziu um funeral falso, e oficialmente Atilla está morto. ([[Sessão 3 - Queima de Arquivo]])
+- [[Ludger]] entregou ao grupo a pedra de comunicação que Atilla usava com [[Vialis]]. ([[Sessão 3 - Queima de Arquivo]])

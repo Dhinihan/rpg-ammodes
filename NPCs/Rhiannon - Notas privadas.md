@@ -43,3 +43,7 @@ intimidacao: 0
 - Deu à [[Maya]] permissão para se infiltrar na prisão e investigar a morte do pai; a conversa foi estranha, desarmando a Maya com a excentricidade, e terminou com liberdade total e oferta de recursos e braços, recusados por desconfiança e orgulho.
 - Seu assistente, [[Cyfrin]], deslocou a guarda do cristal de [[Simeno]] com uma ordem dada em nome dela; ela nunca deu a ordem. [[Cyfrin]] foi preso e cumpre quatro anos por não entregar ninguém.
 - Se a defensiva de [[Cyfrin]] aparecer na cena da prisão, [[Rhiannon]] pode começar a desconfiar dele por conta própria.
+
+### Fatos observados na Sessão 3
+
+- Chegou à cela com [[Cyfrin]]; depois da discussão, [[Maya]] e [[Yawar]] foram soltos, Yawar e quase todos os presos ligados ao caso foram inocentados, e Cyfrin foi preso. ([[Sessão 3 - Queima de Arquivo]])

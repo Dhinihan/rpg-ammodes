@@ -34,3 +34,8 @@ intimidacao: 0
 
 - Sobreviveu à emboscada com outros seis combatentes e ficou com o Simeno para levá-lo à tribo. O destino específico não foi revelado aos jogadores.
 - Ofereceu equipamentos ao grupo e deixou um convite para visitarem a tribo. Isso não estabelece, por si só, uma aliança.
+
+### Fatos observados na Sessão 3
+
+- Liderava os batedores da [[Aella]] no acampamento das pedras rachadas; recebeu o grupo de forma amistosa e deu água. ([[Sessão 3 - Queima de Arquivo]])
+- Diante de [[Gundrada]], [[Ignis Fênix]] o chamou de incompetente. ([[Sessão 3 - Queima de Arquivo]])

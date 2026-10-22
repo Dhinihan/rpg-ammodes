@@ -29,3 +29,8 @@ intimidacao: 0
 - Deslocou a guarda do cristal de [[Simeno]] com uma ordem dada em nome de [[Rhiannon]], que nunca a deu; ia executar a sabotagem e recuou no último momento.
 - Foi preso e cumpre mais quatro anos por não entregar ninguém. Não foi executado nem exilado graças à investigação de [[Maya]], que corroborou o arrependimento.
 - Relação com o grupo: [[Maya]] o conhece da investigação; o grupo ainda não o procurou na prisão.
+
+### Fatos observados na Sessão 3
+
+- No bate-boca da cela, disse que [[Maya]] estava infiltrada com aval de [[Rhiannon]]; [[Casse]] lembrou que foi ele quem entregou a ordem de deixar o posto. ([[Sessão 3 - Queima de Arquivo]])
+- Foi preso e continua na prisão. ([[Sessão 3 - Queima de Arquivo]])

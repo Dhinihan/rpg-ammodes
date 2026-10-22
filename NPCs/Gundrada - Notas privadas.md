@@ -2,7 +2,7 @@
 tags:
   - npc
 aliases: []
-localizacao: "Mina de Simeno"
+localizacao: "A caminho do cerco de [[Ffin]]"
 faccao: Aella
 percepcao_passiva: 10
 intuicao_passiva: 10
@@ -29,3 +29,8 @@ intimidacao: 0
 
 - Liderou um ataque de [[Aella]] a uma mina de [[Simeno]], com mineradores feitos reféns. ([[Sessão 2 - A Guerra do Simeno]])
 - Capturou [[Vialis]] ao encontrá-lo com mapas do coração do deserto. ([[Sessão 2 - A Guerra do Simeno]])
+
+### Fatos observados na Sessão 3
+
+- Chegou ao acampamento das pedras rachadas com um exército grande a caminho de cercar [[Ffin]]. ([[Sessão 3 - Queima de Arquivo]])
+- Cortou [[Ignis Fênix]], provocou [[Yawar]] por andar com magos e tolerou o mago só por causa dele. ([[Sessão 3 - Queima de Arquivo]])

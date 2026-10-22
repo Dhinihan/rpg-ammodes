@@ -28,10 +28,14 @@ Não registrado.
 - Reconheceu as [[Pegadas do Gigante]] pelas rochas vulcânicas; descobriu que dano psíquico não funciona em construto, puxou uma espada caída com mão mágica e derrubou a última armadura; ficou com uma adaga dos construtos. ([[Sessão 2 - A Guerra do Simeno]])
 - Em [[Ffin]], disse a [[Ava]] que a motivação de [[Aella]] está certa e o método completamente errado, que não vai lutar contra os próprios e que aceita ser o contraponto, com os outros Doreán envolvidos só em defesa. ([[Sessão 2 - A Guerra do Simeno]])
 - No ataque dos mephits, gastou o orbe cromático que guardava desde a compra do diamante. ([[Sessão 2 - A Guerra do Simeno]])
+- Foi inocentado e solto da cela da prefeitura de [[Ffin]]. ([[Sessão 3 - Queima de Arquivo]])
+- Disse a [[Ava]] que poderia ir ao segundo conselho, mas ainda sem certeza. ([[Sessão 3 - Queima de Arquivo]])
+- No acampamento da [[Aella]], foi provocado por [[Gundrada]] por andar com magos. ([[Sessão 3 - Queima de Arquivo]])
+- Encenou uma visão sobre a mina de [[Vialis]] para não revelar o traje do deserto; a encenação virou visão de verdade: ele mesmo afundando num lago subterrâneo. ([[Sessão 3 - Queima de Arquivo]])
 
 ## Estado atual
 
-Está vivo em [[Ffin]], na casa alugada do grupo, ferido após o ataque dos sete mephits na madrugada. A acusação contra ele já foi resolvida, embora ainda não tenha sido mostrado em mesa como isso aconteceu. Recusou lutar contra os próprios [[Doreán]].
+Está com o grupo diante da mina onde [[Vialis]] trabalhava, no quarto dia de viagem desde [[Ffin]]. O grupo está no nível 3, sem exaustão, mas sem água suficiente para a volta, e talvez esteja sendo seguido por agentes da [[A Mão de Athroniaeth]]. A acusação contra ele caiu.
 
 ## Pendências
 

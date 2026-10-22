@@ -36,3 +36,7 @@ intimidacao: 0
 ### Preparação da Sessão 3
 
 - Enfrenta o protesto liderado por [[Gwydion]] na reitoria, que cobra sua saída pela falta de segurança após os assassinatos noturnos.
+
+### Fatos observados na Sessão 3
+
+- Foi alvo do discurso de [[Gwydion]], que exigiu sua renúncia imediata; o grupo não sabe se renunciou. ([[Sessão 3 - Queima de Arquivo]])

@@ -42,3 +42,8 @@ intimidacao: 0
 - Mandou a carta anônima com dinheiro pedindo que [[Maya]] protegesse [[Yawar]] na prisão; sabe que a Maya investiga.
 - Quer reunir os líderes que recusaram [[Aella]] num reservatório escondido no subterrâneo, alcançável só desacordado ou de olhos vendados.
 - Pode levar o grupo a outros [[Doreán]].
+
+### Fatos observados na Sessão 3
+
+- Na [[Estalagem da Pedra Dura]], voltou a insistir que o grupo fosse ao segundo conselho, sem dizer onde; [[Yawar]] disse que poderia ir, sem certeza. ([[Sessão 3 - Queima de Arquivo]])
+- [[Maya]] suspeita que a carta anônima com dinheiro veio dela. ([[Sessão 3 - Queima de Arquivo]])

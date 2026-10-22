@@ -21,3 +21,7 @@ estado: Parcialmente acessível
 - Atilla pesquisa a arqueologia do templo.
 - [[Ludger]] ocupa-se de sua teologia.
 - [[Celidwen]] estuda a antropologia do povo aasimar que o construiu.
+
+### Fatos observados na Sessão 3
+
+- [[Atilla]] foi atacado por mephits no templo; depois [[Ludger]] conduziu ali o funeral falso dele, de madrugada. ([[Sessão 3 - Queima de Arquivo]])

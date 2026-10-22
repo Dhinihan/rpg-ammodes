@@ -29,3 +29,7 @@ estado: Preservado e parcialmente esvaziado
 - Incluir o vento e a geometria que Ignis identificou como magia. Omitir tempo mais lento e magia mais fácil.
 - A hipótese de Atilla (experimento de perspectiva, vento como eco de salão vazio) entra atribuída a ele. A discordância de Ignis sobre a parte óptica também.
 - [[Golimar]] estava escondida no subterrâneo e mexeu na fechadura. Isso fica na nota dela ou no registro da sessão, não na nota do local.
+
+### Fatos observados na Sessão 3
+
+- [[Atilla]] está escondido no salão, oficialmente morto. ([[Sessão 3 - Queima de Arquivo]])

@@ -34,3 +34,8 @@ intimidacao: 0
 - "Pode gritar, pode bater. Mas antes me deixa terminar a frase." — quando é interrompido.
 - Imita a última frase de alguém com voz de deboche e resmunga por baixo: "Era só o que me faltava."
 - Quando alguém diz algo revelador, exclama "Ah! Pronto!" e se ajeita para ouvir melhor.
+
+### Fatos observados na Sessão 3
+
+- Dividiu a cela com [[Maya]] e [[Yawar]], reclamando que o tiraram do posto; o grupo não deu atenção à história. ([[Sessão 3 - Queima de Arquivo]])
+- Lembrou que foi [[Cyfrin]] quem entregou a ordem e foi inocentado com quase todos os presos ligados ao caso. ([[Sessão 3 - Queima de Arquivo]])

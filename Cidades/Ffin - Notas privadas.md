@@ -37,3 +37,9 @@ estado:
 - Gwydion propõe fundir prefeitura e reitoria, formar um exército de magos e restringir futuras cidades do deserto aos membros de Athroniaeth.
 - [[Rhiannon]] reúne relatos sobre violência interna e procura provas que permitam prender lideranças radicais.
 - [[A Mão de Athroniaeth]] possui células descentralizadas e agentes infiltrados na escola.
+
+### Fatos observados na Sessão 3
+
+- Na universidade, alguns magos aproveitaram o tumulto para saquear [[Simeno]]. ([[Sessão 3 - Queima de Arquivo]])
+- Cobras voadoras e morcegos gigantes sobrevoaram a cidade de madrugada. ([[Sessão 3 - Queima de Arquivo]])
+- A água já estava racionada; a cidade amanheceu se preparando para o cerco de [[Gundrada]], com gente indo embora e soldados arcanos da academia nos portões. ([[Sessão 3 - Queima de Arquivo]])

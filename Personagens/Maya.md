@@ -27,16 +27,19 @@ Investiga a morte do pai e questiona a versão de [[Athroniaeth]].
 - Em [[Ffin]], contou a [[Ava]] sobre a morte do pai e ligou o caso ao símbolo da mão; Ava nunca tinha visto aquele símbolo. ([[Sessão 2 - A Guerra do Simeno]])
 - Declarou ao grupo que quer descobrir quem é a facção dentro da academia e matar todos eles, não a escola. ([[Sessão 2 - A Guerra do Simeno]])
 - No ataque dos mephits, ficou incapacitada por boa parte da luta após um sono mágico e escapou do estouro de um mephit pela resistência tiefling. ([[Sessão 2 - A Guerra do Simeno]])
+- Recebeu na cela uma carta anônima com dinheiro pedindo que protegesse [[Yawar]]; suspeita que veio de [[Ava]]. ([[Sessão 3 - Queima de Arquivo]])
+- Não contestou quando [[Cyfrin]] disse que ela estava infiltrada na prisão com aval de [[Rhiannon]]; foi solta. ([[Sessão 3 - Queima de Arquivo]])
+- Com [[Golimar]], puxou conversa na academia sem levantar suspeita. ([[Sessão 3 - Queima de Arquivo]])
+- Ficou com a pedra de comunicação que [[Atilla]] usava com [[Vialis]]; insistiu durante a viagem até Vialis responder. ([[Sessão 3 - Queima de Arquivo]])
 
 ## Estado atual
 
-Está viva em [[Ffin]], na casa alugada do grupo, ferida após o ataque dos sete mephits na madrugada.
+Está com o grupo diante da mina onde [[Vialis]] trabalhava, no quarto dia de viagem desde [[Ffin]]. O grupo está no nível 3, sem exaustão, mas sem água suficiente para a volta, e talvez esteja sendo seguido por agentes da [[A Mão de Athroniaeth]]. Guarda a pedra de comunicação com [[Vialis]].
 
 ## Pendências
 
 - Investigar a morte do pai e a versão de [[Athroniaeth]] sobre ela.
 - Descobrir quem é a facção dentro da academia ligada ao símbolo da mão.
-- O grupo planeja ir à universidade de [[Athroniaeth]] e começar pelo escritório de [[Llosg]].
 
 ## Possibilidades atuais
 

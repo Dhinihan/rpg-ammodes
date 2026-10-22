@@ -32,3 +32,8 @@ intimidacao: 0
 
 - Chega à casa alugada do grupo minutos depois do ataque dos mephits, pedindo ajuda para [[Atilla]] e lembrando que [[Kadur]] tem cura. Se o grupo já tiver saído, chega tarde demais.
 - Sabe da verdade se [[Ludger]] esconder [[Atilla]] no [[Salão Acromático]].
+
+### Fatos observados na Sessão 3
+
+- Foi à casa do grupo avisar que [[Atilla]] tinha sido atacado por mephits e levou [[Kadur]] ao templo. ([[Sessão 3 - Queima de Arquivo]])
+- Estava presente no funeral falso de [[Atilla]]. ([[Sessão 3 - Queima de Arquivo]])

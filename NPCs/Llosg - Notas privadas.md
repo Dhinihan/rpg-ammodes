@@ -35,3 +35,9 @@ faccao: "[[Athroniaeth]]"
 - A participação no ataque é apresentada como identificação de [[Ignis Fênix]], sem confirmação independente.
 - Segundo [[Dylan]], ninguém o vê há cerca de quinze dias e seu interesse por política e exército mudou recentemente.
 - Quem lidera a investigação da sabotagem da proteção de Ffin é [[Gwydion]], conforme a correção do registro da [[Sessão 2 - A Guerra do Simeno]].
+
+### Fatos observados na Sessão 3
+
+- Para a academia, foi assassinado com os outros magos da expedição da [[Tumba Brilhante]]; as manchas de sangue nos aposentos eram recentes, e o grupo achou a cena conveniente demais. ([[Sessão 3 - Queima de Arquivo]])
+- Um livro dos aposentos era um mímico, com uma pérola do poder no fundo falso. ([[Sessão 3 - Queima de Arquivo]])
+- O diário dele apareceu em cima da mesa da casa do grupo; ninguém sabe quem o deixou. ([[Sessão 3 - Queima de Arquivo]])

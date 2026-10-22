@@ -28,15 +28,17 @@ Quer provar que os deuses são fonte de energia, não divindades. Está com o gr
 - Aceitou a contragosto deixar o [[Simeno]] com os [[Colorados]], registrando que seu voto era o outro. ([[Sessão 2 - A Guerra do Simeno]])
 - Acertou o silêncio com [[Atilla]]: ele não foi contra nem tentou impedir e tem dívida de vida com o grupo; "Você não será envolvido se não se envolver." ([[Sessão 2 - A Guerra do Simeno]])
 - No ataque dos mephits, matou o primeiro com um golpe divino de 20, explodiu junto e terminou a luta com 8 de vida, curando exatamente 8 com o [[Periapt of Health]]. ([[Sessão 2 - A Guerra do Simeno]])
+- Foi com [[Celidwen]] ao [[Templo de Planetar]], curou [[Atilla]] com a cura pelas mãos, notou a preocupação de [[Ludger]] e combinou com os sacerdotes escondê-lo no [[Salão Acromático]]. ([[Sessão 3 - Queima de Arquivo]])
+- Afastou o guarda dos aposentos de [[Llosg]] dizendo vir a mando de [[Rhiannon]] e ameaçando uma reprimenda, sem violência. ([[Sessão 3 - Queima de Arquivo]])
+- No funeral de [[Atilla]], foi conferir o [[Salão Acromático]]; a cara feia de [[Ludger]] confirmou que Atilla estava vivo e que o funeral era farsa. ([[Sessão 3 - Queima de Arquivo]])
 
 ## Estado atual
 
-Está viva em [[Ffin]], na casa alugada do grupo, ferida após o ataque dos sete mephits na madrugada. Ficou com equipamento retirado dos construtos e começou a raspar o brasão de [[Athroniaeth]] de uma das armaduras.
+Está com o grupo diante da mina onde [[Vialis]] trabalhava, no quarto dia de viagem desde [[Ffin]]. O grupo está no nível 3, sem exaustão, mas sem água suficiente para a volta, e talvez esteja sendo seguido por agentes da [[A Mão de Athroniaeth]].
 
 ## Pendências
 
 - Por que os construtos estavam escondidos em caixas de [[Simeno]] ligadas à [[Athroniaeth]].
-- O grupo planeja ir à universidade de [[Athroniaeth]] e começar pelo escritório de [[Llosg]].
 - O destino das outras quatro peças do traje do deserto e o que fazer com o traje permanecem sem acordo.
 
 ## Preferências do jogador

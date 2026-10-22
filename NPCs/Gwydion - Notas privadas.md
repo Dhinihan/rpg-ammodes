@@ -37,3 +37,8 @@ intimidacao: 0
 
 - Na madrugada seguinte ao ataque ao grupo, protesta em frente à reitoria com magos mais jovens, pedindo a saída de [[Hywel]] pela falta de segurança na academia.
 - Alguns magos aproveitam a confusão para estocar ou saquear [[Simeno]]; não há indício de ligação direta dele com isso.
+
+### Fatos observados na Sessão 3
+
+- Discursou no pátio da universidade contra [[Hywel]], culpou-o pelos assassinatos e exigiu a renúncia imediata; o grupo não sabe o desfecho. ([[Sessão 3 - Queima de Arquivo]])
+- [[Ignis Fênix]] usou o nome dele para entrar nos aposentos de [[Llosg]]. ([[Sessão 3 - Queima de Arquivo]])
