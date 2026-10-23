@@ -128,6 +128,7 @@ Monte o prompt final em **português**, seguindo esta estrutura:
 4. **Elementos de Ammódes**: conectores com o mundo (Simeno, Planetar, facções, deserto)
 5. **Composição e luz**: ângulo, iluminação, profundidade de campo
 6. **Diversidade de espécies** (se houver pessoas ao fundo): especifique variedade de raças de D&D
+7. **Formato**: para NPCs, termine com "Formato paisagem (horizontal), como os outros retratos de NPC da wiki". A frase faz parte do prompt exibido para aprovação; não a acrescente só no envio ao Codex
 
 O prompt deve ser:
 - **Descritivo e evocativo**, não técnico (não use parâmetros como --ar, --v, CFG scale, etc.)
