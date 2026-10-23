@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Aiyra
 
+![[Aiyra.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** 
 > **Personalidade:** Líder espiritual dos peregrinos; está perdendo a sanidade.

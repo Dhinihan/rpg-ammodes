@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Boros
 
+![[Boros.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** Bem carismático e cuidadoso com o que fala.
 > **Personalidade:** A curiosidade o corrói por dentro.

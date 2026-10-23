@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Örn
 
+![[Örn.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** 
 > **Personalidade:** Entusiasta da mina.

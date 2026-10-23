@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Magl
 
+![[Magl.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** Lê-se "Méguel". Sem personagem de referência.
 > **Personalidade:** Curiosa, mas cética; pensada como uma jornalista: informada, interessada e bem articulada.

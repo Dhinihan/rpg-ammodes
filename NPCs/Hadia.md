@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Hadia
 
+![[Hadia.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** 
 > **Personalidade:** Guardiã da mina; espera a volta de [[Planetar]].

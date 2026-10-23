@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Ahmad
 
+![[Ahmad.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** 
 > **Personalidade:** Muito crente; principal defensor da irmã e das visões dela.

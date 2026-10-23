@@ -13,6 +13,8 @@ intimidacao: 0
 
 # Noah
 
+![[Noah.png]]
+
 > [!abstract] Resumo de Interpretação
 > **Voz e Trejeitos:** 
 > **Personalidade:** Adaptou-se às circunstâncias e aproveitou a vida apesar de tudo.
