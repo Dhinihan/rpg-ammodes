@@ -628,15 +628,15 @@ Registro em 2026-10-21, ao pausar a preparação. Commitado no branch `preparaca
 - Mapas da mina e das cavernas escolhidos; entrada, escada do norte, porta disfarçada, sala da passagem, chegada do labirinto, guardiã e halfling, saída escondida (seção 6).
 - Monstros: primeiro encontro (Stirges e Rust Monsters), segundo encontro (Shadows e Specter com reskin), luta direta contra a Mão, com fichas e dificuldade (seções 4 e 5).
 - As 3 chaves e o destino da saída escondida (seção 7).
+- Em 2026-10-23: segredos, recompensas, mundo vivo, orçamento de tempo, auditoria, links do D&D Beyond e sincronização (notas sem `published` de Aiyra, Ahmad, Boros, Örn, Noah, Magl, Hadia, Manto da Proteção e Simeno; acréscimos em Maion, Vialis e Kariate Aljusur). O Mestre aprovou sem revisão final do Markdown e corrige na mesa se precisar.
 - Nomes e papéis dos NPCs (seção 4), em 2026-10-23: Aiyra, Ahmad (também o ajudante), Boros, Örn, Noah, Magl e Hadia. Aparência e voz ficaram em branco onde o Mestre não trouxe.
 
 ### Próximo (ordem combinada com o Mestre)
 
-1. Passos do método ainda não cobertos: finalização com links do D&D Beyond (exceto conteúdo do Xanathar's, que o Mestre só tem em papel) e sincronização de NPCs e locais em notas sem `published`, incluindo criar `Simeno - Notas privadas.md` com a resistência dos mineiros (decisão do Mestre).
-2. Lacunas soltas do Contexto do episódio: interferências que os peregrinos veem como milagre (o Mestre traz), primeiros sinais do halfling e da água, gatilho do ataque final.
-3. Pendentes menores: câmara exata do segundo encontro; sala exata do primeiro encontro.
-4. Depois de jogada: aplicar os retcons da Sessão 2 no registro da Sessão 4 (seção 2).
-5. Opcional, no fim: variante da skill de preparação para sessões contidas.
+1. Lacunas soltas do Contexto do episódio: interferências que os peregrinos veem como milagre (o Mestre traz), primeiros sinais do halfling e da água, gatilho do ataque final.
+2. Pendentes menores: câmara exata do segundo encontro; sala exata do primeiro encontro.
+3. Depois de jogada: aplicar os retcons da Sessão 2 no registro da Sessão 4 (seção 2).
+4. Opcional, no fim: variante da skill de preparação para sessões contidas.
 
 ### Arquivos da sessão
 

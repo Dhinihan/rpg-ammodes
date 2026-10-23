@@ -36,3 +36,7 @@ intimidacao: 0
 ### Preparação da Sessão 3
 
 - Possibilidade: o grupo pode procurá-la para ver se está bem ou se também foi atacada pela relação com os jogadores.
+
+### Preparação da Sessão 4
+
+- Possibilidade: o sobrinho dela, [[Örn]], filho do irmão dela, está na mina onde [[Vialis]] trabalhava; foi entregar os suprimentos que ela vende da [[Estalagem da Pedra Dura]] aos trabalhadores. Como ela não tem filhos, ele é meio que o herdeiro dela. ([[Sessão 4]])
