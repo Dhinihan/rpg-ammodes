@@ -123,7 +123,69 @@ Antes da [[Sessão 2 - A Guerra do Simeno]]. Nas cavernas perto de [[Ffin]], a m
 
 - Se o desabamento vier da queda de [[Kadur]], Golimar chega ao Salão com Kadur e Ignis já lá dentro: os "passos no fundo" que eles ouviram são ela, saindo da parede pela passagem da caverna.
 
-## 3. Episódio em traços largos
+## 3. Cenas potenciais
+
+Avaliação do Mestre: faltavam elementos de ligação que melhorassem as batidas de ritmo. Cada cena diz como leva à próxima. A abertura é o flashback de [[Golimar]] (seção 2), que termina em corte seco quando fica clara a ligação com o flashback da [[Sessão 2 - A Guerra do Simeno]], que aconteceu ao mesmo tempo. Contexto que não vai à mesa: "Contexto do episódio", logo abaixo dos segredos.
+
+### Chegada à mina
+
+- **Situação:** a [[Aella]] foi embora; peregrinos mineradores e [[Doreán]] tratam as cavernas como lugar sagrado, guiados por [[Aiyra]]; o grupo talvez esteja sendo seguido pela [[A Mão de Athroniaeth]].
+- **Divisão:** [[Boros]] quer descobrir para onde Aiyra vai; [[Ahmad]] acha isso sacrilégio.
+- **Lenda:** pode circular a da criança que chorava atrás da parede, ou de vultos vistos de canto de olho anos atrás.
+- **O que o grupo quer:** o Manto. Sabe que ele está na mina porque era ali que [[Vialis]] estudava; é Vialis quem conta, pela pedra de [[Maya]]. Ele fica mais disponível, para dar exposição, e possivelmente passa a confiar um pouco mais no grupo. No registro da Sessão 3, o grupo foi atrás de "uma pista da próxima peça"; essa conversa com Vialis é o que fecha a diferença.
+- **Ligação:** [[Örn]], sobrinho de [[Maion]], reconhece o grupo e o leva pela mina explorada; [[Magl]] faz o contraponto cético.
+
+### Descida com Örn
+
+- **Situação:** [[Örn]] conduz o grupo pela parte ocupada pelos peregrinos; visões de [[Hadia]] tentam afastar o grupo e ilusões dos magos da [[A Mão de Athroniaeth]] o incentivam a continuar e o distraem; a Mão gasta recursos do grupo.
+- **Lutas:** acontecem as duas lutas pequenas (seção 5).
+- **Pressa de Örn:** a partir de certo ponto ele quer beber. Quem bebe com ele ganha confiança e ouve como achou o esconderijo (chave 3).
+- **Ligação:** o grupo chega à sala da passagem, onde [[Aiyra]] some. Örn não segue a líder nem invade a sala dela.
+
+### Porta e labirinto
+
+- **Situação:** [[Aiyra]] some na parede; o grupo descobre a porta disfarçada e entra no labirinto na neblina. Detalhes em "Parte oculta e Guards and Wards" e no mapa da seção 6.
+- **Ligação:** a lenda da criança atrás da parede prepara o encontro.
+
+### Noah e Hadia
+
+- **Situação:** o [[Manto da Proteção]] mantém [[Noah]] vivo; para tirá-lo da mina antes da Mão, o grupo precisa derrotar [[Hadia]] (quase impossível), convencê-la ou levar o Manto sem ser visto. O grupo conhece Noah perto do final.
+- **Soluções:** ficam com os jogadores. Exemplos:
+  - o próprio Noah diz que a hora dele chegou e que o Manto deve se unir ao resto do traje;
+  - o grupo mostra que, nas mãos da Mão, o traje pode ser copiado e o deserto corre perigo;
+  - o grupo rouba o Manto furtivamente;
+  - o grupo cita [[Atilla]], Hadia o liga a [[Planetar]] e passa a confiar no grupo.
+
+### Ataque da Mão
+
+- **Situação:** o grupo leva a [[A Mão de Athroniaeth]] até a fonte, e a Mão ataca no fim, ou o grupo a encontra antes. A Mão não liga de machucar [[Noah]]; [[Hadia]] é poderosa e ajuda contra ela. [[Magl]] só entra depois dos outros quatro magos (seção 5).
+- **Exemplos de gatilho:**
+  - o grupo está quase derrotado por Hadia e a Mão a ataca;
+  - o grupo chega a um acordo com ela;
+  - o grupo tenta levar o Manto furtivamente.
+
+### Desfecho
+
+- **Escolhas:** com quem fica o [[Manto da Proteção]] e o destino de [[Noah]] são escolha dos jogadores.
+- **Água:** a água escondida só se revela com as 3 chaves, e a intenção é que o grupo não a encontre; a visão de [[Yawar]] fica em aberto.
+- **Água para a volta:** resolvida pela magia de [[Golimar]], à vontade. Sem o Manto, a água some aos poucos, depois desta sessão.
+
+## Segredos e pistas
+
+1. As visões de [[Aiyra]] vêm de [[Hadia]], não de um espírito do deserto. Pode surgir em [[#Chegada à mina]], [[#Noah e Hadia]].
+2. [[Aiyra]] some por uma porta disfarçada na parede da própria sala para levar comida a alguém. Pode surgir em [[#Chegada à mina]], [[#Descida com Örn]], [[#Porta e labirinto]].
+3. A fama de cura da mina foi espalhada por [[Aiyra]] e [[Ahmad]]; as pessoas vêm pela cura e ficam pela umidade. Pode surgir em [[#Chegada à mina]], [[#Descida com Örn]].
+4. A criança que chorava atrás da parede é [[Noah]], perdido há uns 150 anos e vivo por causa do [[Manto da Proteção]]. Pode surgir em [[#Chegada à mina]], [[#Porta e labirinto]], [[#Noah e Hadia]].
+5. [[Hadia]] escondeu o lugar por séculos esperando a volta de [[Planetar]] e odeia os magos de [[Athroniaeth]]. Pode surgir em [[#Noah e Hadia]].
+6. O [[Manto da Proteção]] protege uma água escondida no fundo da mina contra a força do deserto; é a umidade que [[Golimar]] sente e o lago da visão de [[Yawar]]. Pode surgir em [[#Noah e Hadia]], [[#Desfecho]].
+7. Há uns 150 anos, magos pegaram [[Hadia]] desprevenida e acharam o maior depósito de [[Simeno]] já visto; isso pode ter dado início à corrida que expulsou os [[Doreán]]. Pode surgir em [[#Noah e Hadia]].
+8. O desabamento com stirges e rust monsters foi provocado pelos magos da [[A Mão de Athroniaeth]]: escoras de metal e uma parede restaurada de propósito. Pode surgir em [[#Descida com Örn]].
+9. [[Magl]] é a líder da Mão; foi expulsa da academia por vazar segredos e montou o teleporte que salvou [[Llosg]]. Pode surgir em [[#Descida com Örn]], [[#Ataque da Mão]].
+10. Algumas frestas se iluminam com [[Simeno]] por causa de uma magia que [[Hadia]] ensinou a [[Noah]] para esconder portas secretas; não vale para qualquer fresta. [[Örn]] descobriu isso por acaso no antigo esconderijo de Noah. Pode surgir em [[#Descida com Örn]], [[#Noah e Hadia]].
+
+Fora da lista de propósito: os segredos do flashback, já em "O que Golimar deve sair sabendo" (seção 2), e a resistência dos mineiros ao [[Simeno]], que o Mestre guarda.
+
+## Contexto do episódio
 
 Versão completa em traços largos, para detalhar aos poucos nas seções 4 a 7. Nada aqui é definitivo.
 
@@ -133,7 +195,7 @@ Versão completa em traços largos, para detalhar aos poucos nas seções 4 a 7.
 - **A surpresa:** há uns 150 anos, magos a pegaram desprevenida e acharam o maior depósito de [[Simeno]] que já tinham visto. A mina nasceu ali e pode ter dado início à corrida do Simeno que expulsou os [[Doreán]] há uns 100 anos.
 - **A água escondida:** o Manto protege a água do fundo da força do deserto. Sem conseguir afastar todos, a guardiã passou a esconder só essa água. Não conta onde ela está.
 - **O halfling:** nos primeiros anos da mina, o filho de um minerador se perdeu lá dentro e foi adotado por ela. Hoje é um idoso morrendo de velhice, vivo por causa do [[Manto da Proteção]].
-- **A distração:** cuidando do amigo doente, ela deixa a umidade escapar. Os mineradores sentem e atribuem as interferências dela a uma intervenção divina; daí a peregrinação de mineradores e [[Doreán]].
+- **A distração:** cuidando do amigo doente, ela deixa a umidade escapar. Os mineradores sentem e atribuem as interferências dela a uma intervenção divina. As pessoas vêm pela fama de cura e ficam pela umidade (ver "Origem da peregrinação" em Peregrinos).
 - **A força que impede a água:** cobre todo o deserto e é mais forte perto de [[Ffin]]. Por isso a magia de [[Golimar]] voltou longe da cidade, e a mina ainda depende do Manto.
 - **Vialis sabe do Manto:** estudando a mina e outros artefatos arqueológicos, [[Vialis]] descobriu que o Manto está aqui. Parte dos artefatos foi descrita por [[Atilla]] pelas sending stones; Atilla inventa alguns para não entregar quem é. A memória de Atilla está voltando aos poucos, e ele não lembra de tudo. Quando disse ao grupo que não sabia onde estavam as outras peças, na [[Sessão 1.5 - O Traje do Deserto]], estava sendo cauteloso.
 - **A Aella saiu:** a [[Aella]] abandonou a mina para concentrar forças no cerco de [[Ffin]].
@@ -155,10 +217,12 @@ Versão completa em traços largos, para detalhar aos poucos nas seções 4 a 7.
 
 ### Peregrinos
 
-- **A líder espiritual:** uma goliath [[Doreán]], cega de nascença, lidera os peregrinos. A guardiã a usa como fantoche, mandando visões como se fosse um espírito do deserto.
+- **A líder espiritual:** Aiyra, uma goliath [[Doreán]] cega desde os 6 ou 7 anos, lidera os peregrinos. A guardiã a usa como fantoche, mandando visões como se fosse um espírito do deserto.
 - **O sumiço:** um grupo de peregrinos sabe que ela some por um tempo, mas ninguém sabe para onde vai.
 - **A passagem secreta:** a guardiã mostrou a ela uma passagem para uma área mais interna da caverna. Por ali ela leva comida, que a guardiã usa para alimentar o halfling. A passagem abre a mina para a parte inexplorada, ainda não a parte com água. Como funciona: "Parte oculta e Guards and Wards".
-- **A divisão:** alguns peregrinos querem descobrir para onde a líder vai quando some; outros acham que segui-la é sacrilégio.
+- **Origem da peregrinação:** Aiyra começou a ter visões quando visitou a mina, com 30 e poucos anos. Ela e o irmão, Ahmad, supervisor da mina, espalharam que a mina tinha poderes de cura. As pessoas vêm pela cura e ficam pela umidade, porque a mina é mais úmida que o deserto. Não levou muito tempo.
+- **Antes e depois da Aella:** a mina funcionava até poucos dias atrás. Antes, quem queria ficar tentava emprego na mina. Os peregrinos só tomaram conta depois que a [[Aella]] saiu.
+- **A divisão:** alguns peregrinos querem descobrir para onde a líder vai quando some; outros, liderados por Ahmad, acham que segui-la é sacrilégio.
 - **Pessoas:** a líder, um integrante de cada lado e o guia, na seção 4.
 
 ### Parte oculta e Guards and Wards
@@ -185,30 +249,6 @@ Versão completa em traços largos, para detalhar aos poucos nas seções 4 a 7.
 - A luta contra a guardiã é perdida se o grupo não tentar fugir, domá-la, interagir com o halfling ou algo do tipo.
 - No flashback, o cadáver da esposa de [[Ludger]] persegue [[Golimar]]; é mecanismo de história, sem luta (decisão do Mestre).
 
-### Episódio
-
-Avaliação do Mestre: faltavam elementos de ligação que melhorassem as batidas de ritmo. A primeira rodada foi fechada, e cada batida diz como leva à próxima.
-
-1. **Abertura:** flashback de [[Golimar]], definido na seção 2.
-   - **Ligação:** corte seco. O flashback acaba quando fica clara a ligação com o flashback da [[Sessão 2 - A Guerra do Simeno]], que aconteceu ao mesmo tempo.
-2. **Chegada à mina:** a Aella foi embora; peregrinos mineradores e Doreán tratam as cavernas como lugar sagrado, guiados pela líder goliath cega; o grupo talvez esteja sendo seguido pela Mão. Os peregrinos se dividem entre quem quer descobrir para onde a líder vai e quem acha isso sacrilégio. Pode circular a lenda do halfling: uma criança que chorava atrás da parede, ou vultos vistos de canto de olho anos atrás.
-   - **O que o grupo quer:** o Manto. Sabe que ele está na mina porque era ali que [[Vialis]] estudava; é Vialis quem conta, pela pedra de [[Maya]]. Ele fica mais disponível, para dar exposição, e possivelmente passa a confiar um pouco mais no grupo. No registro da Sessão 3, o grupo foi atrás de "uma pista da próxima peça"; essa conversa com Vialis é o que fecha a diferença.
-   - **Ligação:** um guia entre os peregrinos leva o grupo pela mina explorada.
-3. **Descida pela mina explorada:** o guia conduz o grupo; visões da guardiã tentam afastá-lo e ilusões dos magos o incentivam a continuar e o distraem; a Mão gasta recursos do grupo; acontecem as duas lutas pequenas.
-   - **Ligação:** o grupo chega à área onde a líder some.
-4. **Porta e labirinto:** a líder some na parede; o grupo descobre a porta disfarçada e entra no labirinto na neblina. Detalhes em "Parte oculta e Guards and Wards".
-   - **Ligação:** a lenda da criança atrás da parede prepara o encontro.
-5. **Halfling e guardiã:** o Manto mantém o halfling vivo; para tirá-lo da mina antes da Mão, o grupo precisa derrotar a guardiã (quase impossível), convencê-la ou levar o Manto sem ser visto. O grupo conhece o halfling perto do final. A solução fica com os jogadores. Exemplos:
-   - o próprio halfling diz que a hora dele chegou e que o Manto deve se unir ao resto do traje;
-   - o grupo mostra que, nas mãos da Mão, o traje pode ser copiado e o deserto corre perigo;
-   - o grupo rouba o Manto furtivamente;
-   - o grupo cita [[Atilla]], a guardiã o liga a [[Planetar]] e passa a confiar no grupo.
-6. **Ataque da Mão:** o grupo os leva até a fonte, e a Mão ataca no fim, ou o grupo a encontra antes. A Mão não liga de machucar o halfling; a guardiã é poderosa e ajuda contra ela. Exemplos de gatilho:
-   - o grupo está quase derrotado pela guardiã e a Mão a ataca;
-   - o grupo chega a um acordo com ela;
-   - o grupo tenta levar o Manto furtivamente.
-7. **Desfecho:** com quem fica o Manto e o destino do halfling são escolha dos jogadores. A água escondida só se revela com as 3 chaves, e a intenção é que o grupo não a encontre; a visão de [[Yawar]] fica em aberto. Água para a volta: resolvida pela magia de [[Golimar]], à vontade. Sem o Manto, a água some aos poucos, depois desta sessão.
-
 ### Ganchos dos personagens já nas notas
 
 - [[Golimar]] sente umidade; o flashback prepara isso.
@@ -221,12 +261,9 @@ Avaliação do Mestre: faltavam elementos de ligação que melhorassem as batida
 
 ### Lacunas abertas fora das seções 4 a 7
 
-- **Estrutural:** Clairvoyance da guardiã contra "não sabe o que acontece fora da mina agora".
 - Interferências que os peregrinos veem como milagre (o Mestre traz).
-- O que houve com os mineradores reféns.
 - Onde aparecem, na descida, os primeiros sinais do halfling e da água.
-- Gatilho do ataque final (há exemplos na batida 6).
-- Recompensas além do Manto e do Horn of Silent Alarm (sala 2).
+- Gatilho do ataque final (há exemplos em [[#Ataque da Mão]]).
 
 ### Decisões descartadas, para não voltarem
 
@@ -247,8 +284,11 @@ Lacunas para o Mestre preencher. O que já está definido vem preenchido.
 
 ### A líder dos peregrinos
 
-- **Definido:** goliath [[Doreán]], cega de nascença; recebe as visões da guardiã como se fossem de um espírito do deserto; some de tempos em tempos para levar comida ao halfling; passa livre pela porta e pelos corredores do Guards and Wards.
-- **Nome:**
+- **Definido:** goliath [[Doreán]]; recebe as visões da guardiã como se fossem de um espírito do deserto; some de tempos em tempos para levar comida ao halfling; passa livre pela porta e pelos corredores do Guards and Wards.
+- **Nome:** Aiyra.
+- **Cegueira:** cega desde os 6 ou 7 anos, não de nascença.
+- **Como as visões começaram:** visitou a mina com 30 e poucos anos. O irmão dela, Ahmad, estava prestes a descobrir a porta disfarçada e não foi afetado pela magia da guardiã. Para distraí-lo, a guardiã mandou visões a Aiyra.
+- **O que veio depois:** a guardiã viu que podia usar Aiyra para manipular os peregrinos e abusou disso. Aiyra foi perdendo a sanidade.
 - **Aparência e voz:**
 - **Referência de interpretação (opcional):**
 - **O que quer:**
@@ -258,36 +298,43 @@ Lacunas para o Mestre preencher. O que já está definido vem preenchido.
 ### Integrante que quer seguir a líder
 
 - **Definido:** lado dos peregrinos que quer descobrir para onde a líder vai quando some.
-- **Nome e origem (minerador ou Doreán):**
+- **Nome:** Boros.
+- **Origem:** humano, minerador. Sobreviveu ao ataque da [[Aella]] e conseguiu evitar ser levado.
+- **O que acha das visões:** Aiyra as tem por estar em contato com algo sagrado escondido, não por ser escolhida.
+- **Jeito:** bem carismático e cuidadoso com o que fala, mas a curiosidade o corrói por dentro.
+- **O que quer:** descobrir logo se ele pode receber o mesmo tipo de bênção.
+- **A guardiã não o afeta:** ela não consegue afetá-lo, então tem dificuldade de manipulá-lo. Motivo: exposição ao [[Simeno]] (ver "Lacunas gerais dos NPCs").
 - **Aparência e voz:**
 - **Referência de interpretação (opcional):**
-- **O que quer:**
-- **O que sabe:**
 - **Como reage ao grupo:**
 
 ### Integrante que acha sacrilégio
 
 - **Definido:** lado dos peregrinos que acha que seguir a líder é sacrilégio.
-- **Nome e origem (minerador ou Doreán):**
+- **Nome:** Ahmad, irmão de Aiyra.
+- **Origem:** goliath [[Doreán]], como a irmã.
+- **Ocupação:** supervisor da mina. Por isso ele e a irmã tinham tanto acesso a ela.
+- **Também é o ajudante da líder (decisão do Mestre, para simplificar):** mora com Aiyra na sala da passagem; sai da sala quando ela pede, antes de ela entrar na passagem; acredita que ela vai para o mundo espiritual.
+- **Posição:** defende que deixem a irmã em paz. Muito crente, é o principal defensor dela e das visões.
+- **Conflito:** sofre com a distância que as visões criaram entre os dois.
+- **Ligação com a guardiã:** foi por ele que tudo começou. Estava prestes a achar a porta disfarçada e resistiu à magia da guardiã (exposição ao [[Simeno]], ver "Lacunas gerais dos NPCs"), que então mandou as visões a Aiyra para distraí-lo.
 - **Aparência e voz:**
 - **Referência de interpretação (opcional):**
 - **O que quer:**
 - **O que sabe:**
 - **Como reage ao grupo:**
 
-### O ajudante da líder
-
-- **Definido:** mora com a líder na sala da passagem; sai da sala quando ela pede, antes de ela entrar na passagem; acredita que ela vai para o mundo espiritual.
-- **Nome e origem (minerador ou Doreán):**
-- **Aparência e voz:**
-- **Referência de interpretação (opcional):**
-- **O que sabe e o que conta:**
-- **Como reage ao grupo:**
-
 ### O guia
 
-- **Definido:** leva o grupo pela mina explorada até a área da passagem.
-- **Nome e origem (minerador ou Doreán):**
+- **Definido:** leva o grupo pela mina explorada até a área da passagem. Fica com o grupo só na parte ocupada pelos peregrinos: não segue a líder nem invade a sala dela. É entusiasta, e Magl, a líder da Mão, faz o contraponto cético.
+- **Nome:** Örn.
+- **Espécie:** meio orc, meio tiefling; um orc é raro nessas regiões.
+- **Quem é:** filho do irmão de [[Maion]]. Está passando um tempo ajudando a tia a cuidar da [[Estalagem da Pedra Dura]]; como ela não tem filhos, ele é meio que o herdeiro dela. Reconhece o grupo.
+- **Por que está na mina:** veio entregar os suprimentos que Maion vende da estalagem para os trabalhadores e acabou ficando depois do ataque da [[Aella]].
+- **O ataque:** viu tudo de uma distância segura. Deu sorte. Viu os mineradores e [[Vialis]] serem levados.
+- **O esconderijo:** conhece um bom esconderijo na mina, onde guarda as bebidas alcoólicas que trouxe para vender. Achou o lugar quando derrubou [[Simeno]] numa parede e as frestas se iluminaram. É um esconderijo antigo que o halfling criou, escondido com uma magia que a guardiã lhe ensinou, e a mina avançou até interceptá-lo; Örn não sabe disso.
+- **Pressa:** a partir de certo ponto, fica com pressa como guia, porque quer beber.
+- **Beber com ele:** não convida exatamente, mas aceita companhia. Quem bebe com ele ganha a confiança dele, e aí ele conta como achou o esconderijo. É a chave 3 (seção 7).
 - **De que lado da divisão está, se de algum:**
 - **Aparência e voz:**
 - **Referência de interpretação (opcional):**
@@ -297,14 +344,12 @@ Lacunas para o Mestre preencher. O que já está definido vem preenchido.
 ### O halfling
 
 - **Definido:** filho de um minerador, perdido na mina quando criança, há uns 150 anos; adotado pela guardiã; morou na sala 2 do Guards and Wards antes de ficar doente, e ali ficou o Horn of Silent Alarm que ganhou dos pais quando criança, para usar caso se perdesse, gasto em brincadeiras com os amigos e sem carga quando ele se perdeu; está doente há mais de um ano, de uma doença de ação lenta; guarda a chave literal da saída escondida das cavernas (chave 2) e reluta em entregá-la; idoso morrendo de velhice, vivo por causa do [[Manto da Proteção]]; o grupo o conhece perto do final; a lenda da criança que chorava atrás da parede fala dele.
-- **Nome:**
-- **Aparência e voz:**
-- **Referência de interpretação (opcional):**
-- **Personalidade:**
-- **Relação com a guardiã:**
-- **O que pensa sobre o Manto e sobre a própria morte:**
-- **O que sabe da mina, da água e do mundo lá fora:**
-- **Ficha de referência, se precisar:**
+- **Nome:** Noah.
+- **Nível de detalhe:** não precisa de muito (decisão do Mestre).
+- **Vida:** desde que se perdeu, viveu sozinho com a guardiã. Tem uma vida bem integrada com a caverna e ajuda a guardiã a manter a caverna interna escondida.
+- **Gostos:** cantar as músicas que aprendeu na infância e domesticar os animais mais improváveis do fundo da caverna.
+- **Personalidade:** se adaptou às circunstâncias na medida do possível e aproveitou a vida apesar de tudo.
+- **Esconderijo antigo:** criou o esconderijo que a mina interceptou, onde Örn hoje guarda as bebidas.
 
 ### Os magos da Mão
 
@@ -324,55 +369,70 @@ Lacunas para o Mestre preencher. O que já está definido vem preenchido.
 ### A líder da Mão
 
 - **Definido:** elfa que vive normalmente no deserto e se veste quase como uma [[Doreán]]; lidera os magos da [[A Mão de Athroniaeth]] (ficha Mage); está infiltrada entre os peregrinos. Dependendo de como a sessão for, pode se juntar ao grupo ou inventar uma desculpa para explicar por que o seguiu na caverna. Sem ideia melhor na hora, só aparece no ataque final, fingindo que foi arrastada pelos magos ou algo do tipo.
-- **Nome:**
-- **Aparência e voz:**
-- **Referência de interpretação (opcional):**
-- **O que quer:**
-- **Desculpa para ter seguido o grupo:**
+- **Nome:** Magl (lê-se "Méguel"). Não é o nome original dela, que não vem ao caso.
+- **Aparência:** elfa alta, de aparência comum, vestida com roupas do deserto.
+- **Como se apresenta:** curiosa, mas cética sobre o que acontece na mina; é o contraponto do guia, que é entusiasta. Pensada como uma jornalista: informada, interessada e bem articulada.
+- **Voz e referência de interpretação:** não precisa; o Mestre não vai usar um personagem de referência.
+- **Por que se radicalizou:** foi expulsa da academia por divulgar segredos que roubou da reitoria, sobre magias novas cuja segurança ainda estava em avaliação.
+- **Poder:** uma das magas mais poderosas da [[A Mão de Athroniaeth]]. Foi ela quem montou o mecanismo de teleporte que "salvou" [[Llosg]] na [[Tumba Brilhante]].
+- **O que ela divulgou:** algo genérico, como "uma técnica para ligar uma magia a um gatilho com alcance acima do esperado" (exemplo, não definitivo). O salto disso para o que aconteceu com Llosg é grande demais para [[Dylan]] ter ligado as duas coisas.
+- **O teleporte dela:** versão com mais controle que a da tumba. Preparar o gatilho exige esforço e custa muito [[Simeno]], então ela precisa de tempo entre um uso e outro. Com o gatilho pronto, ativa com uma ação. Para missões menos importantes, como a da tumba, ela faz versões mais simples (lá, disparou com a morte do primeiro mago e levou 15 minutos).
+- **Teleporte na luta:** ela vem com o gatilho pronto e usa uma ação para fugir quando estiver com pouca vida. Já começa a luta com os olhos piscando, o mesmo sinal da tumba (olhos brilhando). [[Dylan]] achou que era um item implantado, mas o mecanismo é algo mais etéreo, não um item: não fica nada para saquear se ela morrer (decisão do Mestre).
+- **Com o grupo:** é o contraponto do guia na parte da mina ocupada pelos peregrinos. Daí em diante, os três caminhos de "Definido" continuam abertos.
+- **O que quer:** sabe que o grupo está atrás de algo ligado ao poder de [[Planetar]] no deserto e quer descobrir o que é.
+- **Desculpa para ter seguido o grupo:** quer entender de onde vem o poder que os peregrinos sentem na mina.
+- **Ignis pode reconhecê-la:** na academia ela usava outro nome e não chamava atenção, então a chance é pequena. O Mestre rola um dado; se der certo, [[Ignis Fênix]] só sente que já a viu antes, sem lembrar quando.
 
 ### A guardiã
 
-- **Definido:** detalhada na seção 3, em "Fundo da mina".
-- **Nome:**
+- **Definido:** detalhada em "Contexto do episódio", em "Fundo da mina".
+- **Nome:** Hadia.
 - **Aparência e voz:**
 - **Referência de interpretação (opcional):**
 
 ### Lacunas gerais dos NPCs
 
+- **Resistência dos mineiros (mecanismo interno, ninguém sabe ainda):** Ahmad e Boros passaram muito tempo expostos ao [[Simeno]] como mineiros, e com o tempo o corpo ganha uma leve resistência a magia. Não é óbvia, mas atrapalha Hadia de afetá-los de tão longe. O Mestre pode usar isso no futuro.
+
 - **Infiltrado:** a infiltrada é a líder da Mão, que não é nenhum dos quatro peregrinos; outro infiltrado só se o Mestre improvisar.
-- **Lacuna:** como a líder da Mão comanda os quatro magos enquanto está disfarçada.
+- **Como Magl e os quatro magos se coordenam:** não precisam de comando constante; os quatro trabalham bem como equipe. Enquanto isso, Magl tenta aprender com o grupo e espera o ataque dos outros no fim (ver "Mundo vivo").
 
 ## 5. Monstros relevantes
 
-- **Guardian Naga** (ND 10): a guardiã. Lacuna: link do D&D Beyond.
+- **[Guardian Naga](https://www.dndbeyond.com/monsters/5195066-guardian-naga)** (ND 10): ficha de [[Hadia]]; poderes sobem ou descem conforme a história pedir (ver "Fundo da mina"). Cena: [[#Noah e Hadia]].
 
-### Primeiro encontro provocado pela Mão
+### Primeiro encontro provocado pela Mão, em [[#Descida com Örn]]
 
 - **Definido:** parece coisa da própria caverna, mas um jogador atento pode perceber que foi plantado. Acontece na mina, no meio dos peregrinos, que podem virar obstáculos.
-- **Criaturas (com ND):** 5 **Stirge** (ND 1/8, 25 XP cada) contra o grupo, havendo mais delas que os peregrinos enfrentam, e 2 **Rust Monster** (ND 1/2, 100 XP cada). Links do D&D Beyond na finalização.
-  - **Stirge (2024, aidedd.org):** CA 13, 5 PV, voo 12 m; Proboscis +5, 1d6 + 3 perfurante e se prende; presa, causa 2d4 necrótico no início de cada turno dela; solta com 1,5 m do movimento dela, ou com uma ação do alvo ou de alguém a até 1,5 m.
-  - **Rust Monster (2024, aidedd.org):** CA 14, 33 PV, deslocamento 12 m; fareja metal ferroso a 9 m; Bite +3, 1d8 + 1; Antennae (duas por turno e uma como reação quando é atingido): mira armadura ou arma de metal não mágica a até 1,5 m, teste de Destreza CD 11, e na falha a armadura perde 1 de CA (destruída ao chegar a CA 10) ou a arma perde 1 no ataque (destruída em -5); Mending remove a penalidade; itens mágicos não são afetados.
+- **[Stirge](https://www.dndbeyond.com/monsters/5195219-stirge)** (ND 1/8, 25 XP): 5 contra o grupo, havendo mais delas que os peregrinos enfrentam; ninho atrás da parede que cede.
+  - **Ficha (2024, aidedd.org):** CA 13, 5 PV, voo 12 m; Proboscis +5, 1d6 + 3 perfurante e se prende; presa, causa 2d4 necrótico no início de cada turno dela; solta com 1,5 m do movimento dela, ou com uma ação do alvo ou de alguém a até 1,5 m.
+- **[Rust Monster](https://www.dndbeyond.com/monsters/5195186-rust-monster)** (ND 1/2, 100 XP): 2; comem as escoras de metal e a parede cede; ameaçam o equipamento de metal.
+  - **Ficha (2024, aidedd.org):** CA 14, 33 PV, deslocamento 12 m; fareja metal ferroso a 9 m; Bite +3, 1d8 + 1; Antennae (duas por turno e uma como reação quando é atingido): mira armadura ou arma de metal não mágica a até 1,5 m, teste de Destreza CD 11, e na falha a armadura perde 1 de CA (destruída ao chegar a CA 10) ou a arma perde 1 no ataque (destruída em -5); Mending remove a penalidade; itens mágicos não são afetados.
 - **Dificuldade (5 personagens de nível 3):** 325 XP, abaixo de Baixa (750); o custo vem do dano no equipamento de metal.
 - **Onde acontece:** na mina, entre os peregrinos (sala exata em aberto).
 - **Como os magos plantaram:** provocam o desabamento de uma parede da mina, que solta as criaturas.
 - **A pista para o jogador atento:** se for a líder da Mão quem provoca o desabamento (o Mestre improvisa na hora), ela foi vista "apoiada numa parede" um bom tempo antes. Ela estava atraindo os Rust Monsters (que farejam metal ferroso a 9 m) para um ponto onde sabia que havia um ninho de stirges atrás da parede. A parede tinha escoras de metal, e ela sabia disso: os Rust Monsters comem o metal e a parede cede.
   - **Se não for a líder:** uma investigação depois do desabamento mostra que a parede foi "restaurada" há pouco tempo, com escoras de metal, aparentemente por alguém que não sabia que viviam Rust Monsters nas cavernas. Na verdade, os magos fizeram isso de propósito, imaginando que poderia ser útil em algum momento.
 
-### Segundo encontro provocado pela Mão
+### Segundo encontro provocado pela Mão, nas cavernas antes de [[#Noah e Hadia]]
 
 - **Definido:** fica mais claro que foram magos, sem ser óbvio demais; serve para assustar e fazer o grupo gastar recursos. Acontece nas cavernas depois do labirinto: os magos atravessam o labirinto desfazendo os efeitos com Dispel Magic.
-- **Criaturas (com ND):** 2 **Shadow** (ND 1/2, 100 XP cada) e 1 **Specter** (ND 1, 200 XP), com reskin: em vez de mortos-vivos, elementais de sombra (Shadow) e um elemental de morte (Specter), com as mesmas regras. É o tipo de avanço tecnológico arcano que a Mão está estudando. Links do D&D Beyond na finalização.
-  - **Shadow (2024, aidedd.org):** CA 12, 27 PV, deslocamento 12 m; vulnerável a radiante; resiste a ácido, frio, fogo, elétrico e trovão; Draining Swipe +4, 1d6 + 2 necrótico e reduz a Força em 1d4 (Força 0 mata; um humanoide morto assim vira um novo elemental de sombra em 1d4 horas, regra mantida no reskin por decisão do Mestre); Shadow Stealth: esconde-se como ação bônus na penumbra ou no escuro; passa por frestas de 2,5 cm.
-  - **Specter (2024, aidedd.org):** CA 12, 22 PV, voo 15 m; resiste a ácido, frio, fogo, elétrico, trovão e a dano de concussão, perfuração e corte; Life Drain +4, 2d6 necrótico e reduz o máximo de PV no mesmo valor; atravessa criaturas e objetos.
+- **Reskin:** em vez de mortos-vivos, elementais de sombra (Shadow) e um elemental de morte (Specter), com as mesmas regras. É o tipo de avanço tecnológico arcano que a Mão está estudando.
+- **[Shadow](https://www.dndbeyond.com/monsters/5174958-shadow)** (ND 1/2, 100 XP): 2, como elementais de sombra; drenam Força.
+  - **Ficha (2024, aidedd.org):** CA 12, 27 PV, deslocamento 12 m; vulnerável a radiante; resiste a ácido, frio, fogo, elétrico e trovão; Draining Swipe +4, 1d6 + 2 necrótico e reduz a Força em 1d4 (Força 0 mata; um humanoide morto assim vira um novo elemental de sombra em 1d4 horas, regra mantida no reskin por decisão do Mestre); Shadow Stealth: esconde-se como ação bônus na penumbra ou no escuro; passa por frestas de 2,5 cm.
+- **[Specter](https://www.dndbeyond.com/monsters/5195210-specter)** (ND 1, 200 XP): 1, como elemental de morte; reduz o máximo de PV.
+  - **Ficha (2024, aidedd.org):** CA 12, 22 PV, voo 15 m; resiste a ácido, frio, fogo, elétrico, trovão e a dano de concussão, perfuração e corte; Life Drain +4, 2d6 necrótico e reduz o máximo de PV no mesmo valor; atravessa criaturas e objetos.
 - **Como aparecem:** se a líder da Mão estiver com o grupo, ela dá um jeito de conjurá-los escondida; se não, os quatro magos os invocam na caverna para seguirem os jogadores.
 - **Dificuldade (5 personagens de nível 3):** 400 XP, abaixo de Baixa (750). O custo vem das sequelas, Força perdida e máximo de PV reduzido, o que serve ao objetivo de gastar recursos antes da luta final. A duração das sequelas não apareceu no texto consultado; em 2014, a Força voltava num descanso curto ou longo e o máximo de PV num descanso longo.
 - **Onde acontece:** nas cavernas depois do labirinto (câmara exata em aberto).
 - **O sinal de que foram magos:**
 
-### Luta direta contra a Mão
+### Luta direta contra a Mão, em [[#Ataque da Mão]]
 
 - **Definido:** pode se fundir à luta contra a guardiã; a guardiã ajuda contra a Mão.
-- **Fichas dos magos (com ND):** 2 Mage Apprentice (ND 2), 2 Priest Acolyte reskin (ND 1/4) e o líder Mage (ND 6), que só entra depois que os quatro caem. Detalhes na seção 4. Links do D&D Beyond na finalização.
+- **[Mage Apprentice](https://www.dndbeyond.com/monsters/5195109-mage-apprentice)** (ND 2, 450 XP): 2 magos da [[A Mão de Athroniaeth]]; um carrega o Spell Scroll of Dispel Magic. Detalhes na seção 4.
+- **[Priest Acolyte](https://www.dndbeyond.com/monsters/5195169-priest-acolyte)** (ND 1/4, 50 XP): 2, com reskin para mago.
+- **[Mage](https://www.dndbeyond.com/monsters/4831023-mage)** (ND 6, 2.300 XP): [[Magl]], que só entra depois que os quatro caem; foge com o teleporte quando estiver com pouca vida.
 - **Dificuldade (D&D 2024, 5 personagens de nível 3; orçamento por personagem 150 / 225 / 400, com só o 225 conferido em fonte):** Baixa 750 XP, Moderada 1.125 XP, Alta 2.000 XP.
   - **Os quatro magos menores:** 1.000 XP, Moderada.
   - **O Mage sozinho:** 2.300 XP, acima de Alta.
@@ -392,7 +452,7 @@ Lacunas para o Mestre preencher. O que já está definido vem preenchido.
 - **Escada do norte:** acima do salão de colunas; segue para uma parte mais rústica da mina, fora do mapa.
 - **Porta disfarçada:** na parede sul da sala grande do centro do mapa; leva ao labirinto do Guards and Wards.
 - **Acampamento dos peregrinos:** ocupam o mapa todo, tudo improvisado e bem cheio.
-- **Sala da passagem (a sala grande do centro):** onde os peregrinos se reúnem para ouvir a líder. Ela é a única que mora ali: por ser respeitada, ficou com a sala só para ela e um ajudante. Quando vai entrar na passagem, pede que o ajudante saia; ele acha que ela vai para o mundo espiritual.
+- **Sala da passagem (a sala grande do centro):** onde os peregrinos se reúnem para ouvir a líder. Por ser respeitada, ficou com a sala só para ela e o irmão, Ahmad, que é o ajudante; os dois são os únicos que moram ali. Quando vai entrar na passagem, pede que ele saia; ele acha que ela vai para o mundo espiritual.
 - **Principais áreas:**
 - **Primeira luta pequena:** no meio dos peregrinos, na própria mina; os peregrinos podem virar obstáculos.
 
@@ -465,7 +525,7 @@ Lacunas para o Mestre preencher. O que já está definido vem preenchido.
 
 - **Forma:** mapa.
 - **Onde ou com quem está:** no quarto do halfling, a sala 2 do Guards and Wards (acessível depois de tirar o gás).
-- **O que revela ou abre:** a saída escondida na sala elevada do sudeste das cavernas; o mapa traz escrito o que procurar. Lacuna: aonde a saída leva; decidir junto com a chave 3.
+- **O que revela ou abre:** a saída escondida na sala elevada do sudeste das cavernas; o mapa traz escrito o que procurar. A saída leva à caverna com água (ver chave 3).
 
 ### Chave 2
 
@@ -476,31 +536,107 @@ Lacunas para o Mestre preencher. O que já está definido vem preenchido.
 
 ### Chave 3
 
-- **Forma:**
-- **Onde ou com quem está:**
-- **O que revela ou abre:**
+- **Forma:** informação. [[Simeno]] derrubado numa parede faz as frestas se iluminarem, mas só onde há a magia que Hadia ensinou a Noah para esconder portas secretas; não vale para qualquer fresta.
+- **Onde ou com quem está:** com Örn, o guia. Ele conta como achou o esconderijo das bebidas para quem bebe com ele e ganha a confiança dele.
+- **O que revela ou abre:** a técnica é a chave. Jogando Simeno na saída escondida das cavernas, as frestas se iluminam e mostram onde pôr a chave do halfling (chave 2). O esconderijo de Örn é só onde ele descobriu a técnica.
+- **Como as três se juntam:** o mapa (chave 1) mostra onde fica a saída escondida, a técnica (chave 3) mostra onde fica a fechadura e a chave do halfling (chave 2) abre. A saída leva à caverna com água.
+- **Difícil de ligar (decisão do Mestre):** o Mestre não quer que os jogadores achem a água nesta sessão, então a ligação entre a história de Örn e a saída escondida deve ser difícil de perceber.
+
+## Recompensas possíveis
+
+- **[[Manto da Proteção]]:** +1 na CA e nos testes de resistência; na história pode ter mais efeitos. Mantém [[Noah]] vivo. Cena: [[#Noah e Hadia]].
+- **Horn of Silent Alarm** (Xanathar's Guide to Everything; sem link, o Mestre só tem o livro físico): na sala 2 do Guards and Wards, antiga casa de [[Noah]]. Cena: [[#Porta e labirinto]].
+- **[Spell Scroll](https://www.dndbeyond.com/magic-items/9229085-spell-scroll) of Dispel Magic:** com um dos aprendizes da [[A Mão de Athroniaeth]], de reserva para atravessar o labirinto. Serve ao grupo contra o Guards and Wards. Cena: [[#Ataque da Mão]].
+- **[Sending stone](https://www.dndbeyond.com/magic-items/9180147-sending-stones)** de um mago da [[A Mão de Athroniaeth]]: o mesmo tipo de pedra dos mercadores da travessia. Pista: alguém responde do outro lado, e a pedra conversa livremente (inovação de [[Athroniaeth]], ver "Mundo vivo"). Liga à vontade de [[Maya]] de achar a facção. Cena: [[#Ataque da Mão]].
+- **Talvez, improvisado:** um dos animais domesticados de [[Noah]] passa a seguir o grupo, se o grupo ajudá-lo.
+- **Descartado:** implante de teleporte de [[Magl]] como item; o mecanismo dela é etéreo.
+
+## Mundo vivo
+
+### [[A Mão de Athroniaeth]]
+
+- **Agora:** [[Magl]] está entre os peregrinos, no papel de cética. Os outros quatro magos seguem o grupo pelo deserto; os dois "mercadores" da travessia estão entre eles.
+- **Coordenação:** os quatro trabalham bem como equipe e agem sem comando constante de Magl. Ela tenta aprender com o grupo enquanto espera o ataque dos outros no fim.
+- **Recursos:** ilusão, telepatia, invocação ou provocação de criaturas, Dispel Magic, sending stones.
+- **Pressão:** precisam que o grupo os leve até a fonte antes de descobrir quem são.
+
+### [[Hadia]]
+
+- **Agora:** cuida de [[Noah]], doente há mais de um ano; distraída, deixa a umidade escapar. Usa [[Aiyra]] para manipular os peregrinos e mantém o gás na sala 2.
+- **Clairvoyance:** alcance de 1 milha, em lugar familiar ou óbvio; conjuração de 10 minutos e concentração de até 10 minutos (PHB 2024, conferido no aidedd.org). Vigia a mina e os arredores, inclusive a chegada do grupo, mas não enxerga [[Ffin]], o cerco nem o resto do deserto. Por isso não sabe o que acontece fora da mina agora.
+- **Pressão:** a mina, que funcionava até poucos dias atrás, está lotada de peregrinos.
+
+### Peregrinos
+
+- **Agora:** tomaram a mina depois que a [[Aella]] saiu, num acampamento improvisado e cheio.
+- **Aiyra e Ahmad:** [[Aiyra]] prega na sala da passagem e está perdendo a sanidade; [[Ahmad]] a protege.
+- **Boros:** a curiosidade de [[Boros]] está perto de virar ação.
+- **Örn:** [[Örn]] vende as bebidas e ficou depois do ataque.
+
+### [[Aella]]
+
+- **Agora:** deixou a mina para reforçar o cerco de [[Ffin]].
+- **Reféns:** os mineradores levados no ataque estão em [[Kariate Aljusur]], com [[Vialis]].
+
+### [[Vialis]]
+
+- **Agora:** preso em [[Kariate Aljusur]], capturado por [[Gundrada]] no mesmo ataque à mina. Sabe do [[Manto da Proteção]] e fala a contragosto pela pedra de [[Maya]].
+- **A pedra (regra da casa, decisão do Mestre):** as sending stones de [[Athroniaeth]] conversam mais livremente que a regra de 2024 (uma vez por amanhecer, 25 palavras), por uma inovação da academia. Vale para todas as pedras: a de [[Maya]], para Vialis poder dar exposição, e as da Mão.
+
+## Orçamento de tempo
+
+Sessão de 5 horas. A divisão fecha sem folga; o Mestre acha que não vai dar para terminar e aceita deixar parte para a próxima sessão (decisão do Mestre).
+
+| Parte | Min | Observação |
+|---|---|---|
+| Flashback de [[Golimar]] | 30 | investigativo, corte seco |
+| [[#Chegada à mina]] | 35 | conversa com [[Vialis]], peregrinos, [[Örn]] e [[Magl]] |
+| [[#Descida com Örn]] | 50 | inclui o primeiro encontro, uns 25 min |
+| [[#Porta e labirinto]] | 60 | separação nas bifurcações, salas 1 a 3 opcionais, puzzle |
+| Segundo encontro | 25 | na caverna depois do labirinto |
+| [[#Noah e Hadia]] | 40 | negociação, furto ou luta |
+| [[#Ataque da Mão]] | 45 | quatro magos, depois Magl; provavelmente passa disso |
+| [[#Desfecho]] | 15 | o Manto, Noah, a volta |
+| **Total** | **300** | |
+
+- **Onde cortar, se precisar:** labirinto pelo caminho só da sala 4 (uns 20 min); segundo encontro, o mais dispensável (25 min); ataque da Mão começando no meio da conversa com Hadia.
+
+## Auditoria de trilhos
+
+### Decisões conscientes
+
+- **Porta disfarçada:** o Arcane Lock não abre por meios não mágicos, e no nível 3 o grupo não tem Dispel Magic. [[Magl]] pode ter Knock e o usa de forma sutil se conseguir. Regra de 2024: o Knock solta um estrondo audível a 90 m, então a sutileza depende de disfarçar o barulho. O Mestre improvisa: se alguém usar força na porta, ela aproveita o momento, e os jogadores vão estranhar o barulho. Se ela não estiver perto, o Mestre ouve as ideias criativas dos jogadores, ou eles esperam por ela e ela percebe. Cena: [[#Porta e labirinto]].
+- **Seguir Aiyra no labirinto:** [[Hadia]] oculta [[Aiyra]] magicamente dos jogadores no labirinto, então segurar a mão dela não pula o labirinto. Ali o poder de Hadia começa a aumentar. Cena: [[#Porta e labirinto]].
+- **Chaves com uma fonte só:** chave 1 só na sala 2, chave 2 só com [[Noah]], chave 3 só com [[Örn]]. Combina com a intenção de que a água seja difícil de achar.
+- **Luta contra Hadia perdida se o grupo só lutar:** regra de desenho do Mestre. Cena: [[#Noah e Hadia]].
+- **Suposições sobre os jogadores:** que vão mapear o labirinto depois de entender os 50% e que conhecem Noah perto do final. Marcadas como suposição do Mestre.
+
+### Lacunas deliberadas
+
+- **Se o grupo achar a água:** é interessante, só deve ser difícil de acontecer. Sem material preparado para a caverna com água; o Mestre improvisa. Cena: [[#Desfecho]].
+- **Interferências que os peregrinos veem como milagre:** o Mestre traz.
+- **Gatilho do ataque final:** exemplos em [[#Ataque da Mão]]; decidido na mesa.
 
 ## Estado da preparação (para retomar)
 
-Registro em 2026-10-21, ao pausar a preparação. Nada foi commitado.
+Registro em 2026-10-21, ao pausar a preparação. Commitado no branch `preparacao-sessao-4`.
 
 ### Feito
 
-- Estrutura do episódio em 7 batidas, com ligações (seção 3).
+- Estrutura do episódio: abertura e 6 cenas potenciais, com ligações (seção 3), e 10 segredos aprovados.
 - Região do Guards and Wards completa: labirinto, salas 1 a 4, regras da casa, bifurcações (seção 6).
 - Mapas da mina e das cavernas escolhidos; entrada, escada do norte, porta disfarçada, sala da passagem, chegada do labirinto, guardiã e halfling, saída escondida (seção 6).
 - Monstros: primeiro encontro (Stirges e Rust Monsters), segundo encontro (Shadows e Specter com reskin), luta direta contra a Mão, com fichas e dificuldade (seções 4 e 5).
-- Chaves 1 e 2 (seção 7).
+- As 3 chaves e o destino da saída escondida (seção 7).
+- Nomes e papéis dos NPCs (seção 4), em 2026-10-23: Aiyra, Ahmad (também o ajudante), Boros, Örn, Noah, Magl e Hadia. Aparência e voz ficaram em branco onde o Mestre não trouxe.
 
 ### Próximo (ordem combinada com o Mestre)
 
-1. Nomes, aparência e voz dos NPCs: líder dos peregrinos, os dois integrantes de lados opostos, o guia, o ajudante da líder, o halfling, a líder da Mão e a guardiã.
-2. Chave 3, junto com o destino da saída escondida.
-3. Passos do método ainda não cobertos: segredos (cada um apontando cenas com `[[#Cena]]`), recompensas, mundo vivo, auditoria, orçamento de tempo, finalização com links do D&D Beyond (exceto conteúdo do Xanathar's, que o Mestre só tem em papel) e sincronização de NPCs e locais em notas sem `published`.
-4. Lacunas soltas da seção 3: Clairvoyance da guardiã (a única estrutural), interferências que os peregrinos veem como milagre (o Mestre traz), destino dos mineradores reféns, primeiros sinais do halfling e da água, gatilho do ataque final.
-5. Pendentes menores: como a líder da Mão comanda os quatro magos enquanto está disfarçada; câmara exata do segundo encontro; sala exata do primeiro encontro.
-6. Depois de jogada: aplicar os retcons da Sessão 2 no registro da Sessão 4 (seção 2).
-7. Opcional, no fim: variante da skill de preparação para sessões contidas.
+1. Passos do método ainda não cobertos: finalização com links do D&D Beyond (exceto conteúdo do Xanathar's, que o Mestre só tem em papel) e sincronização de NPCs e locais em notas sem `published`, incluindo criar `Simeno - Notas privadas.md` com a resistência dos mineiros (decisão do Mestre).
+2. Lacunas soltas do Contexto do episódio: interferências que os peregrinos veem como milagre (o Mestre traz), primeiros sinais do halfling e da água, gatilho do ataque final.
+3. Pendentes menores: câmara exata do segundo encontro; sala exata do primeiro encontro.
+4. Depois de jogada: aplicar os retcons da Sessão 2 no registro da Sessão 4 (seção 2).
+5. Opcional, no fim: variante da skill de preparação para sessões contidas.
 
 ### Arquivos da sessão
 
