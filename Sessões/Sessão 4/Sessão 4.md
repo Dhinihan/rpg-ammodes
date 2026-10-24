@@ -141,11 +141,13 @@ Avaliação do Mestre: faltavam elementos de ligação que melhorassem as batida
 - **Lutas:** acontecem as duas lutas pequenas (seção 5).
 - **Pressa de Örn:** a partir de certo ponto ele quer beber. Quem bebe com ele ganha confiança e ouve como achou o esconderijo (chave 3).
 - **Ligação:** o grupo chega à sala da passagem, onde [[Aiyra]] some. Örn não segue a líder nem invade a sala dela.
+- **Mapa:** caverna externa, a mina explorada (seção 6). ![[Mina watabou.png]]
 
 ### Porta e labirinto
 
 - **Situação:** [[Aiyra]] some na parede; o grupo descobre a porta disfarçada e entra no labirinto na neblina. Detalhes em "Parte oculta e Guards and Wards" e no mapa da seção 6.
 - **Ligação:** a lenda da criança atrás da parede prepara o encontro.
+- **Mapa:** labirinto do Guards and Wards; na mesa, girar 180° (seção 6). ![[Labirinto Guards and Wards.png]]
 
 ### Noah e Hadia
 
@@ -155,6 +157,7 @@ Avaliação do Mestre: faltavam elementos de ligação que melhorassem as batida
   - o grupo mostra que, nas mãos da Mão, o traje pode ser copiado e o deserto corre perigo;
   - o grupo rouba o Manto furtivamente;
   - o grupo cita [[Atilla]], Hadia o liga a [[Planetar]] e passa a confiar no grupo.
+- **Mapa:** caverna interna, a parte oculta; o segundo encontro também acontece aqui (seção 6). ![[Cavernas watabou.png]]
 
 ### Ataque da Mão
 
