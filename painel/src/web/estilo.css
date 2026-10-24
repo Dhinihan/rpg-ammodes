@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Imagem fora de botão abre na largura da tela ao clicar. */
+main img:not(button img, a img) {
+  cursor: zoom-in;
+}
+
 /* Markdown renderizado do vault. */
 .nota {
   & h1,

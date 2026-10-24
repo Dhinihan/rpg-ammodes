@@ -14,6 +14,19 @@ export function Aviso({ texto }: { texto: string | null }) {
   )
 }
 
+/** Imagem na largura inteira da tela; imagem alta rola. Clique ou Esc fecha. */
+export function Ampliada(props: { src: string; aoFechar: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={props.aoFechar}
+      className="fixed inset-0 z-50 cursor-zoom-out overflow-y-auto bg-black/95"
+    >
+      <img src={props.src} alt="" className="min-h-full w-full object-contain" />
+    </button>
+  )
+}
+
 export function Retrato(props: { imagem: Imagem | null; className: string; alt?: string }) {
   if (props.imagem === null) return <div className={`bg-stone-800 ${props.className}`} />
   return (

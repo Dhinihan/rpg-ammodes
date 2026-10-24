@@ -20,7 +20,7 @@ import {
   paginaAtual,
   voltar,
 } from "./navegacao.ts"
-import { Aviso, Retrato } from "./pecas.tsx"
+import { Ampliada, Aviso, Retrato } from "./pecas.tsx"
 import { TelaCena, TelaEntidade, TelaInicial, TelaSecao, TelaTrecho } from "./telas.tsx"
 
 const LIMITE_DE_RESULTADOS = 12
@@ -32,6 +32,8 @@ export function Painel({ vault }: { vault: Vault }) {
   const [texto, setTexto] = useState("")
   const [indiceDoResultado, setIndiceDoResultado] = useState(0)
   const [notaAberta, setNotaAberta] = useState(false)
+  /** Endereço da imagem aberta na largura da tela, ou nulo. */
+  const [ampliada, setAmpliada] = useState<string | null>(null)
   const campo = useRef<HTMLInputElement>(null)
 
   // Uma página que sumiu do vault (nota renomeada no Obsidian) cai na tela inicial.
@@ -54,6 +56,11 @@ export function Painel({ vault }: { vault: Vault }) {
   useTeclas((evento) => {
     const semModificador = !evento.ctrlKey && !evento.altKey && !evento.metaKey
     const imagem = imagemDaPagina(pagina, indice)
+    if (ampliada !== null) {
+      // Com a imagem aberta, as teclas só a fecham.
+      if (evento.key === "Escape") setAmpliada(null)
+      return
+    }
     if (evento.key === "Escape") setNav(alternarInicio)
     else if (evento.key === "ArrowLeft" && semModificador) setNav(voltar)
     else if (evento.key === "ArrowRight" && semModificador) setNav(avancar)
@@ -89,8 +96,14 @@ export function Painel({ vault }: { vault: Vault }) {
   }
 
   // Links dentro do Markdown: `[[#Cena]]` e `[[nota]]` navegam; link externo abre na aba do Beyond.
+  // Imagem fora de botão abre na largura da tela; a de dentro de botão segue o botão.
   const aoClicar = (evento: MouseEvent) => {
-    const link = evento.target instanceof Element ? evento.target.closest("a") : null
+    const alvo = evento.target instanceof Element ? evento.target : null
+    if (alvo instanceof HTMLImageElement && alvo.closest("button, a") === null) {
+      setAmpliada(alvo.src)
+      return
+    }
+    const link = alvo?.closest("a") ?? null
     if (link === null) return
     evento.preventDefault()
     const cena = indice.cenaDoTitulo(link.dataset.cena ?? "")
@@ -163,6 +176,7 @@ export function Painel({ vault }: { vault: Vault }) {
         letra busca · 1-9 abre · Esc início e volta · ← → histórico · Ctrl+C manda a imagem
         {pagina?.tipo === "entidade" && " · N nota inteira"}
       </footer>
+      {ampliada !== null && <Ampliada src={ampliada} aoFechar={() => setAmpliada(null)} />}
     </div>
   )
 }
