@@ -1,4 +1,5 @@
 import { beforeAll, describe, expect, test } from "bun:test"
+import { readdir } from "node:fs/promises"
 import { join } from "node:path"
 import { lerVault } from "./ler-vault.ts"
 import { primeiroCallout, trechos, wikilinks } from "./markdown.ts"
@@ -126,8 +127,13 @@ describe("vault real", () => {
   })
 
   test("sem sessão pedida, abre a de maior número", async () => {
+    // O vault ganha uma sessão nova a cada preparação; o esperado vem das pastas.
+    const numeros = (await readdir(join(RAIZ, "Sessões")))
+      .map((pasta) => /^Sessão (\d+(?:\.\d+)?)$/.exec(pasta)?.[1])
+      .filter((numero) => numero !== undefined)
+      .map(Number)
     const atual = await lerVault(RAIZ)
-    expect(atual.sessao?.nome).toBe("Sessão 3")
+    expect(atual.sessao?.nome).toBe(`Sessão ${Math.max(...numeros)}`)
   })
 
   test("sessão inexistente diz quais existem", async () => {
